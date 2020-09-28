@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html lang=" en ">
+<head>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Referencing https://www.w3schools.com/howto/howto_js_scroll_to_top.asp*/
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: rgba(0, 0, 179, .45); /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+        }
+
+        #myBtn:hover {
+            background-color: #555; /* Add a dark-grey background on hover */
+        }
+
+        div.scrollmenu {
+            position:relative;
+            margin-left: auto;
+            margin-left: auto;
+            vertical-align: top;
+            display: inline-block;
+            background-color: rgba(0, 0, 179, .45);
+            overflow: auto;
+            width: 100%;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        div.scrollmenu a {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            font-size: min(3vw, 40px);
+            /* ^ Referencing: https://stackoverflow.com/questions/40528290/how-to-implement-max-font-size */
+            text-decoration: none;
+        }
+
+        div.scrollmenu a:hover {
+            background-color: #777;
+            text-align: center;
+        }
+        
+        ::-webkit-progress-bar {
+            
+            background-color: rgb(135, 135, 216);
+        }
+
+        ::-webkit-progress-value {
+            background-color: rgb(0, 100, 180);
+        }
+    </style><script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Miles Frantz | Graduate Computer Scientist at Virginia Tech</title><!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="franceme.github.io" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A modern static resume template and theme. Powered by Jekyll and GitHub pages." />
+<meta property="og:description" content="A modern static resume template and theme. Powered by Jekyll and GitHub pages." />
+<meta property="og:site_name" content="Graduate Computer Scientist at Virginia Tech" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"/README.html","headline":"franceme.github.io","description":"A modern static resume template and theme. Powered by Jekyll and GitHub pages.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"></head>
+
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <div class="container header-contianer">
+    <section id="home">
+        <div class="row scrollmenu ">
+            <a href="#experience" class="topbar">Experience</a>
+            <a href="#education" class="topbar">Education</a>
+            <a href="#submissions" class="topbar">Submissions</a>
+            <a href="http://faculty.cs.tamu.edu/guofei/sec_conf_stat.htm" class="topbar">Ranks</a>
+            <!--
+            <a href="#certs"  class="topbar">Certificates</a>
+	    <a href="https://franceme.github.io/Blog/"  class="topbar">Blogs</a>
+	    <a href="https://oaklandsok.github.io/"  class="topbar">SoKs</a>
+	    -->
+        </div>
+        <div class="row scrollmenu ">
+            <!--
+            <a href="#awards" class="topbar">Awards</a>
+            -->
+            <a href="#projects" class="topbar">Projects</a>
+            <a href="#mentor" class="topbar">Mentees</a>
+            <a href="#groups" class="topbar">Groups</a>
+            <a href="#skills" class="topbar">Skills</a>
+        </div>
+    </section>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
+            <h1>Miles Frantz</h1>
+            <h2>Graduate Computer Scientist at Virginia Tech</h2>
+
+            
+            <h4>
+                Email: milesfrantz at acm.org</a>
+            </h4>
+            
+            
+            
+            <h4>
+                Web: 
+<a href="https://franceme.github.io" target="_blank" class="">franceme.github.io</a>
+            </h4>
+            
+            <h4>
+                Last Update Date: |DATEHERE|
+            </h4>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
+            <style>
+                .custom-link:hover .custom-icon{
+                    filter:invert(0);
+                }
+                .custom-icon {
+                    filter:invert(1);
+                    padding-top: 2rem;
+                }
+            </style>
+            <ul class="icons no-print">
+                <li>
+                    <a target="_blank" href="files/keys/frantzme.gpg.asc" class="button button--sacnite button--round-l">
+                        <i class="fas fa-key" title="GPG Public Key"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="files/keys/frantzme.fingerprint" class="button button--sacnite button--round-l">
+                        <i class="fas fa-fingerprint" title="GPG Public Key Fingerprint"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a target="_blank" href="https://github.com/franceme"
+                        class="button button--sacnite button--round-l">
+                        <i class="fa fa-github" title="Github link"></i>
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a target="_blank"
+                        href="https://www.linkedin.com/in/franceme"
+                        class="button button--sacnite button--round-l">
+                        <i class="fa fa-linkedin" title="Linkedin link"></i>
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a target="_blank" href="files/docs/Resume.pdf" class="button button--sacnite button--round-l">
+                        <i class="fas fa-file-pdf" title="Resume link"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="files/keys/Resume.sig" class="button button--sacnite button--round-l">
+                        <i class="fas fa-unlock-alt" title="Resume Signature"></i>
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a target="_blank" href="files/docs/CV.pdf" class="button button--sacnite button--round-l">
+                        <i class="ai ai-cv ai-3x" title="CV link"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="files/keys/CV.sig" class="button button--sacnite button--round-l">
+                        <i class="fas fa-unlock-alt" title="CV Signature"></i>
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a target="_blank" href="https://scholar.google.com/citations?user=RKKj9VgAAAAJ" class="button button--sacnite button--round-l">
+                        <i class="ai ai-google-scholar-square ai-3x" title="Google Scholar"></i>
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a target="_blank" href="https://www.mendeley.com/profiles/myles-f" class="button button--sacnite button--round-l">
+                        <i class="ai ai-mendeley ai-3x" title="Mendeley Account"></i>
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a target="_blank" href="https://ieee-collabratec.ieee.org/app/p/MilesFrantz662182" class="button button--sacnite button--round-l">
+                        <i class="ai ai-ieee ai-3x" title="IEEE Account"></i>
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a class="button button--sacnite button--round-l">
+                        <i class="ai ai-acm ai-3x" title="ACM Account"></i>
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a target="_blank" href="https://medium.com/@frantzme" class="button button--sacnite button--round-l">
+                        <i class="fab fa-medium" title="Medium Account"></i>
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a target="_blank" href="https://orcid.org/0000-0002-7329-6979" class="button button--sacnite button--round-l">
+                        <i class="fab fa-orcid" title="Orcid Account"></i>
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a target="_blank" href="https://zenodo.org/search?page=1&size=20&q=owners:3701552" class="button button--sacnite button--round-l custom-link">
+                        <img class="custom-icon" src="https://about.zenodo.org/static/img/logos/zenodo-black.svg" width="80%"/>
+                    </a>
+                </li>
+                
+                <li>
+                    <a target="_blank" href="https://www.oracle.com/technical-resources/oracle-contributor-agreement.html#f" class="button button--sacnite button--round-l custom-link">
+                        <i class="fab fa-java" title="Java Oracle Contributor Agreement"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <table>
+            <tr>
+                <td>&lt;!--</td>
+                <td>%%</td>
+                <td>/*</td>
+                <td>;</td>
+                <td>&quot;&quot;&quot;</td>
+                <td>--</td>
+                <td>//</td>
+                <td>#</td>
+                <td>//</td>
+                <td>--</td>
+                <td>&quot;&quot;&quot;</td>
+                <td>;</td>
+                <td>*/</td>
+                <td>%%</td>
+                <td>--&gt;</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+    
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+
+            <div>
+                <h1 style="text-align: center;background-color: red;">
+                    <i><a href="https://trackcorona.live">A CoronaVirus link created with participation from Virginia Tech Students.</a></i>
+                </h1>
+            </div>
+
+             
+<div class="container intro-container">
+    <h3>About Me</h3>
+    <div class="row clearfix"><div class="col-xs-12 col-sm-4 col-md-3 no-print">
+          <span class="profile-img" style="background-image: url(/files/low_res.jpg)"></span>
+        </div><div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+        <p>I’m a 3rd year Ph.D. Computer Science student and am currently working on new and exciting projects.</p>
+
+<p>Currently I am working with <a href="http://people.cs.vt.edu/danfeng/">Dr. Danfeng (Daphne) Yao</a>.
+Previously I have worked in <a href="https://worldpay.com">Worldpay from FIS</a> for several Internships (or Co-Ops) and have learned a lot through my various teams.</p>
+
+<p>I enjoy working on projects and actively learning about security.</p>
+
+      </div>
+    </div>
+  </div>
+
+            
+                <section id="experience">
+                    <div class="container experience-container">
+  <h3>Experience</h3>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              
+            
+          
+          <h4>Virginia Tech</h4>
+          
+            
+<a href="https://cs.vt.edu" target="_blank" class="link">cs.vt.edu</a>
+          
+          <p><b>Graduate Teaching Assistant</b></p>
+          
+          
+          
+          <p><b>Assistant</b></p>
+          <p>July 31/2020 - Present</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <ul>
+  <li>Helped record videos for the lab lectures.</li>
+</ul>
+
+          
+
+          
+
+          
+        </div>
+        
+        <br><div style="display:inline-block;">
+        <p>Learned Skills: </p>
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Managing Students</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Handling Lectures</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Detailing and Recording Labs</p>&nbsp;
+            
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              
+            
+          
+          <h4>Virginia Tech</h4>
+          
+            
+<a href="https://yaogroup.cs.vt.edu/index.html" target="_blank" class="link">yaogroup.cs.vt.edu/index.html</a>
+          
+          <p><b>Graduate Research Assistant</b></p>
+          
+          
+          
+          <p><b>Assistant</b></p>
+          <p>July 31/2019 - July 31/2020</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <ul>
+  <li>Created a live Jupyter notebook for extended documentation on Cryptoguard use.</li>
+  <li>Creating a live Java Jupyter notebook through MyBinder for live and public demonstrations.</li>
+  <li>Worked on the open source project Cryptoguard.</li>
+  <li>Exploring various avenues to make Cryptoguard more easily available.</li>
+  <li>Created both Gradle and Maven plugin supporting Cryptoguard to be used within the build process (IDE independent).</li>
+</ul>
+
+          
+
+          
+
+          
+        </div>
+        
+        <br><div style="display:inline-block;">
+        <p>Learned Skills: </p>
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Cryptoguard</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Jupyter Notebook</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">IJava Jupyter Notebook</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Gradle Plugin</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Maven Plugin</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Dockerfile</p>&nbsp;
+            
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              
+            
+          
+          <h4>Worldpay from FIS</h4>
+          
+            
+<a href="https://vantiv.com" target="_blank" class="link">vantiv.com</a>
+          
+          <p><b>Software Engineer</b></p>
+          
+          
+          
+          <p><b>Internship</b></p>
+          <p>May 03/2019 - July 31/2019</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <ul>
+  <li>Enabled the Open Source Project Hygieia for system and tool monitoring.</li>
+  <li>Enhanced multiple Tasktop integrations by making custom JavaScript logic.</li>
+  <li>Improved Terraform scripts to dynamically build Virtual Machines for resources.</li>
+  <li>Implemented a Python3 script to track Hygieia usage and automatically start and stop the project.</li>
+  <li>Enabled users to work with various tools owned and managed by the team.</li>
+</ul>
+
+          
+
+          
+
+          
+        </div>
+        
+        <br><div style="display:inline-block;">
+        <p>Learned Skills: </p>
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Hygieia</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Tasktop</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Github Enterprise</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Splunk</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Nexus</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Jenkins</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Terraform</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Ansible</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Teamforge</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Rally</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">TFS</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Checkmarx</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">DataPower</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">XLDeploy</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">XLRelease</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">DevOps</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">DexVMs</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">DevSecOps</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Bash</p>&nbsp;
+            
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              
+            
+          
+          <h4>Virginia Tech</h4>
+          
+            
+<a href="https://yaogroup.cs.vt.edu/index.html" target="_blank" class="link">yaogroup.cs.vt.edu/index.html</a>
+          
+          <p><b>Graduate  Research Assistant</b></p>
+          
+          
+          
+          <p><b>Assistant</b></p>
+          <p>October 01/2018 - May 03/2019</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <ul>
+  <li>Designed a system to create any of three different outputs dependent on the user.</li>
+  <li>Worked with an external consumer to create a specific output adapter for their service.</li>
+  <li>Worked on the open source project Cryptoguard.</li>
+  <li>Used a design akin to common flat data base designs.</li>
+</ul>
+
+          
+
+          
+
+          
+        </div>
+        
+        <br><div style="display:inline-block;">
+        <p>Learned Skills: </p>
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Cryptoguard</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Research Skills</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Independent Work</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Soot</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Modularization Design</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Adapter Design</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Abstract Factory</p>&nbsp;
+            
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              
+            
+          
+          <h4>Virginia Tech</h4>
+          
+            
+<a href="https://cs.vt.edu" target="_blank" class="link">cs.vt.edu</a>
+          
+          <p><b>Graduate Teaching Assistant</b></p>
+          
+          
+          
+          <p><b>Assistant</b></p>
+          <p>July 01/2018 - December 19/2018</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <ul>
+  <li>Helped split the students into anonymized groups for a research study.</li>
+  <li>Helped the students out with their inqueries.</li>
+  <li>Graded various student assignments including the finals.</li>
+</ul>
+
+          
+
+          
+
+          
+        </div>
+        
+        <br><div style="display:inline-block;">
+        <p>Learned Skills: </p>
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Managing Students</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Grading Reports</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Managing Students</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Creating Groups</p>&nbsp;
+            
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              
+            
+          
+          <h4>Worldpay from FIS</h4>
+          
+            
+<a href="https://vantiv.com" target="_blank" class="link">vantiv.com</a>
+          
+          <p><b>Software Engineer</b></p>
+          
+          
+          
+          <p><b>Co-Op</b></p>
+          <p>January 09/2017 - August 12/2017</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <ul>
+  <li>Fundamentally enhanced a highly utilized SOAP API with an overall average response time &lt; 100 ms.</li>
+  <li>Mentored two Computer Science Students.</li>
+  <li>Enhanced and rectified various incidents on existing Java/Webmethods Webservices.</li>
+  <li>Designed several SOAP Webservices.</li>
+  <li>Created an API that supports both SOAP and REST as a POC.</li>
+  <li>Combined Reflection and Aspect oriented programming to dynamically filter Java SOAP API output.</li>
+  <li>Worked closely with a DevOps team to support and showcase both XL Deploy and XL Release using internal APIs.</li>
+  <li>Trained 2 other interns on the team and led several KT sessions.</li>
+</ul>
+
+          
+
+          
+
+          
+        </div>
+        
+        <br><div style="display:inline-block;">
+        <p>Learned Skills: </p>
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Java EE</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">JUnit 4</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Mockito</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Leadership</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">IBM Websphere</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Software AG</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Webmethods</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">SOAP</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Splunk</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">DataPower</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">XebiaLabs</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">XLDeploy</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">XLRelease</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">REST</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">DevOps</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">SoapUI</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">SQL</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">AQT</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Design</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Postman</p>&nbsp;
+            
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              
+            
+          
+          <h4>Worldpay from FIS</h4>
+          
+            
+<a href="https://vantiv.com" target="_blank" class="link">vantiv.com</a>
+          
+          <p><b>Software Engineer</b></p>
+          
+          
+          
+          <p><b>Co-Op</b></p>
+          <p>May 2016 - August 2016</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <ul>
+  <li>Led an Agile team to design and create a Caching Web Application through Dynamic Server Pages.</li>
+  <li>The Caching Web Application compared values cached in a server to live database values.</li>
+  <li>Enhanced and rectified various incidents on existing Java/Webmethods Webservices.</li>
+</ul>
+
+          
+
+          
+
+          
+        </div>
+        
+        <br><div style="display:inline-block;">
+        <p>Learned Skills: </p>
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Java EE</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">IBM Websphere</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Leadership</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Webmethods</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">SOAP</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">SoapUI</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Server Cache Web App</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">DSP</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">SQL</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">AQT</p>&nbsp;
+            
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              
+            
+          
+          <h4>Worldpay from FIS</h4>
+          
+            
+<a href="https://vantiv.com" target="_blank" class="link">vantiv.com</a>
+          
+          <p><b>Software Engineer</b></p>
+          
+          
+          
+          <p><b>Co-Op</b></p>
+          <p>August 2015 - January 2016</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <ul>
+  <li>Created an API Operation to store tiff images for internal client issue management.</li>
+  <li>Setup a deletion API Operation to clear issues for multiple internal clients.</li>
+  <li>Enhanced and rectified various incidents on existing Java/Webmethods Webservices.</li>
+</ul>
+
+          
+
+          
+
+          
+        </div>
+        
+        <br><div style="display:inline-block;">
+        <p>Learned Skills: </p>
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Software AG</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Leadership</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Webmethods</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">SOAP</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">SoapUI</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">SQL</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">AQT</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Design</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Bash</p>&nbsp;
+            
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              
+            
+          
+          <h4>Worldpay from FIS</h4>
+          
+            
+<a href="https://vantiv.com" target="_blank" class="link">vantiv.com</a>
+          
+          <p><b>Software Engineer</b></p>
+          
+          
+          
+          <p><b>Co-Op</b></p>
+          <p>January 2015 - April 2015</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <ul>
+  <li>Implemented several Bash scripts to track API usage.</li>
+  <li>Created a lightweight Java program to translate a phone-digit-text based input to alphabet characters.</li>
+</ul>
+
+          
+
+          
+
+          
+        </div>
+        
+        <br><div style="display:inline-block;">
+        <p>Learned Skills: </p>
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Software AG</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Webmethods</p>&nbsp;
+            
+                <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">Bash</p>&nbsp;
+            
+        </div>
+        
+      </div>
+  
+</div>
+
+                </section>
+            
+
+            
+                <section id="education">
+                    <div class="container education-container">
+  <h3>Education</h3>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>Virginia Polytechnic Institute and State University</h4>
+            
+          
+          
+          
+            
+<a href="https://cs.vt.edu" target="_blank" class="link">cs.vt.edu</a>
+          
+          
+          
+          
+          
+          <p><b>Ph.D. Computer Science</b></p>
+          <p>May 2020 - May 202X</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+            <p class="quote">Ut Prosim, That I May Serve.</p>
+          
+          <p>I have been working under <a href="http://people.cs.vt.edu/danfeng/">Dr. Danfeng (Daphne) Yao</a> on <a href="https://github.com/franceme/cryptoguard">Cryptoguard</a> related projects and other static analysis projects..</p>
+
+<p>I have also been joining various groups (located at the bottom) as well as taking more security oriented courses and enjoying the mountains.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>Virginia Polytechnic Institute and State University</h4>
+            
+          
+          
+          
+            
+<a href="https://cs.vt.edu" target="_blank" class="link">cs.vt.edu</a>
+          
+          
+          
+          
+          
+          <p><b>M.S. Computer Science</b></p>
+          <p>August 2018 - May 2020</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+            <p class="quote">Ut Prosim, That I May Serve.</p>
+          
+          <p>I have been working under <a href="http://people.cs.vt.edu/danfeng/">Dr. Danfeng (Daphne) Yao</a> on <a href="https://github.com/franceme/cryptoguard">Cryptoguard</a>. Throughout my research I have also been exploring the cutting edge of the security field in general.</p>
+
+<p>I have also been joining various groups (located at the bottom) as well as taking more security oriented courses and enjoying the mountains.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>University of Cincinnati</h4>
+            
+          
+          
+          
+            
+<a href="https://ceas.uc.edu" target="_blank" class="link">ceas.uc.edu</a>
+          
+          
+          
+          
+          
+          <p><b>B.S. Computer Engineering</b></p>
+          <p>August 2013 - April 2018</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+            <p class="quote">We Engineer Better.</p>
+          
+          <p>During my Undergraduate I learned alot throughout the classes I took and the Co-Ops I was a part of.</p>
+
+<p>The Co-Ops were some of the best part of the degree, as it gave me real-world experience, and a chance for practical application.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+</div>
+
+                </section>
+            
+
+            
+                <section id="submissions">
+                    <div class="container submissions-container">
+    <h3>Submissions</h3>
+    <h5><i>This material is presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright. In most cases, these works may not be reposted without the explicit permission of the copyright holder.</i></h5>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+          <h4>Secure Java Tutorial</h4>
+          <h4>
+            
+              <h4>
+<a href="https://secdev.ieee.org/2020/accepted/" target="_blank" class="link">Secure Java Tutorial</a></h4>
+            
+          
+          
+          
+          
+          <p><b>
+            
+<a href="https://secdev.ieee.org/2020/accepted/" target="_blank" class="link">SecDev20</a></b></p>
+          
+          
+            
+              <p><a href="https://secdev.ieee.org/2020/accepted/">Tutorial</a></p>
+            
+          
+          
+          
+          <p>September 2020</p>
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          
+
+          
+
+          
+
+          
+            <p>Tutorial: Principles and Practices of Secure Cryptographic Coding in Java</p>
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+          <h4>Enhancing CryptoGuard</h4>
+          <h4>
+            
+              <a target="_blank" href="files/submissions/thesis.pdf">
+                  <i class="fas fa-file-pdf" title="Enhancing CryptoGuard" style="font-size:125%;"></i>
+              </a>
+              
+              <a href="files/keys/thesis.sig">
+                  <i class="fas fa-unlock-alt" title="files/keys/thesis.sig" style="font-size:125%;"></i>
+              </a>
+              
+            </h4>
+            
+          
+          
+          
+          
+          <p><b>
+            
+<a href="https://vtechworks.lib.vt.edu/handle/10919/5534" target="_blank" class="link">VT ETDs</a></b></p>
+          
+          
+            
+              <p><a href="https://vtechworks.lib.vt.edu/handle/10919/98521">Thesis</a></p>
+            
+          
+          
+          
+          <p>May 2020</p>
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          
+
+          
+
+          
+
+          
+            <p>Enhancing CryptoGuard’s Deployability for Continuous Software Security Scanning</p>
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+          <h4>Cryptoguard</h4>
+          <h4>
+            
+              <a target="_blank" href="files/submissions/cryptoguard_ccs_19.pdf">
+                  <i class="fas fa-file-pdf" title="Cryptoguard" style="font-size:125%;"></i>
+              </a>
+              
+              <a href="files/keys/cryptoguard_ccs_19.sig">
+                  <i class="fas fa-unlock-alt" title="files/keys/cryptoguard_ccs_19.sig" style="font-size:125%;"></i>
+              </a>
+              
+            </h4>
+            
+          
+          
+          
+          
+          <p><b>
+            
+<a href="https://sigsac.org/ccs/CCS2019/" target="_blank" class="link">ACM CCS</a></b></p>
+          
+          
+            
+              <p><a href="https://dl.acm.org/doi/10.1145/3319535.3345659">Conference</a></p>
+            
+          
+          
+          
+          <p>November 2019</p>
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          
+
+          
+
+          
+
+          
+            <p>CryptoGuard: High Precision Detection of Cryptographic Vulnerabilities in Massive-sized Java Projects</p>
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+          <h4>Cryptoguard Poster</h4>
+          <h4>
+            
+              <a target="_blank" href="files/submissions/cryptoguard_poster.pdf">
+                  <i class="fas fa-file-pdf" title="Cryptoguard Poster" style="font-size:125%;"></i>
+              </a>
+              
+              <a href="files/keys/cryptoguard_poster.sig">
+                  <i class="fas fa-unlock-alt" title="files/keys/cryptoguard_poster.sig" style="font-size:125%;"></i>
+              </a>
+              
+            </h4>
+            
+          
+          
+          
+          
+          <p><b>
+            
+<a href="https://sigsac.org/ccs.html" target="_blank" class="link">ACM SIGSAC</a></b></p>
+          
+          
+            
+              <p><a href="https://people.cs.vt.edu/nm8247/publications/security-2019-poster.pdf">Poster</a></p>
+            
+          
+          
+          
+          <p>November 2019</p>
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          
+
+          
+
+          
+
+          
+            <p>Deployment-quality and Accessible Solutions for Cryptography Code Development</p>
+
+          
+        </div>
+        
+      </div>
+    
+</div>
+                </section>
+            
+
+            
+
+            
+
+            
+                <section id="projects">
+                    <div class="container projects-container">
+    <h3>Projects</h3>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>WaveNetExploration</h4>
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          <p>2019</p>
+          
+          
+          <p class="no-print">
+          
+              <a href="https://github.com/franceme/WaveNetExploration" target="_blank">
+                <i class="fa fa-github" style="font-size:225%;" title="WaveNetExploration Github link"></i>
+              </a>
+          
+          
+              <a href="https://franceme.github.io/WaveNetExploration/" target="_blank">
+                <i class="fab fa-internet-explorer" style="font-size:225%;" title="WaveNetExploration Github Page link"></i>
+              </a>
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>This was a class project created for an Advanced Machine Learning class.</p>
+
+<p>The purpose of this project was to replicate an existing papers work and to add onto it.</p>
+
+<p>For this my group chose to replicate the paper <a href="https://arxiv.org/pdf/1609.03499.pdf">WaveNet</a> and to enhance the results by running it on music samples.</p>
+
+<p>Unfortunately we were unable to create any sound samples that mimic actual music, however from the website there is a clear improvement in the music generation from the models.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>gradleguard</h4>
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          <p>2019 - Now</p>
+          
+          
+          <p class="no-print">
+          
+              <a href="https://github.com/franceme/gradleguard" target="_blank">
+                <i class="fa fa-github" style="font-size:225%;" title="gradleguard Github link"></i>
+              </a>
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>This is the gradle plugin for my thesis project Cryptoguard.</p>
+
+<p>This was created to help ease the access and use for developers to be able to use Cryptoguard.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>mavenguard</h4>
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          <p>2019 - Now</p>
+          
+          
+          <p class="no-print">
+          
+              <a href="https://github.com/franceme/mavenguard" target="_blank">
+                <i class="fa fa-github" style="font-size:225%;" title="mavenguard Github link"></i>
+              </a>
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>This is the maven plugin for my thesis project Cryptoguard.</p>
+
+<p>This was created to help ease the access and use for developers to be able to use Cryptoguard.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>Cryptoguard</h4>
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          <p>2019 - Now</p>
+          
+          
+          <p class="no-print">
+          
+              <a href="https://github.com/franceme/cryptoguard" target="_blank">
+                <i class="fa fa-github" style="font-size:225%;" title="Cryptoguard Github link"></i>
+              </a>
+          
+          
+              <a href="https://franceme.github.io/cryptoguard/" target="_blank">
+                <i class="fab fa-internet-explorer" style="font-size:225%;" title="Cryptoguard Github Page link"></i>
+              </a>
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>This is a static and compiled code analyzer, serving as my current thesis project.</p>
+
+<p>This project will scan cryptographic misuse in Java Projects (Maven/Gradle based) and Android Projects.</p>
+
+<p>Recent works with this project have included making an enhanced interface for this to work with other programs and tools.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>GRFICS</h4>
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          <p>2019</p>
+          
+          
+          <p class="no-print">
+          
+              <a href="https://github.com/franceme/GRFICS" target="_blank">
+                <i class="fa fa-github" style="font-size:225%;" title="GRFICS Github link"></i>
+              </a>
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>Originally created by <a href="https://github.com/djformby/GRFICS&quot;">djformby</a>, this was a class project tasked with enhancing a IoT security project.</p>
+
+<p>Additions made on my copy include enhancing the GUI and adding a Kali VM to lower the barrier for entrance</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>HWMake</h4>
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          <p>2018 - Now</p>
+          
+          
+          <p class="no-print">
+          
+              <a href="https://github.com/franceme/HWMake" target="_blank">
+                <i class="fa fa-github" style="font-size:225%;" title="HWMake Github link"></i>
+              </a>
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>This project was created purely for my own convenience to be able to create the full “lifecycle” of an assignment.</p>
+
+<p>Similar to <a href="https://github.com/pyenv/pyenv">Pyenv</a>, it creates the full environment, compiles the report, and zips up an archive.</p>
+
+<p>Split between Linux commands and Python3 commands this project needs to be refactored.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>Resume Gen</h4>
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          <p>2018 - Now</p>
+          
+          
+          <p class="no-print">
+          
+              <a href="https://github.com/franceme/ResumeGEN" target="_blank">
+                <i class="fa fa-github" style="font-size:225%;" title="Resume Gen Github link"></i>
+              </a>
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>This project was created for my own convenience for automating the Resume Generation process.</p>
+
+<p>Using a combination of Mako to inject a json file into a Resume template file, then using latex to process and create the Resume pdf.</p>
+
+<p>Until I make a clean slate example of this project, it will not stay on Github.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+    
+</div>
+                </section>
+            
+
+            
+                <section id="mentor">
+                    <div class="container mentors-container">
+    <h3>Mentor</h3>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>Jason</h4>
+            
+          
+          
+          
+          
+          
+          <p><b>Bachelor in Computer Science</b></p>
+          
+          
+          <p>June 08/2020 - August 22/2020</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          
+
+          
+
+          <ul>
+  <li>Instructed about assistance on the CryptoGuard Project.</li>
+  <li>Read the proper review <a href="https://docs.google.com/document/d/18Xa6M5ymDyZ-zvPFqN5tAlQuIPqd27nWBdp2pevpytU/edit?usp=sharing">here</a>.</li>
+</ul>
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>UNLISTED</h4>
+            
+          
+          
+          
+          
+          
+          <p><b>UNLISTED</b></p>
+          
+          
+          <p>January 22/2020 - May 30/2020</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          
+
+          
+
+          <ul>
+  <li>Help lead her on the Cryptoguard project.</li>
+  <li>Help to instruct her on current Java research.</li>
+</ul>
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>UNLISTED</h4>
+            
+          
+          
+          
+          
+          
+          <p><b>UNLISTED</b></p>
+          
+          
+          <p>January 09/2017 - August 12/2017</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          
+
+          
+
+          <ul>
+  <li>Instructed him on current project workflows.</li>
+  <li>Helped him to build up his Java API skills.</li>
+</ul>
+
+          
+        </div>
+        
+      </div>
+    
+        <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>UNLISTED</h4>
+            
+          
+          
+          
+          
+          
+          <p><b>UNLISTED</b></p>
+          
+          
+          <p>January 09/2017 - August 12/2017</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          
+
+          
+
+          <ul>
+  <li>Instructed her on current project workflows.</li>
+  <li>Helped to teach her about the projects within the teams.</li>
+</ul>
+
+          
+        </div>
+        
+      </div>
+    
+</div>
+                </section>
+            
+
+            
+            <section id="groups">
+                <div class="container group-container">
+  <h3>Groups</h3>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>Graduate Student Council</h4>
+            
+          
+          
+          
+            
+<a href="https://csgrad.cs.vt.edu" target="_blank" class="link">csgrad.cs.vt.edu</a>
+          
+          
+          
+          
+          
+          <p><b>Vice President</b></p>
+          <p>2020 - Now</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department.
+It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings.</p>
+
+<p>I have setup the GitHub Organization and the website to autobuild using GitHub Actions..</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>Graduate Student Council</h4>
+            
+          
+          
+          
+            
+<a href="https://csgrad.cs.vt.edu" target="_blank" class="link">csgrad.cs.vt.edu</a>
+          
+          
+          
+          
+          
+          <p><b>Member</b></p>
+          <p>2018 - 2020</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department.
+It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings.</p>
+
+<p>I have directly helped by enhancing the website and helping with various decisions and activities.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>Systems Reading Group</h4>
+            
+          
+          
+          
+          
+          
+          
+          
+          <p><b>Member</b></p>
+          <p>2018 - Now</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>Throughout this group, we have read various popular and new security research papers.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>VT OpenSource</h4>
+            
+          
+          
+          
+          
+          
+          
+          
+          <p><b>Vice President</b></p>
+          <p>2018 - 2019</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>This group aims to educate fellow students about opensource programming and how to become a more popular opensource developer.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>Order of The Engineer</h4>
+            
+          
+          
+          
+            
+<a href="https://order-of-the-engineer.org" target="_blank" class="link">order-of-the-engineer.org</a>
+          
+          
+          
+          
+          
+          <p><b>Member</b></p>
+          <p>2018 - Now</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+            <p class="quote">"Upholding Devotion to the Standards and Dignity of the Engineering Profession"</p>
+          
+          <p>This group is a ceremonious group acknowledging members commitments to uphold high qualities and their duty as an engineer.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>Cyber@UC</h4>
+            
+          
+          
+          
+            
+<a href="https://cyberatuc.org" target="_blank" class="link">cyberatuc.org</a>
+          
+          
+          
+          
+          
+          <p><b>Executive</b></p>
+          <p>2016 - 2018</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>Cyber@UC is a student led OWASP organization aiming to educate people about security.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>UC ACM</h4>
+            
+          
+          
+          
+            
+<a href="https://acmatuc.org" target="_blank" class="link">acmatuc.org</a>
+          
+          
+          
+          
+          
+          <p><b>Member</b></p>
+          <p>2014 - 2018</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>ACM@UC is the University of Cincinnati’s student chapter of the Association for Computing Machinery.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+          
+            
+              <h4>UC Paintball</h4>
+            
+          
+          
+          
+          
+          
+          
+          
+          <p><b>Founder/Safety Officer</b></p>
+          <p>2013 - 2016</p>
+          
+          
+          <p class="no-print">
+          
+          
+          
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+          
+          <p>UC Paintball was a competitive paintball group started to encourage students to participate in the paintball sport.</p>
+
+          
+
+          
+
+          
+        </div>
+        
+      </div>
+  
+</div>
+            </section>
+            
+
+            
+                <section id="skills">
+                    <div class="container skills-container">
+    <h3>Skills</h3>
+    
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4><a href="https://openjdk.java.net">Java EE ~ 90% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 14</b>
+                    
+                    <br>
+                    </p>
+                   <p>2015 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="90" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4>Soap Webservices ~ 75% Mastery</h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 8</b>
+                    
+                    <br>
+                    </p>
+                    <p>2015 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="75" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4>Rest Webservices ~ 65% Mastery</h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 3</b>
+                    
+                    <br>
+                    </p>
+                   <p>2017 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="65" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4>Machine Learning ~ 40% Mastery</h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 2</b>
+                    
+                    <br>
+                    </p>
+                    <p>2019 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="40" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4><a href="https://maven.apache.org">Maven ~ 85% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 10</b>
+                    
+                    <br>
+                    </p>
+                   <p>2015 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="85" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4><a href="https://gradle.org">Gradle ~ 65% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 2</b>
+                    
+                    <br>
+                    </p>
+                    <p>2019 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="65" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4><a href="https://python.org">Python3 ~ 70% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 11</b>
+                    
+                    <br>
+                    </p>
+                   <p>2016 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="70" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4>Bash Scripts ~ 50% Mastery</h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 7</b>
+                    
+                    <br>
+                    </p>
+                    <p>2017 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="50" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4><a href="https://tasktop.com">Tasktop Integrations ~ 85% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 3</b>
+                    
+                    <br>
+                    </p>
+                   <p>2019</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="85" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4>Linux ~ 60% Mastery</h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b></b>
+                    
+                    <br>
+                    </p>
+                    <p>2017 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="60" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4><a href="https://spring.io">Spring ~ 50% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 3</b>
+                    
+                    <br>
+                    </p>
+                   <p>2015 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="50" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4><a href="https://docs.microsoft.com/en-us/dotnet/csharp">C# ~ 25% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 3</b>
+                    
+                    <br>
+                    </p>
+                    <p>2017 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="25" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4><a href="https://fullstackpython.com/flask.html">Flask ~ 25% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 2</b>
+                    
+                    <br>
+                    </p>
+                   <p>2017 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="25" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4><a href="https://jenkins.io">Jenkins ~ 50% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 3</b>
+                    
+                    <br>
+                    </p>
+                    <p>2017 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="50" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4><a href="https://makotemplates.org">Mako ~ 40% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 1</b>
+                    
+                    <br>
+                    </p>
+                   <p>2018 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="40" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4><a href="https://tensorflow.org">Tensorflow ~ 30% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 2</b>
+                    
+                    <br>
+                    </p>
+                    <p>2019 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="30" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4>HTML ~ 50% Mastery</h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 3</b>
+                    
+                    <br>
+                    </p>
+                   <p>2015 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="50" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4>SQL ~ 65% Mastery</h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 6</b>
+                    
+                    <br>
+                    </p>
+                    <p>2015 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="65" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4><a href="https://microsoft.com/net">.NET ~ 25% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 1</b>
+                    
+                    <br>
+                    </p>
+                   <p>2018 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="25" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4><a href="https://golang.org">GO ~ 40% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 1</b>
+                    
+                    <br>
+                    </p>
+                    <p>2019 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="40" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4><a href="https://scala-lang.org">Scala ~ 65% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 2</b>
+                    
+                    <br>
+                    </p>
+                   <p>2018 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="65" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4>Agile/SAFE ~ 70% Mastery</h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b></b>
+                    
+                    <br>
+                    </p>
+                    <p>2015 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="70" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4>Scrum ~ 60% Mastery</h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b></b>
+                    
+                    <br>
+                    </p>
+                   <p>2015 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="60" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+            
+                <div style="display:inline-block;width:50%;" class="progress-container">
+                    
+                        <h4><a href="https://isocpp.org">C++ ~ 1% Mastery</a></h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 1</b>
+                    
+                    <br>
+                    </p>
+                    <p>2014 - 2015</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="1" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+    
+    <div style="width:100%;display:inline-block;">
+        
+        
+            
+                <div style="width:50%;float:left;" class="progress-container">
+                    
+                        <h4>JavaScript ~ 15% Mastery</h4>
+                    
+                    <br>
+                    <p>
+                    
+                        <b>Number of Projects: 2</b>
+                    
+                    <br>
+                    </p>
+                   <p>2017 - Now</p>
+                    <div class="progress">
+                        <progress style="background: rgba(0, 0, 179, .45);color: rgba(0, 0, 179, .45);width:100%;height: 100%;" value="15" max="100"></progress>
+                    </div>
+                </div>
+            
+            
+        
+        <div style="clear:both;"></div>
+    </div>
+    
+  </div>
+                </section>
+            
+
+            <section id="more">
+                <div class="container more-container">
+    <h3>A Little More About Me</h3>
+    <div class="row clearfix">
+        <div class="col-md-12">
+            <p>
+            Other than working at the computer, I also like to:
+            </p>
+            <ul>
+  <li>Bike</li>
+  <li>Hike</li>
+  <li>Game</li>
+  <li>Work out</li>
+  <li>Play board games</li>
+  <li>Hackathons</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+            </section>
+
+        </div>
+    </main>
+
+    <div class="container footer-container">
+    <p>
+        Miles Frantz -
+        <a href="mailto:milesfrantz@acm.org" target="_blank">milesfrantz@acm.org</a>
+        
+        &nbsp;- References on request
+        
+    </p>
+
+    <p>This website was created (with slight
+        
+<a href="https://github.com/franceme/franceme.github.io/blob/master/README.md" target="_blank" class="link">deviations</a>)
+        using the template via 
+<a href="https://github.com/sproogen/resume-theme" target="_blank" class="link">sproogen.</a> </p>
+
+</div>
+
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+</body>
+
+</html>
