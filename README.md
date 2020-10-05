@@ -1,6 +1,6 @@
 # franceme.github.io
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-![Website Repo Build](https://github.com/franceme/franceme.github.io/workflows/Jekyll%20site%20CI/badge.svg)
+![Jekyll Site Website](https://github.com/franceme/franceme.github.io/workflows/Jekyll%20Site%20Website/badge.svg)
 ![Resume Repo Build](https://github.com/franceme/Resume/workflows/Create%20and%20Release%20Latex%20File/badge.svg)
 ---
 
