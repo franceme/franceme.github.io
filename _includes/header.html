@@ -1,0 +1,188 @@
+<div class="container header-contianer">
+    <section id="home">
+        <div class="row scrollmenu ">
+            <a href="#experience" class="topbar">Experience</a>
+            <a href="#education" class="topbar">Education</a>
+            <a href="#submissions" class="topbar">Submissions</a>
+            <a href="http://faculty.cs.tamu.edu/guofei/sec_conf_stat.htm" class="topbar">Ranks</a>
+            <!--
+            <a href="#certs"  class="topbar">Certificates</a>
+	    <a href="https://franceme.github.io/Blog/"  class="topbar">Blogs</a>
+	    <a href="https://oaklandsok.github.io/"  class="topbar">SoKs</a>
+	    -->
+        </div>
+        <div class="row scrollmenu ">
+            <!--
+            <a href="#awards" class="topbar">Awards</a>
+            -->
+            <a href="#projects" class="topbar">Projects</a>
+            <a href="#mentor" class="topbar">Mentees</a>
+            <a href="#groups" class="topbar">Groups</a>
+            <a href="#skills" class="topbar">Skills</a>
+        </div>
+    </section>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
+            <h1>{{ site.name | escape }}</h1>
+            <h2>{{ site.title | escape }}</h2>
+
+            {% if site.email  %}
+            <h4>
+                Email: {{ site.email | escape | replace: "@"," at "}}</a>
+            </h4>
+            {% endif  %}
+            {% if site.phone  %}
+            <h4>
+                Phone: {{ site.phone | escape }}
+            </h4>
+            {% endif  %}
+            {% if site.website  %}
+            <h4>
+                Web: {% include a.html href=site.website %}{{ site.website | escape }}</a>
+            </h4>
+            {% endif  %}
+            <h4>
+                Last Update Date: DATEHERE
+            </h4>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
+            <style>
+                .custom-link:hover .custom-icon{
+                    filter:invert(0);
+                }
+                .custom-icon {
+                    filter:invert(1);
+                    padding-top: 2rem;
+                }
+            </style>
+            <ul class="icons no-print">
+                <li>
+                    <a target="_blank" href="files/keys/frantzme.gpg.asc" class="button button--sacnite button--round-l">
+                        <i class="fas fa-key" title="GPG Public Key"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="files/keys/frantzme.fingerprint" class="button button--sacnite button--round-l">
+                        <i class="fas fa-fingerprint" title="GPG Public Key Fingerprint"></i>
+                    </a>
+                </li>
+                {% if site.github_username  %}
+                <li>
+                    <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}"
+                        class="button button--sacnite button--round-l">
+                        <i class="fa fa-github" title="Github link"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if site.linkedin_username  %}
+                <li>
+                    <a target="_blank"
+                        href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"
+                        class="button button--sacnite button--round-l">
+                        <i class="fa fa-linkedin" title="Linkedin link"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if site.resume  %}
+                <li>
+                    <a target="_blank" href="{{ site.resume }}" class="button button--sacnite button--round-l">
+                        <i class="fas fa-file-pdf" title="Resume link"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="{{ site.resume_sig }}" class="button button--sacnite button--round-l">
+                        <i class="fas fa-unlock-alt" title="Resume Signature"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if site.cv  %}
+                <li>
+                    <a target="_blank" href="{{ site.cv }}" class="button button--sacnite button--round-l">
+                        <i class="ai ai-cv ai-3x" title="CV link"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="{{ site.cv_sig }}" class="button button--sacnite button--round-l">
+                        <i class="fas fa-unlock-alt" title="CV Signature"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if site.scholar_username  %}
+                <li>
+                    <a target="_blank" href="https://scholar.google.com/citations?user={{ site.scholar_username }}" class="button button--sacnite button--round-l">
+                        <i class="ai ai-google-scholar-square ai-3x" title="Google Scholar"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if site.mendeley_username  %}
+                <li>
+                    <a target="_blank" href="https://www.mendeley.com/profiles/{{ site.mendeley_username }}" class="button button--sacnite button--round-l">
+                        <i class="ai ai-mendeley ai-3x" title="Mendeley Account"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if site.ieee  %}
+                <li>
+                    <a target="_blank" href="https://ieee-collabratec.ieee.org/app/p/{{ site.ieee }}" class="button button--sacnite button--round-l">
+                        <i class="ai ai-ieee ai-3x" title="IEEE Account"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if site.acm  %}
+                <li>
+                    <a class="button button--sacnite button--round-l">
+                        <i class="ai ai-acm ai-3x" title="ACM Account"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if site.medium  %}
+                <li>
+                    <a target="_blank" href="https://medium.com/@{{ site.medium }}" class="button button--sacnite button--round-l">
+                        <i class="fab fa-medium" title="Medium Account"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if site.orcid  %}
+                <li>
+                    <a target="_blank" href="https://orcid.org/{{ site.orcid }}" class="button button--sacnite button--round-l">
+                        <i class="fab fa-orcid" title="Orcid Account"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if site.zenodo  %}
+                <li>
+                    <a target="_blank" href="https://zenodo.org/search?page=1&size=20&q=owners:{{ site.zenodo }}" class="button button--sacnite button--round-l custom-link">
+                        <img class="custom-icon" src="https://about.zenodo.org/static/img/logos/zenodo-black.svg" width="80%"/>
+                    </a>
+                </li>
+                {% endif  %}
+                <li>
+                    <a target="_blank" href="https://www.oracle.com/technical-resources/oracle-contributor-agreement.html#f" class="button button--sacnite button--round-l custom-link">
+                        <i class="fab fa-java" title="Java Oracle Contributor Agreement"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <table>
+            <tr>
+                <td>&lt;!--</td>
+                <td>%%</td>
+                <td>/*</td>
+                <td>;</td>
+                <td>&quot;&quot;&quot;</td>
+                <td>--</td>
+                <td>//</td>
+                <td>#</td>
+                <td>//</td>
+                <td>--</td>
+                <td>&quot;&quot;&quot;</td>
+                <td>;</td>
+                <td>*/</td>
+                <td>%%</td>
+                <td>--&gt;</td>
+            </tr>
+        </table>
+    </div>
+</div>

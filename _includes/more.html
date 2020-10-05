@@ -1,0 +1,11 @@
+<div class="container more-container">
+    <h3>{{ site.more_title | default: "A Little More About Me" }}</h3>
+    <div class="row clearfix">
+        <div class="col-md-12">
+            <p>
+            Other than working at the computer, I also like to:
+            </p>
+            {{ site.data.interests.more_content | strip | markdownify }}
+        </div>
+    </div>
+</div>

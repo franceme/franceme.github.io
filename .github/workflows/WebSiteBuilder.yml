@@ -1,0 +1,104 @@
+name: Jekyll Site Website
+
+on:
+  push:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [event-build]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checking out the latest branch
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Retriving Ruby Setup
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.5.1
+
+      - name: Installing Bundle Packages
+        run: bundle install
+
+      - name: Installing Dependencies
+        run: sudo apt install p7zip-full
+
+      - name: Decode secret
+        env:
+          SECRETS_PROPERTIES: ${{ secrets.CONFIG }}
+        run: echo "$SECRETS_PROPERTIES" | base64 -d > ./_config.yml
+
+      - name: Get Time
+        id: time
+        uses: nanzm/get-time-action@v1.0
+        with:
+          format: 'YYYY-MM-DD'
+
+      - name: Find and Replace
+        uses: shitiomatic/str-replace@master
+        env:
+          TIME: "${{ steps.time.outputs.time }}"
+        with:
+          find: "DATEHERE"
+          replace: "${{ steps.time.outputs.time }}"
+
+      - name: Download the CV.pdf
+        run: wget https://github.com/franceme/Resume/releases/latest/download/CV.pdf
+
+      - name: Move the CV
+        run: mv CV.pdf files/docs/
+
+      - name: Download the Resume.pdf
+        run: wget https://github.com/franceme/Resume/releases/latest/download/Resume.pdf
+
+      - name: Move the Resume
+        run: mv Resume.pdf files/docs/
+
+      - name: Download the Website Archive
+        run: wget https://github.com/franceme/Resume/releases/latest/download/Website.zip
+
+      - name: Extract the Website Archive
+        run: 7z x Website.zip
+
+      - name: Builds the Website
+        run: bundle exec jekyll build -d public
+
+      - name: Get Excess Time
+        id: excesstime
+        uses: nanzm/get-time-action@v1.0
+        with:
+          format: 'YYYY-MM-DD-HH-mm-ss'
+
+      - name: Zip the Website
+        run: 7z a Website.zip public/ 
+
+      - name: Create a Release
+        id: create_release
+        uses: actions/create-release@v1.1.4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: Release_${{ steps.excesstime.outputs.time }}
+          release_name: Release_${{ steps.excesstime.outputs.time }}
+
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} 
+          asset_path: Website.zip
+          asset_name: Website.zip
+          asset_content_type: application/zip
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public
+          enable_jekyll: true

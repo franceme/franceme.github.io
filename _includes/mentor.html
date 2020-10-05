@@ -1,0 +1,6 @@
+<div class="container mentors-container">
+    <h3>{{ site.mentors_title | default: "Mentor" }}</h3>
+    {% for mentor in site.data.mentor %}
+        {% include {{ mentor.layout | default: 'left' | append: ".html" }} item=mentor %}
+    {% endfor %}
+</div>

@@ -1,0 +1,6 @@
+<div class="container group-container">
+    <h3>{{ site.groups_title | default: "Awards" }}</h3>
+    {% for group in site.data.awards %}
+      {% include {{ group.layout | default: 'left' | append: ".html" }} item=group %}
+    {% endfor %}
+  </div>

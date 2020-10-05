@@ -1,0 +1,11 @@
+*.gem
+.bundle
+.sass-cache
+Gemfile.lock
+*.code-workspace
+vendor
+Resources/
+plugins/
+_site/
+_config.yml
+_config.yml.base64
