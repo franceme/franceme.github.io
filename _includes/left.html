@@ -57,6 +57,16 @@
                 <i class="fab fa-internet-explorer" style="font-size:225%;" title="{{ include.item.name }} Github Page link"></i>
               </a>
           {% endif %}
+          {% if include.item.rss %}
+              <a href="https://{{ include.item.rss }}" target="_blank">
+                <i class="fas fa-rss" style="font-size:225%;" title="{{ include.item.name }} RSS Link"></i>
+              </a>
+          {% endif %}
+          {% if include.item.actions %}
+              <a href="https://{{ include.item.actions }}" target="_blank">
+                <i class="fas fa-wrench" style="font-size:225%;" title="{{ include.item.name }} GitHub Actions"></i>
+              </a>
+          {% endif %}
           {% if include.item.linkedin %}
               <a href="https://linkedin.com/learning/{{ include.item.linkedin }}" target="_blank">
                 <i class="fab fa-linkedin" style="font-size:225%;" title="{{ include.item.short }} Linkedin link"></i>
