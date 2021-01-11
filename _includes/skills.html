@@ -1,5 +1,5 @@
 <div class="container skills-container">
-    <h3>{{ site.skills_title | default: "Skills" }}</h3>
+    <h3>{% include hyper_link.html title="Skills"%}</h3>
     {% assign rows = site.data.skills.size | divided_by: 2.0 | ceil %}
     {% for i in (1..rows) %}
     {% assign offset = forloop.index0 | times: 2 %}
