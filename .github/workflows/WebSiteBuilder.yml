@@ -39,7 +39,7 @@ jobs:
           format: 'YYYY-MM-DD'
 
       - name: Find and Replace
-        uses: shitiomatic/str-replace@master
+        uses: jacobtomlinson/gha-find-replace@master
         env:
           TIME: "${{ steps.time.outputs.time }}"
         with:
