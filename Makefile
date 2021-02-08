@@ -2,6 +2,9 @@ config=_config.yml
 default:: localbuild
 
 install:
+	yes|sudo apt-get install ruby-full
+	yes|sudo apt install ruby-bundler
+	yes|sudo gem install bundler
 	bundle install
 
 localbuild:

@@ -1,0 +1,6 @@
+<div class="container experience-container">
+    <h3>{% include hyper_link.html title="Experience"%}</h3>
+    {% for exp in site.data.experience %}
+        {% include {{ mentor.layout | default: 'left' | append: ".html" }} item=exp %}
+    {% endfor %}
+</div>
