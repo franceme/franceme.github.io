@@ -23,13 +23,16 @@ jobs:
           python-version: 3.8
 
       - name: Installing Bundle Packages
-        run: python3 -m pip install flask==2.0.1 flask_flatpages==0.7.3 frozen_flask==0.18 pygments==2.10.0
+        run: python3 -m pip install elsa flask==2.0.1 flask_flatpages==0.7.3 frozen_flask==0.18 pygments==2.10.0
 
       - name: Installing Dependencies
-        run: python3 setup.py build
+        run: python3 setup.py freeze
 
       - name: Installing Dependencies
         run: ls -altr
+
+      - name: Installing Dependencies
+        run: python3 setup.py deploy --no-freeze --push
 
       - name: Get Excess Time
         id: excesstime
