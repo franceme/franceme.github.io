@@ -106,7 +106,7 @@ if arg('build'):
     freezer.freeze()
     sys.exit(0)
 elif arg('run'):
-    app.run(host='0.0.0.0', port=50876)
+    app.run(host='0.0.0.0', port=52550)
     sys.exit(0)
 elif arg('install'):
     sys.exit(os.system('python3 -m pip install -e .'))
