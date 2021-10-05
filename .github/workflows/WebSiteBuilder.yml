@@ -28,6 +28,9 @@ jobs:
       - name: Installing Dependencies
         run: python3 setup.py build
 
+      - name: Installing Dependencies
+        run: 7z a Website.zip build/
+
       - name: Get Excess Time
         id: excesstime
         uses: nanzm/get-time-action@v1.0
