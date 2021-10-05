@@ -28,6 +28,9 @@ jobs:
       - name: Installing Dependencies
         run: python3 setup.py build
 
+      - name: Installing Dependencies
+        run: ls -altr
+
       - name: Get Excess Time
         id: excesstime
         uses: nanzm/get-time-action@v1.0
@@ -47,4 +50,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/
+          publish_dir: build/
