@@ -88,14 +88,19 @@ def arg(string):
     return __name__ == "__main__" and len(
         sys.argv) > 1 and sys.argv[0].endswith('site.py') and str(sys.argv[1]).upper() == str(string).upper()
 
-if arg('build'):
-    freezer.freeze()
-    sys.exit(0)
-elif arg('run'):
-    app.run(host='0.0.0.0', port=57289)
-    sys.exit(0)
-elif arg('install'):
-    sys.exit(os.system('python3 -m pip install -e .'))
+if __name__ == '__main__':
+    from else import cli
+    cli(app, base_url='https://francemee.github.io')
+
+if False:
+    if arg('build'):
+        freezer.freeze()
+        sys.exit(0)
+    elif arg('run'):
+        app.run(host='0.0.0.0', port=57289)
+        sys.exit(0)
+    elif arg('install'):
+        sys.exit(os.system('python3 -m pip install -e .'))
 
 
 setup(name='My Website',
