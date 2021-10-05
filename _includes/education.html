@@ -1,6 +1,0 @@
-<div class="container education-container">
-    <h3>{% include hyper_link.html title="Education"%}</h3>
-    {% for edu in site.data.education %}
-        {% include {{ mentor.layout | default: 'left' | append: ".html" }} item=edu %}
-    {% endfor %}
-</div>

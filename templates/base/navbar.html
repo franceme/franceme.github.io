@@ -1,0 +1,32 @@
+<!-- Navigation bar -->
+
+<nav class="navbar" style="margin-bottom: 0%;">
+    <div class="navbar-container">
+        <div class="navbar-left">
+            <a href="{{ url_for('index') }}">
+                <div id="logo-name">{{base_info['NAME']}}</div>
+            </a>
+        </div>
+        <div class="navbar-right">
+            <ul class="navbar-list">
+                {% for section in ["experience", "education", "submissions", "projects", "mentees", "talks", "groups", "skills"]%}
+                    <li><a href="{{ url_for('page',path=section) }}">{{section|upper}}</a></li>
+                {% endfor %}
+                {% for paper in ["Resume", "CV"]%}
+                    <li><a id="menu_{{paper|lower}}" href="https://rebrand.ly/frantzme_{{paper|lower}}">{{paper|upper}}</a></li>
+                {% endfor %}
+                <li><a id="menu_rank" href="http://faculty.cs.tamu.edu/guofei/sec_conf_stat.htm">{{"Rank"|upper}}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var path = window.location.pathname;
+        var page = path.split('/')[1];
+        if (page !== "") {
+            var menu = document.getElementById("menu-" + page);
+            menu.className = "menu-selected";
+        }
+    </script>
+
+</nav>

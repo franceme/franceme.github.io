@@ -1,0 +1,282 @@
+title: experience
+
+### Experience
+
+<p>
+    {%
+        set experience = [
+            {
+                "NAME":"Virginia Tech",
+                "LINK":"https://yaogroup.cs.vt.edu/index.html",
+                "LINK_NAME":"yaogroup.cs.vt.edu",
+                "JOB_TYPE":"Graduate Research Assistant",
+                "JOB_TITLE":"Assistant",
+                "FROM":"01/19/2021",
+                "TO":"Present",
+                "TEXT-DESC": [
+                ],
+                "SKILLS": [
+                    'Static Analysis'
+                ]
+            },{
+                "NAME":"Virginia Tech",
+                "LINK":"https://yaogroup.cs.vt.edu/index.html",
+                "LINK_NAME":"yaogroup.cs.vt.edu",
+                "JOB_TYPE":"Graduate Teaching Assistant",
+                "JOB_TITLE":"Assistant",
+                "FROM":"08/05/2020",
+                "TO":"12/20/2021",
+                "TEXT-DESC": [
+                    'Helped record videos for the lab lectures.'
+                ],
+                "SKILLS": [
+                    'Managing Students',
+                    'Handling Lectures',
+                    'Detailing and Recording Labs'
+                ]
+            },{
+                "NAME":"Oracle",
+                "LINK":"https://oracle.com",
+                "LINK_NAME":"oracle.com",
+                "JOB_TYPE":"Researcher",
+                "JOB_TITLE":"Intern",
+                "FROM":"01/19/2021",
+                "TO":"Present",
+                "TEXT-DESC": [
+                    'Due to Covid the internship was not started.'
+                ],
+                "SKILLS": [
+                ]
+            },{
+                "NAME":"Virginia Tech",
+                "LINK":"https://yaogroup.cs.vt.edu/index.html",
+                "LINK_NAME":"yaogroup.cs.vt.edu",
+                "JOB_TYPE":"Graduate Research Assistant",
+                "JOB_TITLE":"Assistant",
+                "FROM":"07/31/2019",
+                "TO":"07/31/2020",
+                "TEXT-DESC": [
+                    'Created a live Jupyter notebook for extended documentation on Cryptoguard use.',
+                    'Worked on the open source project Cryptoguard.',
+                    'Exploring various avenues to make Cryptoguard more easily available.',
+                    'Created both Gradle and Maven plugin supporting Cryptoguard to be used within the build process (IDE independent).',
+                    'Creating a live Java Jupyter notebook through MyBinder for live and public demonstrations.',
+                ],
+                "SKILLS": [
+                    'Cryptoguard',
+                    'Jupyter Notebook',
+                    'IJava Jupyter Notebook',
+                    'Gradle Plugin',
+                    'Maven Plugin',
+                    'Dockerfile'
+                ]
+            },{
+                "NAME":"Worldpay from FIS",
+                "LINK":"https://vantiv.com",
+                "LINK_NAME":"vantiv.com",
+                "JOB_TYPE":"Softare Engineer",
+                "JOB_TITLE":"Internship",
+                "FROM":"05/03/2019",
+                "TO":"07/31/2019",
+                "TEXT-DESC": [
+                    'Enhanced multiple Tasktop integrations by making custom JavaScript logic.',
+                    'Improved Terraform scripts to dynamically build Virtual Machines for resources.',
+                    'Enabled the Open Source Project Hygieia for system and tool monitoring.',
+                    'Implemented a Python3 script to track Hygieia usage and automatically start and stop the project.',
+                    'Enabled users to work with various tools owned and managed by the team.',
+                ],
+                "SKILLS": [
+                    'Hygieia',
+                    'Tasktop',
+                    'Github Enterprise',
+                    'Splunk',
+                    'Nexus',
+                    'Jenkins',
+                    'Terraform',
+                    'Ansible',
+                    'Teamforge',
+                    'Rally',
+                    'TFS',
+                    'Checkmarx',
+                    'DataPower',
+                    'XLDeploy',
+                    'XLRelease',
+                    'DevOps',
+                    'DexVMs',
+                    'DevSecOps',
+                    'Bash'
+                ]
+            },{
+                "NAME":"Virginia Tech",
+                "LINK":"https://yaogroup.cs.vt.edu/index.html",
+                "LINK_NAME":"yaogroup.cs.vt.edu",
+                "JOB_TYPE":"Graduate Research Assistant",
+                "JOB_TITLE":"Assistant",
+                "FROM":"10/01/2018",
+                "TO":"05/03/2019",
+                "TEXT-DESC": [
+                    'Worked with an external consumer to create a specific output adapter for their service.',
+                    'Designed a system to create any of three different outputs dependent on the user.',
+                    'Worked on the open source project Cryptoguard.',
+                    'Used a design akin to common flat data base designs.'
+                ],
+                "SKILLS": [
+                    'Cryptoguard',
+                    'Research Skills',
+                    'Soot',
+                    'Modularization Design',
+                    'Adapter Design',
+                    'Abstract Factory',
+                ]
+            },{
+                "NAME":"Virginia Tech",
+                "LINK":"https://yaogroup.cs.vt.edu/index.html",
+                "LINK_NAME":"yaogroup.cs.vt.edu",
+                "JOB_TYPE":"Graduate Teaching Assistant",
+                "JOB_TITLE":"Assistant",
+                "FROM":"07/01/2018",
+                "TO":"12/19/2018",
+                "TEXT-DESC": [
+                    'Helped split the students into anonymized groups for a research study.',
+                    'Helped the students out with their inqueries.',
+                    'Graded various student assignments including the finals.'
+                ],
+                "SKILLS": [
+                    'Managing Students',
+                    'Grading Reports',
+                    'Creating Groups'
+                ]
+            },{
+                "NAME":"WorldPay from FIS",
+                "LINK":"https://vantiv.com",
+                "LINK_NAME":"vantiv.com",
+                "JOB_TYPE":"Software Engineer",
+                "JOB_TITLE":"Co-Op",
+                "FROM":"01/09/2017",
+                "TO":"08/12/2017",
+                "TEXT-DESC": [
+                    'Fundamentally enhanced a highly utilized SOAP API with an overall average response time &lt; 100 ms.',
+                    'Mentored two Computer Science Students.',
+                    'Enhanced and rectified various incidents on existing Java/Webmethods Webservices.',
+                    'Designed several SOAP Webservices.',
+                    'Created an API that supports both SOAP and REST as a POC.',
+                    'Combined Reflection and Aspect oriented programming to dynamically filter Java SOAP API output.',
+                    'Worked closely with a DevOps team to support and showcase both XL Deploy and XL Release using internal APIs.',
+                    'Trained 2 other interns on the team and led several KT sessions.'
+                ],
+                "SKILLS": [
+                    'Java EE',
+                    'JUnit 4',
+                    'Mockito',
+                    'Leadership',
+                    'IBM Websphere',
+                    'Software AG',
+                    'Webmethods',
+                    'SOAP',
+                    'Splunk',
+                    'DataPower',
+                    'XebiaLabs',
+                    'XLDeploy',
+                    'XLRelease',
+                    'REST',
+                    'DevOps',
+                    'SoapUI',
+                    'SQL',
+                    'AQT',
+                    'Postman',
+                ]
+            },{
+                "NAME":"WorldPay from FIS",
+                "LINK":"https://vantiv.com",
+                "LINK_NAME":"vantiv.com",
+                "JOB_TYPE":"Software Engineer",
+                "JOB_TITLE":"Co-Op",
+                "FROM":"05/2016",
+                "TO":"08/2016",
+                "TEXT-DESC": [
+                    'Led an Agile team to design and create a Caching Web Application through Dynamic Server Pages.',
+                    'The Caching Web Application compared values cached in a server to live database values.',
+                    'Enhanced and rectified various incidents on existing Java/Webmethods Webservices.',
+                ],
+                "SKILLS": [
+                    'Java EE',
+                    'IBM Websphere',
+                    'Leadership',
+                    'Webmethods',
+                    'SOAP',
+                    'SoapUI',
+                    'Server Cache Web App',
+                    'DSP',
+                    'SQL',
+                    'AQT'
+                ]
+            },{
+                "NAME":"WorldPay from FIS",
+                "LINK":"https://vantiv.com",
+                "LINK_NAME":"vantiv.com",
+                "JOB_TYPE":"Software Engineer",
+                "JOB_TITLE":"Co-Op",
+                "FROM":"08/2015",
+                "TO":"01/2016",
+                "TEXT-DESC": [
+                    'Created an API Operation to store tiff images for internal client issue management.',
+                    'Setup a deletion API Operation to clear issues for multiple internal clients.',
+                    'Enhanced and rectified various incidents on existing Java/Webmethods Webservices.',
+                ],
+                "SKILLS": [
+                    'Software AG',
+                    'Webmethods',
+                    'SOAP',
+                    'SoapUI',
+                    'SQL',
+                    'AQT',
+                    'Bash'
+                ]
+            },{
+                "NAME":"WorldPay from FIS",
+                "LINK":"https://vantiv.com",
+                "LINK_NAME":"vantiv.com",
+                "JOB_TYPE":"Software Engineer",
+                "JOB_TITLE":"Co-Op",
+                "FROM":"01/2015",
+                "TO":"04/2015",
+                "TEXT-DESC": [
+                    'Implemented several Bash scripts to track API usage.',
+                    'Created a lightweight Java program to translate a phone-digit-text based input to alphabet characters.',
+                ],
+                "SKILLS": [
+                    'Software AG',
+                    'Bash',
+                    'Static',
+                ]
+            }
+        ]
+    %}
+    {% for value in experience %}
+    <div class="row clearfix layout layout-left">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+            <h4>{{value['NAME']}}</h4>
+            <a href="{{value['LINK']}}" target="_blank" class="link">{{value['LINE_NAME']}}</a>
+            <p><b>{{value['JOB_TYPE']}}</b></p>
+            <p><b>{{value['JOB_TITLE']}}</b></p>
+            <p>{{value['FROM']}} to {{value['TO']}}</p>
+            <p class="no-print"></p>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+            <ul>
+                {% for text in value['TEXT-DESC'] %}
+                <li>{{text}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <br>
+        <div style="text-align:right;display:inline-block;">
+            <p>Learned Skills: </p>
+            {% for skill in value['SKILLS'] %}
+            <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">{{skill}}</p>
+            {% endfor %}
+            &nbsp;
+        </div>
+    </div>
+    {% endfor %}
+</p>

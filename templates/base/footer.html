@@ -1,0 +1,34 @@
+<!--
+
+ This footer contains a list of social icons and a footer message.
+ There's some icons in this example, but there are more. Check the
+ contents of static/images/social-accounts.svg (with a Text Editor)
+ to get the names of other icons.
+
+ The url and links are rendered using a flask 'macro' to save a lot
+ of manual labour.
+
+-->
+
+{% macro social_link(href, glyph) %}
+    <a style="text-decoration: none" class="social-link" target="_blank" href="{{ href }}">
+        <svg class="social-icon" viewBox="0 0 64 64">
+            <use class="social-icon-background" xlink:href="/static/images/social-accounts.svg#background"></use>
+            <use class="social-icon-glyph" xlink:href="/static/images/social-accounts.svg#{{ glyph }}"></use>
+        </svg>
+    </a>
+{% endmacro %}
+
+
+
+<!-- Footer -->
+
+<footer>
+    <div class="page-container">
+        This page was provided by various sources.
+        <ul>
+            <li>test</li>
+        </ul>
+
+    </div>
+</footer>

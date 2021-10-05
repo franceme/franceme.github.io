@@ -1,7 +1,0 @@
-<div class="container submissions-container">
-    <h3>{% include hyper_link.html title="Submissions"%}</h3>
-    <h5><i>This material is presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright. In most cases, these works may not be reposted without the explicit permission of the copyright holder.</i></h5>
-    {% for submission in site.data.submissions %}
-        {% include {{ submission.layout | default: 'left' | append: ".html" }} item=submission %}
-    {% endfor %}
-</div>

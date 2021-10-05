@@ -1,6 +1,0 @@
-<div class="container group-container">
-    <h3>{% include hyper_link.html title="Certificates"%}</h3>
-    {% for group in site.data.certificates %}
-      {% include {{ group.layout | default: 'left' | append: ".html" }} item=group %}
-    {% endfor %}
-  </div>
