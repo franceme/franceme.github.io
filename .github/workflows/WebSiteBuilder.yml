@@ -26,7 +26,7 @@ jobs:
         run: python3 -m pip install flask==2.0.1 flask_flatpages==0.7.3 frozen_flask==0.18 pygments==2.10.0
 
       - name: Installing Dependencies
-        run: python3 site.py build
+        run: python3 setup.py build
 
       - name: Get Excess Time
         id: excesstime
