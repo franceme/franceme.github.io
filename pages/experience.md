@@ -273,7 +273,7 @@ title: experience
         <div style="text-align:right;display:inline-block;">
             <p>Learned Skills: </p>
             {% for skill in value['SKILLS'] %}
-            <p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">{{skill}}</p>
+            <a href="{{skill|setup_google|safe}}"><p style="line-height:2em;display:inline;border-radius: 50px;padding: .6ch;background: rgba(0, 0, 179, .45);">{{skill}}</p></a>
             {% endfor %}
             &nbsp;
         </div>

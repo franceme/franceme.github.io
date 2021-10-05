@@ -24,6 +24,94 @@
 <!-- Footer -->
 
 <footer>
-    <div class="page-container">
-    </div>
+            <ul style="justify-content:center !important;display:flex;" class="navbar-list">
+                {% set baseClass = "fa-3x" %}
+                {% set baseStyle = "padding-top:15%;"%}
+                {% if 'GITHUB_USERNAME' in base_info  %}
+                <li>
+                    <a target="_blank" href="https://github.com/{{ base_info['GITHUB_USERNAME']|escape }}"
+                        class="button button--sacnite button--round-l">
+                        <i class="fa fa-github {{baseClass}}" style="{{baseStyle}}" title="Github link"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if 'LINKEDIN_USERNAME' in base_info  %}
+                <li>
+                    <a target="_blank"
+                        href="https://www.linkedin.com/in/{{ base_info['LINKEDIN_USERNAME']|escape }}"
+                        class="button button--sacnite button--round-l">
+                        <i class="fa fa-linkedin {{baseClass}}" style="{{baseStyle}}" title="Linkedin link"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if 'RESUME' in base_info  %}
+                <li>
+                    <a target="_blank" href="{{ base_info['RESUME'] }}" class="button button--sacnite button--round-l">
+                        <i class="fas fa-file-pdf {{baseClass}}" style="{{baseStyle}}" title="Resume link"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if 'CV' in base_info  %}
+                <li>
+                    <a target="_blank" href="{{ base_info['CV'] }}" class="button button--sacnite button--round-l">
+                        <i class="ai ai-cv {{baseClass}}" style="{{baseStyle}}" title="CV link"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                 {% if 'SCHOLAR_USERNAME' in base_info  %}
+                <li>
+                    <a target="_blank" href="https://scholar.google.com/citations?user={{ base_info['SCHOLAR_USERNAME'] }}" class="button button--sacnite button--round-l">
+                        <i class="ai ai-google-scholar-square {{baseClass}}" style="{{baseStyle}}" title="Google Scholar"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if 'MENDELEY_USERNAME' in base_info  %}
+                <li>
+                    <a target="_blank" href="https://www.mendeley.com/profiles/{{ base_info['MENDELEY_USERNAME'] }}" class="button button--sacnite button--round-l">
+                        <i class="ai ai-mendeley {{baseClass}}" style="{{baseStyle}}" title="Mendeley Account"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if 'IEEE' in base_info  %}
+                <li>
+                    <a target="_blank" href="https://ieee-collabratec.ieee.org/app/p/{{ base_info['IEEE'] }}" class="button button--sacnite button--round-l">
+                       <i class="ai ai-ieee {{baseClass}}" style="{{baseStyle}}" title="IEEE Account"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if 'ACM' in base_info  %}
+                <li>
+                    <a class="button button--sacnite button--round-l">
+                        <i class="ai ai-acm {{baseClass}}" style="{{baseStyle}}" title="ACM Account"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if 'MEDIUM' in base_info  %}
+                <li>
+                    <a target="_blank" href="https://medium.com/@{{ base_info['MEDIUM'] }}" class="button button--sacnite button--round-l">
+                        <i class="fab fa-medium {{baseClass}}" style="{{baseStyle}}" title="Medium Account"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if 'ORCID' in base_info  %}
+                <li>
+                    <a target="_blank" href="https://orcid.org/{{ base_info['ORCID'] }}" class="button button--sacnite button--round-l">
+                        <i class="fab fa-orcid {{baseClass}}" style="{{baseStyle}}" title="Orcid Account"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if 'ZENODO' in base_info  %}
+                <li>
+                    <a target="_blank" href="https://zenodo.org/search?page=1&size=20&q=owners:{{ base_info['ZENODO'] }}" class="button button--sacnite button--round-l custom-link">
+                        <img class="custom-icon" style="padding-top:30%;" src="https://about.zenodo.org/static/img/logos/zenodo-white.svg" width="80%"/>
+                    </a>
+                </li>
+                {% endif  %}
+                 <li>
+                    <a target="_blank" href="https://www.oracle.com/technical-resources/oracle-contributor-agreement.html#f" class="button button--sacnite button--round-l custom-link">
+                        <i class="fab fa-java {{baseClass}}" style="{{baseStyle}}" title="Java Oracle Contributor Agreement"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
 </footer>

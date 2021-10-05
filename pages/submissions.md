@@ -18,7 +18,7 @@ title: submissions
                     "FULL_NAME":"Tutorial: Principles and Practices of Secure Cryptographic Coding in Java",
                 },{
                     "SHORT_NAME":"Enhancing CryptoGuard",
-                    "SELF_FILE_URL":"files",
+                    "SELF_FILE_URL":"https://rebrand.ly/frantzme_cryptoguard_ccs",
                     "CONF_NAME":"ACM CCS",
                     "CONF_URL":"https://sigsac.org/ccs/CCS2019/",
                     "RAW_NAME":"Conference",
@@ -27,7 +27,7 @@ title: submissions
                     "FULL_NAME":"CryptoGuard: High Precision Detection of Cryptographic Vulnerabilities in Massive-sized Java Projects",
                 },{
                     "SHORT_NAME":"Cryptoguard",
-                    "SELF_FILE_URL":"files",
+                    "SELF_FILE_URL":"https://rebrand.ly/frantzme_ms_thesis",
                     "CONF_NAME":"VT ETDs",
                     "CONF_URL":"https://vtechworks.lib.vt.edu/handle/10919/5534",
                     "RAW_NAME":"Thesis",
@@ -36,7 +36,7 @@ title: submissions
                     "FULL_NAME":"Enhancing CryptoGuard’s Deployability for Continuous Software Security Scanning",
                 },{
                     "SHORT_NAME":"Cryptoguard Poster",
-                    "SELF_FILE_URL":"files",
+                    "SELF_FILE_URL":"https://rebrand.ly/frantzme_cryptoguard_poster",
                     "CONF_NAME":"ACM SIGSAC",
                     "CONF_URL":"https://sigsac.org/ccs.html",
                     "RAW_NAME":"Poster",

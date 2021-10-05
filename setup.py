@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
+
 from setuptools import find_packages, setup
 import sys,os,re
 from datetime import datetime
-
+import urllib.parse
 from flask import Flask, render_template, render_template_string
 
 from flask_frozen import Freezer
@@ -21,6 +23,18 @@ base_info = {
     'GITHUB':"franceme",
     'RESUME':'https://rebrand.ly/frantzme_resume',
     'CV':'https://rebrand.ly/frantzme_cv',
+    'GITHUB_USERNAME': 'franceme',
+    'LINKEDIN_USERNAME': 'franceme',
+    'SCHOLAR_USERNAME': 'RKKj9VgAAAAJ',
+    'MENDELEY_USERNAME': 'myles-f',
+    #'ieee': 'MilesFrantz662182',
+    #'acm': 'here',
+    #'MEDIUM': 'frantzme',
+    'ORCID': '0000-0002-7329-6979',
+    'ZENODO': '3701552',
+    'WEBSITE': 'franceme.github.io',
+    'LINKEDIN': 'frantzme',
+    # 'phone': '513-480-3169',
 }
 
 DEBUG = True
@@ -45,7 +59,7 @@ def setup_latex_url(name, url):
     return f"\href{{{url}}}{{{name}}}"
 
 def setup_google(name):
-    return setup_latex_url(name,name)
+    return f"https://google.com/search?q={urllib.parse.quote(name)}"
 
 def nice_divide(num):
     return -(int(num) // -2)
@@ -86,21 +100,19 @@ def pygments_css():
 
 def arg(string):
     return __name__ == "__main__" and len(
-        sys.argv) > 1 and sys.argv[0].endswith('site.py') and str(sys.argv[1]).upper() == str(string).upper()
+        sys.argv) > 1 and sys.argv[0].endswith('setup.py') and str(sys.argv[1]).upper() == str(string).upper()
 
-if __name__ == '__main__':
+if arg('build'):
+    freezer.freeze()
+    sys.exit(0)
+elif arg('run'):
+    app.run(host='0.0.0.0', port=50876)
+    sys.exit(0)
+elif arg('install'):
+    sys.exit(os.system('python3 -m pip install -e .'))
+elif __name__ == '__main__':
     from elsa import cli
-    cli(app, base_url='https://francemee.github.io')
-
-if False:
-    if arg('build'):
-        freezer.freeze()
-        sys.exit(0)
-    elif arg('run'):
-        app.run(host='0.0.0.0', port=57289)
-        sys.exit(0)
-    elif arg('install'):
-        sys.exit(os.system('python3 -m pip install -e .'))
+    sys.exit(cli(app, base_url='https://francemee.github.io'))
 
 
 setup(name='My Website',
@@ -115,5 +127,6 @@ setup(name='My Website',
             'flask_flatpages==0.7.3',
             'frozen_flask==0.18',
             'pygments==2.10.0',
+            'elsa==0.1.6'
         ]
 )
