@@ -31,6 +31,9 @@ jobs:
       - name: Installing Dependencies
         run: ls -altr
 
+      - name: Installing Dependencies
+        run: mv _build docs
+
       - name: Get Excess Time
         id: excesstime
         uses: nanzm/get-time-action@v1.0
