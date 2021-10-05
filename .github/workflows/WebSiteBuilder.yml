@@ -28,9 +28,6 @@ jobs:
       - name: Installing Dependencies
         run: python3 setup.py build
 
-      - name: Installing Dependencies
-        run: 7z a Website.zip build/
-
       - name: Get Excess Time
         id: excesstime
         uses: nanzm/get-time-action@v1.0
@@ -45,17 +42,6 @@ jobs:
         with:
           tag_name: Release_${{ steps.excesstime.outputs.time }}
           release_name: Release_${{ steps.excesstime.outputs.time }}
-
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} 
-          asset_path: Website.zip
-          asset_name: Website.zip
-          asset_content_type: application/zip
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
