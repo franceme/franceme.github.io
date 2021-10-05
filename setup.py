@@ -89,7 +89,7 @@ def arg(string):
         sys.argv) > 1 and sys.argv[0].endswith('site.py') and str(sys.argv[1]).upper() == str(string).upper()
 
 if __name__ == '__main__':
-    from else import cli
+    from elsa import cli
     cli(app, base_url='https://francemee.github.io')
 
 if False:
