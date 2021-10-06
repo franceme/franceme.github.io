@@ -7,13 +7,24 @@ title: BasePage
         <img style="width:75%;" src="/static/images/low_res.jpg" />
     </span>
     <span style="float:right;">
+    	My PhD research focuses on creating code analysis tools to assist developers by identifying cryptographic misuse in software repositories.
+	The tools I’m designing save developers time by using on-demand static code analysis to specifically scan for the cryptographic rules that may be broken.
+	The tools I’ve designed so far show higher precision than existing tools to ensure developers pay attention to the results.
+	I also deploy several different formats for my results to fit into many different DevOps tools and fit nicely into the development lifecycle.
+	<br>
+	<br>
+	Focusing on the source of the vulnerabilites will provide better long-term solutions as opposed to continually patching the issues.
+	My application focused research allows me to provide direct impact to current and upcoming vulnerabilites.
+	{#
         I’m a 3rd year Ph.D. Computer Science student and am currently working on exciting projects.
         Currently I am working with <a href="http://people.cs.vt.edu/danfeng/">Dr. Danfeng Yao</a>.
         <br>
         Previously I have worked in <a href="https://worldpay.com/">Worldpay from FIS</a> for several Internships (or Co-Ops) and have learned a lot through my various teams.
         <br>
+	#}
         <br>
-        I enjoy working on projects and actively learning about security.
+        <br>
+        I enjoy working on side-projects to learn new skills and technology.
     </span>
 </p>
 
