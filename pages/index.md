@@ -29,4 +29,9 @@ title: BasePage
 </p>
 
 
-
+<script>
+window.onload = function () {
+        var footer=document.getElementById('footer');
+        footer.setAttribute("style",footer.getAttribute("style") + "bottom:0;");
+}
+</script>
