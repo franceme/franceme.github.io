@@ -13,18 +13,18 @@ title: BasePage
 	I also deploy several different formats for my results to fit into many different DevOps tools and fit nicely into the development lifecycle.
 	<br>
 	<br>
-	Focusing on the source of the vulnerabilites will provide better long-term solutions as opposed to continually patching the issues.
-	My application focused research allows me to provide direct impact to current and upcoming vulnerabilites.
+    Focusing on the source of the vulnerabilities will provide better long-term solutions as opposed to continue patching the issues.
+    My application-focused research allows me to provide direct impact to current and upcoming vulnerabilities.
 	{#
-        I’m a 3rd year Ph.D. Computer Science student and am currently working on exciting projects.
-        Currently I am working with <a href="http://people.cs.vt.edu/danfeng/">Dr. Danfeng Yao</a>.
+        I’m a 3rd-year Ph.D. Computer Science student and am currently working on exciting projects.
+        Currently, I am working with <a href="http://people.cs.vt.edu/danfeng/">Dr. Danfeng Yao</a>.
         <br>
         Previously I have worked in <a href="https://worldpay.com/">Worldpay from FIS</a> for several Internships (or Co-Ops) and have learned a lot through my various teams.
         <br>
 	#}
         <br>
         <br>
-        I enjoy working on side-projects to learn new skills and technology.
+        I enjoy working on side projects to learn new skills and techniques.
     </span>
 </p>
 
