@@ -31,7 +31,15 @@
                 <li>
                     <a target="_blank" href="mailto:{{ base_info['EMAIL']|safe }}"
                         class="button button--sacnite button--round-l">
-                        <i class="fas fa-envelope-square {{baseClass}}" style="{{baseStyle}}" title="Email link"></i>
+                        <i class="fa fa-envelope-square {{baseClass}}" style="{{baseStyle}}" title="Email link"></i>
+                    </a>
+                </li>
+                {% endif  %}
+                {% if 'DOCKER' in base_info  %}
+                <li>
+                    <a target="_blank" href="https://hub.docker.com/u/{{ base_info['DOCKER'] }}"
+                        class="button button--sacnite button--round-l">
+                        <i class="fab fa-docker {{baseClass}}" style="{{baseStyle}}" title="Docker link"></i>
                     </a>
                 </li>
                 {% endif  %}

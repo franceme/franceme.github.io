@@ -21,6 +21,7 @@ base_info = {
     'NAME':"Miles Frantz",
     'EMAIL':"g00qhtdbp@relay.firefox.com",#"frantzme@vt.edu",
     'GITHUB':"franceme",
+    'DOCKER':"frantzme",
     'RESUME':'https://rebrand.ly/frantzme_resume',
     'CV':'https://rebrand.ly/frantzme_cv',
     'GITHUB_USERNAME': 'franceme',
