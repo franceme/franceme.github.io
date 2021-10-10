@@ -27,6 +27,14 @@
             <ul style="justify-content:center !important;display:flex;" class="navbar-list">
                 {% set baseClass = "fa-3x" %}
                 {% set baseStyle = "padding-top:15%;"%}
+                {% if 'EMAIL' in base_info  %}
+                <li>
+                    <a target="_blank" href="mailto:{{ base_info['EMAIL']|safe }}"
+                        class="button button--sacnite button--round-l">
+                        <i class="fas fa-envelope-square {{baseClass}}" style="{{baseStyle}}" title="Email link"></i>
+                    </a>
+                </li>
+                {% endif  %}
                 {% if 'GITHUB_USERNAME' in base_info  %}
                 <li>
                     <a target="_blank" href="https://github.com/{{ base_info['GITHUB_USERNAME']|escape }}"

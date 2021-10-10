@@ -19,7 +19,7 @@ def prerender_jinja(text):
 
 base_info = {
     'NAME':"Miles Frantz",
-    'EMAIL':"frantzme@vt.edu",
+    'EMAIL':"g00qhtdbp@relay.firefox.com",#"frantzme@vt.edu",
     'GITHUB':"franceme",
     'RESUME':'https://rebrand.ly/frantzme_resume',
     'CV':'https://rebrand.ly/frantzme_cv',
@@ -90,6 +90,23 @@ def page(path):
     page = pages.get_or_404(path)
     return render_template('pages/page.html', page=page, base_info=base_info)
 
+@app.route('/.well-known/security.txt')
+def security():
+    return f"""
+# Miles Frantz Website
+Contact: mailto:{base_info['EMAIL']}
+Preferred-Languages: en
+Expires: 2025-12-31T18:00:00.000Z
+""", 200, {'Content-Type':'text/plain'}
+
+@app.route('/robots.txt')
+def robots():
+    return f"""
+# robots.txt - for Miles Frantz Website
+
+User-agent: *
+Disallow: /
+""", 200, {'Content-Type':'text/plain'}
 
 @app.route('/pygments.css')
 def pygments_css():
