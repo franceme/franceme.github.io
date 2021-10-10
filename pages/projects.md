@@ -48,8 +48,8 @@ title: projects
                 ],
             },{
                 "NAME":"MavenGuard",
-                "FROM":"BASE",
-                "TO":"BASE",
+                "FROM":"2019",
+                "TO":"2020",
                 "URL":"https://github.com/franceme/mavenguard",
                 "RELEASES_RSS":True,
                 "ACTIONS_URL":True,
