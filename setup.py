@@ -91,7 +91,7 @@ def page(path):
     page = pages.get_or_404(path)
     return render_template('pages/page.html', page=page, base_info=base_info)
 
-@app.route('/.well-known/security.txt')
+@app.route('/security.txt')
 def security():
     return f"""
 # Miles Frantz Website
