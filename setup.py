@@ -27,7 +27,7 @@ base_info = {
     'GITHUB_USERNAME': 'franceme',
     'LINKEDIN_USERNAME': 'franceme',
     'SCHOLAR_USERNAME': 'RKKj9VgAAAAJ',
-    'MENDELEY_USERNAME': 'myles-f',
+    #'MENDELEY_USERNAME': 'myles-f',
     #'ieee': 'MilesFrantz662182',
     #'acm': 'here',
     #'MEDIUM': 'frantzme',
