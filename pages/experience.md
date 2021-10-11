@@ -9,10 +9,23 @@ title: experience
                 "NAME":"Virginia Tech",
                 "LINK":"https://yaogroup.cs.vt.edu/index.html",
                 "LINK_NAME":"yaogroup.cs.vt.edu",
+                "JOB_TYPE":"Graduate Teaching Assistant",
+                "JOB_TITLE":"Assistant",
+                "FROM":"08/01/2021",
+                "TO":"Present",
+                "TEXT-DESC": [
+                ],
+                "SKILLS": [
+                    'Static Analysis'
+                ]
+            },{
+                "NAME":"Virginia Tech",
+                "LINK":"https://yaogroup.cs.vt.edu/index.html",
+                "LINK_NAME":"yaogroup.cs.vt.edu",
                 "JOB_TYPE":"Graduate Research Assistant",
                 "JOB_TITLE":"Assistant",
                 "FROM":"01/19/2021",
-                "TO":"Present",
+                "TO":"08/01/2021",
                 "TEXT-DESC": [
                 ],
                 "SKILLS": [
