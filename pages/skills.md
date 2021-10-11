@@ -66,7 +66,16 @@ title:skills
                         "LINK":"python.org",
                         "FROM":"2016",
                         "TO":"Now",
-                        "PERCENT":85,
+                        "PERCENT":95,
+                        "TYPE":"lang"
+                },
+                {
+                        "NAME":"Rust",
+                        "NUMPROJ":1,
+                        "LINK":"rust-lang.org",
+                        "FROM":"2021",
+                        "TO":"Now",
+                        "PERCENT":20,
                         "TYPE":"lang"
                 },
                 {
