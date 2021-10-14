@@ -6,7 +6,7 @@ title: experience
     {%
         set experience = [
             {
-                "NAME":"Virginia Tech",
+                "NAME":"Virginia Polytechnic Institute and State University",
                 "LINK":"https://yaogroup.cs.vt.edu/index.html",
                 "LINK_NAME":"yaogroup.cs.vt.edu",
                 "JOB_TYPE":"Graduate Teaching Assistant",
@@ -19,7 +19,7 @@ title: experience
                     'Static Analysis'
                 ]
             },{
-                "NAME":"Virginia Tech",
+                "NAME":"Virginia Polytechnic Institute and State University",
                 "LINK":"https://yaogroup.cs.vt.edu/index.html",
                 "LINK_NAME":"yaogroup.cs.vt.edu",
                 "JOB_TYPE":"Graduate Research Assistant",
@@ -32,7 +32,7 @@ title: experience
                     'Static Analysis'
                 ]
             },{
-                "NAME":"Virginia Tech",
+                "NAME":"Virginia Polytechnic Institute and State University",
                 "LINK":"https://yaogroup.cs.vt.edu/index.html",
                 "LINK_NAME":"yaogroup.cs.vt.edu",
                 "JOB_TYPE":"Graduate Teaching Assistant",
@@ -61,7 +61,7 @@ title: experience
                 "SKILLS": [
                 ]
             },{
-                "NAME":"Virginia Tech",
+                "NAME":"Virginia Polytechnic Institute and State University",
                 "LINK":"https://yaogroup.cs.vt.edu/index.html",
                 "LINK_NAME":"yaogroup.cs.vt.edu",
                 "JOB_TYPE":"Graduate Research Assistant",
@@ -120,7 +120,7 @@ title: experience
                     'Bash'
                 ]
             },{
-                "NAME":"Virginia Tech",
+                "NAME":"Virginia Polytechnic Institute and State University",
                 "LINK":"https://yaogroup.cs.vt.edu/index.html",
                 "LINK_NAME":"yaogroup.cs.vt.edu",
                 "JOB_TYPE":"Graduate Research Assistant",
@@ -142,7 +142,7 @@ title: experience
                     'Abstract Factory',
                 ]
             },{
-                "NAME":"Virginia Tech",
+                "NAME":"Virginia Polytechnic Institute and State University",
                 "LINK":"https://yaogroup.cs.vt.edu/index.html",
                 "LINK_NAME":"yaogroup.cs.vt.edu",
                 "JOB_TYPE":"Graduate Teaching Assistant",
