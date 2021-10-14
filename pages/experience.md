@@ -38,7 +38,7 @@ title: experience
                 "JOB_TYPE":"Graduate Teaching Assistant",
                 "JOB_TITLE":"Assistant",
                 "FROM":"08/05/2020",
-                "TO":"12/20/2021",
+                "TO":"12/20/2020",
                 "TEXT-DESC": [
                     'Helped record videos for the lab lectures.'
                 ],
@@ -54,7 +54,7 @@ title: experience
                 "JOB_TYPE":"Researcher",
                 "JOB_TITLE":"Intern",
                 "FROM":"01/19/2021",
-                "TO":"Present",
+                "TO":"01/19/2021",
                 "TEXT-DESC": [
                     'Due to Covid the internship was not started.'
                 ],
