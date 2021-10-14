@@ -14,9 +14,16 @@ title: experience
                 "FROM":"08/01/2021",
                 "TO":"Present",
                 "TEXT-DESC": [
+			'Assisting students with their problems',
+			'Enhancing the autograding capabilities via Python scripting'
                 ],
                 "SKILLS": [
-                    'Static Analysis'
+                    'Static Analysis',
+		    'Canvas Scripting',
+		    'Mitosheet',
+		    'VirtualBox',
+		    'Attack Surface Evaluation',
+		    'Red Team'
                 ]
             },{
                 "NAME":"Virginia Polytechnic Institute and State University",
@@ -27,9 +34,14 @@ title: experience
                 "FROM":"01/19/2021",
                 "TO":"08/01/2021",
                 "TEXT-DESC": [
+			'Researching Static Code Analysis for future project',
+			'Creating and examining dynamic test bench',
+			'Creating reproducible testing for future additional tests and verification'
                 ],
                 "SKILLS": [
-                    'Static Analysis'
+                    'Static Code Analysis',
+		    'Reproducible testing',
+		    'Dynamic Languages'
                 ]
             },{
                 "NAME":"Virginia Polytechnic Institute and State University",
