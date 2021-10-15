@@ -7,6 +7,16 @@ title: groups
         {%
             set groups = [
                 {
+                    "NAME":"Graduate Student Council",
+                    "WHEN":"2021 to Present",
+                    "TITLE":"President",
+                    "LINK":"https://csgrad.cs.vt.edu",
+                    "NICE_LINK":"csgrad.cs.vt.edu",
+                    "TEXT-DESC":[
+                        "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department.",
+                        "It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings."
+                    ]
+                },{
                     "NAME":"iMentor",
                     "WHEN":"2020",
                     "TITLE":"Slack Admin",
