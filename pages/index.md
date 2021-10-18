@@ -7,7 +7,7 @@ title: BasePage
         <img style="width:75%;" src="/static/images/low_res.jpg" />
     </span>
     <span style="float:right;">
-    	My PhD research focuses on creating code analysis tools to assist developers by identifying cryptographic misuse in software repositories.
+    	My Ph.D. research focuses on creating code analysis tools to assist developers by identifying cryptographic misuse in software repositories.
 	The tools I’m designing save developers time by using on-demand static code analysis to specifically scan for the cryptographic rules that may be broken.
 	The tools I’ve designed so far show higher precision than existing tools to ensure developers pay attention to the results.
 	I also deploy several different formats for my results to fit into many different DevOps tools and fit nicely into the development lifecycle.
