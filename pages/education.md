@@ -15,7 +15,7 @@ title: education
                 "QUOTE":"Ut Prosim, That I May Serve.",
                 "TEXT-DESC":[
                     'I have been working under [http://people.cs.vt.edu/danfeng/](Dr. Danfeng Yao) on [https://github.com/franceme/cryptoguard](Cryptoguard) related projects and other static analysis projects.',
-                    'I have also been joining various groups (located at the bottom) as well as taking more security oriented courses and enjoying the mountains.',
+                    'I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.',
                 ]
             },{
                 "NAME":"Virginia Polytechnic Institute and State University",
@@ -27,7 +27,7 @@ title: education
                 "QUOTE":"Ut Prosim, That I May Serve.",
                 "TEXT-DESC":[
                     'I have been working under [http://people.cs.vt.edu/danfeng/](Dr. Danfeng Yao) on [https://github.com/franceme/cryptoguard](Cryptoguard) related projects and other static analysis projects.',
-                    'I have also been joining various groups (located at the bottom) as well as taking more security oriented courses and enjoying the mountains.',
+                    'I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.',
                 ]
             },{
                 "NAME":"University of Cincinnati",
@@ -38,8 +38,8 @@ title: education
                 "TO":"April 2018",
                 "QUOTE":"We Engineer Better.",
                 "TEXT-DESC":[
-                    'During my Undergraduate I learned alot throughout the classes I took and the Co-Ops I was a part of.',
-                    'The Co-Ops were some of the best part of the degree, as it gave me real-world experience, and a chance for practical application.',
+                    'During my Undergraduate Program, I learned a lot throughout the classes I took and the Co-Ops I was a part of.',
+                    'The Co-Ops was the best part of the degree, as it gave me real-world experience and a chance for practical application.',
                 ]
             }
         ]

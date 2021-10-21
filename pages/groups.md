@@ -37,7 +37,7 @@ title: groups
                     "TEXT-DESC":[
                         "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department.",
                         "It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings.",
-                        "I have setup the GitHub Organization and the website to autobuild using GitHub Actions."
+                        "I have set up the GitHub Organization and the website to auto-build using GitHub Actions."
                     ]
                 },{
                     "NAME":"Order of The Engineer",
@@ -46,8 +46,8 @@ title: groups
                     "LINK":"https://order-of-the-engineer.org",
                     "NICE_LINK":"order-of-the-engineer.org",
                     "TEXT-DESC":[
-                        "Upholding Devotion to the Standards and Dignity of the Engineering Profession",
-                        "This group is a ceremonious group acknowledging members commitments to uphold high qualities and their duty as an engineer."
+                        "Upholding Devotion to the Standards and Dignity of the Engineering Profession.",
+                        "This group is a ceremonious group acknowledging members' commitments to uphold high qualities and their duty as an engineer."
                     ]
                 },
             ]

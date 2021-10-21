@@ -31,8 +31,8 @@ title: projects
                 "TEXT-DESC":[
                     "This was a class project created for an Advanced Machine Learning class.",
                     "The purpose of this project was to replicate an existing papers work and to add onto it.",
-                    "For this my group chose to replicate the paper [https://arxiv.org/pdf/1609.03499.pdf](WaveNet) and to enhance the results by running it on music samples.",
-                    "Unfortunately we were unable to create any sound samples that mimic actual music, however from the website there is a clear improvement in the music generation from the models."
+                    "For this, my group chose to replicate the paper [https://arxiv.org/pdf/1609.03499.pdf](WaveNet) and to enhance the results by running it on music samples.",
+                    "Unfortunately, we were unable to create any sound samples that mimic actual music, however from the website, there is a clear improvement in the music generation from the models."
                 ],
             },{
                 "NAME":"GradleGuard",
@@ -43,7 +43,7 @@ title: projects
                 "ACTIONS_URL":False,
                 "GITUB_PAGE":False,
                 "TEXT-DESC":[
-                    "This is the gradle plugin for my thesis project Cryptoguard.",
+                    "This is the Gradle plugin for my thesis project Cryptoguard.",
                     "This was created to help ease the access and use for developers to be able to use Cryptoguard.",
                 ],
             },{
@@ -55,7 +55,7 @@ title: projects
                 "ACTIONS_URL":True,
                 "GITUB_PAGE":False,
                 "TEXT-DESC":[
-                    "This is the maven plugin for my thesis project Cryptoguard.",
+                    "This is the Maven plugin for my thesis project Cryptoguard.",
                     "This was created to help ease the access and use for developers to be able to use Cryptoguard.",
                 ],
             },{

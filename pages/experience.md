@@ -14,8 +14,8 @@ title: experience
                 "FROM":"08/01/2021",
                 "TO":"Present",
                 "TEXT-DESC": [
-			'Assisting students with their problems',
-			'Enhancing the autograding capabilities via Python scripting'
+			'Assisting students with their problems.',
+			'Enhancing the autograding capabilities via Python scripting.'
                 ],
                 "SKILLS": [
                     'Static Analysis',
@@ -34,9 +34,9 @@ title: experience
                 "FROM":"01/19/2021",
                 "TO":"08/01/2021",
                 "TEXT-DESC": [
-			'Researching Static Code Analysis for future project',
-			'Creating and examining dynamic test bench',
-			'Creating reproducible testing for future additional tests and verification'
+			'Researching Static Code Analysis for my future project.',
+			'Creating and examining dynamic test bench.',
+			'Creating reproducible testing for future additional tests.'
                 ],
                 "SKILLS": [
                     'Static Code Analysis',
@@ -82,9 +82,9 @@ title: experience
                 "TO":"07/31/2020",
                 "TEXT-DESC": [
                     'Created a live Jupyter notebook for extended documentation on Cryptoguard use.',
-                    'Worked on the open source project Cryptoguard.',
+                    'Worked on the open-source project Cryptoguard.',
                     'Exploring various avenues to make Cryptoguard more easily available.',
-                    'Created both Gradle and Maven plugin supporting Cryptoguard to be used within the build process (IDE independent).',
+                    'Created both Gradle and Maven plugin supporting Cryptoguard within the build process (IDE independent).',
                     'Creating a live Java Jupyter notebook through MyBinder for live and public demonstrations.',
                 ],
                 "SKILLS": [
@@ -105,7 +105,7 @@ title: experience
                 "TO":"07/31/2019",
                 "TEXT-DESC": [
                     'Enhanced multiple Tasktop integrations by making custom JavaScript logic.',
-                    'Improved Terraform scripts to dynamically build Virtual Machines for resources.',
+                    'Improved Terraform scripts to dynamically build Virtual Machines.',
                     'Enabled the Open Source Project Hygieia for system and tool monitoring.',
                     'Implemented a Python3 script to track Hygieia usage and automatically start and stop the project.',
                     'Enabled users to work with various tools owned and managed by the team.',
@@ -142,8 +142,8 @@ title: experience
                 "TEXT-DESC": [
                     'Worked with an external consumer to create a specific output adapter for their service.',
                     'Designed a system to create any of three different outputs dependent on the user.',
-                    'Worked on the open source project Cryptoguard.',
-                    'Used a design akin to common flat data base designs.'
+                    'Worked on the open-source project Cryptoguard.',
+                    'Used a design akin to common flat data-base designs.'
                 ],
                 "SKILLS": [
                     'Cryptoguard',
@@ -163,7 +163,7 @@ title: experience
                 "TO":"12/19/2018",
                 "TEXT-DESC": [
                     'Helped split the students into anonymized groups for a research study.',
-                    'Helped the students out with their inqueries.',
+                    'Helped the students out with their inquiries.',
                     'Graded various student assignments including the finals.'
                 ],
                 "SKILLS": [
@@ -185,9 +185,9 @@ title: experience
                     'Enhanced and rectified various incidents on existing Java/Webmethods Webservices.',
                     'Designed several SOAP Webservices.',
                     'Created an API that supports both SOAP and REST as a POC.',
-                    'Combined Reflection and Aspect oriented programming to dynamically filter Java SOAP API output.',
+                    'Combined Reflection and Aspect-oriented programming to dynamically filter Java SOAP API output.',
                     'Worked closely with a DevOps team to support and showcase both XL Deploy and XL Release using internal APIs.',
-                    'Trained 2 other interns on the team and led several KT sessions.'
+                    'Trained two other interns on the team and led several KT sessions.'
                 ],
                 "SKILLS": [
                     'Java EE',
@@ -220,7 +220,7 @@ title: experience
                 "TO":"08/2016",
                 "TEXT-DESC": [
                     'Led an Agile team to design and create a Caching Web Application through Dynamic Server Pages.',
-                    'The Caching Web Application compared values cached in a server to live database values.',
+                    'The Caching Web Application compared values cached in a server to live data-base values.',
                     'Enhanced and rectified various incidents on existing Java/Webmethods Webservices.',
                 ],
                 "SKILLS": [
