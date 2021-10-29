@@ -52,8 +52,13 @@ title: submissions
                 <h4>{{paper['SHORT_NAME']}}</h4>
                 <h4>
                     <a target="_blank" href="{{paper['SELF_FILE_URL']}}">
-                    <i class="fas fa-file-pdf" title="{{paper['SHORT_NAME']}}" style="font-size:125%;"></i>
-                    </a>
+                    
+		    <img class="svg-icon" src="https://www.sri.inf.ethz.ch/assets/icons/icon-pdf.svg" width="10%" width="10%"/>
+		    {#
+		    <i class="fas fa-file-pdf" title="{{paper['SHORT_NAME']}}" style="font-size:125%;"></i>
+                    #}
+
+		    </a>
                 </h4>
                 <p><b>
                     <a href="{{paper['CONF_URL']}}" target="_blank" class="link">{{paper['CONF_NAME']}}</a></b>
