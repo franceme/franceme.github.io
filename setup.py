@@ -124,16 +124,14 @@ if arg('build'):
     freezer.freeze()
     sys.exit(0)
 elif arg('run'):
-    port = 49849
-    if len(sys.argv) >= 2:
-        port = int(sys.argv[2])
+    port = int(sys.argv[2]) if len(sys.argv) >= 2 else 49849
     app.run(host='0.0.0.0', port=port)
     sys.exit(0)
 elif arg('install'):
     sys.exit(os.system('python3 -m pip install -e .'))
 elif __name__ == '__main__':
     from elsa import cli
-    sys.exit(cli(app, base_url='https://francemee.github.io'))
+    sys.exit(cli(app, base_url='https://franceme.github.io'))
 
 
 setup(name='My Website',
