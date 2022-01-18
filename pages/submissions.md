@@ -8,6 +8,15 @@ title: submissions
         {%
             set sub = [
                 {
+                    "SHORT_NAME":"ESORICS Demo",
+                    "SELF_FILE_URL":"https://esorics2021.athene-center.de/tutorial-09-08.php",
+                    "CONF_NAME":"Esorics",
+                    "CONF_URL":"https://esorics2021.athene-center.de/tutorial-09-08.php",
+                    "RAW_NAME":"Tutorial",
+                    "RAW_URL":"https://esorics2021.athene-center.de/tutorial-09-08.php",
+                    "DATE":"September 2021",
+                    "FULL_NAME":"Principles and Practices of Secure Cryptographic Coding in Java",
+                },{
                     "SHORT_NAME":"Secure Java Tutorial",
                     "SELF_FILE_URL":"https://secdev.ieee.org/2020/accepted/",
                     "CONF_NAME":"SecDev20",
@@ -17,7 +26,7 @@ title: submissions
                     "DATE":"September 2020",
                     "FULL_NAME":"Tutorial: Principles and Practices of Secure Cryptographic Coding in Java",
                 },{
-                    "SHORT_NAME":"Enhancing CryptoGuard",
+                    "SHORT_NAME":"Cryptoguard",
                     "SELF_FILE_URL":"https://rebrand.ly/frantzme_cryptoguard_ccs",
                     "CONF_NAME":"ACM CCS",
                     "CONF_URL":"https://sigsac.org/ccs/CCS2019/",
@@ -26,7 +35,7 @@ title: submissions
                     "DATE":"November 2019",
                     "FULL_NAME":"CryptoGuard: High Precision Detection of Cryptographic Vulnerabilities in Massive-sized Java Projects",
                 },{
-                    "SHORT_NAME":"Cryptoguard",
+                    "SHORT_NAME":"Enhancing CryptoGuard",
                     "SELF_FILE_URL":"https://rebrand.ly/frantzme_ms_thesis",
                     "CONF_NAME":"VT ETDs",
                     "CONF_URL":"https://vtechworks.lib.vt.edu/handle/10919/5534",
