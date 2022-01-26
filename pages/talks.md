@@ -9,7 +9,8 @@ title: talks
                 {
                     "NAME":"Esorics 2021 Demo",
                     "URL":"https://esorics2021.athene-center.de/tutorial-09-08.php",
-		    "NOTEBOOK_URL":"https://mybinder.org/v2/gh/franceme/Esorics_Conference/HEAD"
+		    "NOTEBOOK_URL":"https://mybinder.org/v2/gh/franceme/Esorics_Conference/HEAD",
+		    "YOUTUBE_URL":"ahVptaFz7-E"
                 },{
                     "NAME":"Course SQL Injection Demo",
                     "YOUTUBE_URL":"rLY2skQTeJE"
