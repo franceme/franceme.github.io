@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 import sys,os,re
 from datetime import datetime
 import urllib.parse
-from flask import Flask, render_template, render_template_string
+from flask import Flask, render_template, render_template_string, redirect
 
 from flask_frozen import Freezer
 from flask_flatpages import (
