@@ -100,6 +100,18 @@ Preferred-Languages: en
 Expires: 2025-12-31T18:00:00.000Z
 """, 200, {'Content-Type':'text/plain'}
 
+@app.route('/resume.pdf')
+def resume_pdf():
+    return redirect("https://rebrand.ly/frantzme_resume", code=302)
+
+@app.route('/resume')
+def resume_web():
+    return redirect("https://rebrand.ly/frantzme_webresume", code=302)
+
+@app.route('/cv.pdf')
+def cv():
+    return redirect("https://rebrand.ly/frantzme_cv", code=302)
+
 @app.route('/robots.txt')
 def robots():
     return f"""

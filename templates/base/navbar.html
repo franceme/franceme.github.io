@@ -8,7 +8,7 @@
                     <div id="logo-name">{{base_info['NAME']}}</div>
                 </a>
             </li>
-            {% for section in ["experience", "education", "submissions", "projects", "mentees", "talks", "groups", "skills"]%}
+            {% for section in ["experience", "education", "submissions", "projects", "mentees", "talks", "groups", "skills","webresume"]%}
             <li><a href="{{ url_for('page',path=section) }}">{{section|upper}}</a></li>
             {% endfor %}
             {% for paper in ["Resume", "CV"]%}
