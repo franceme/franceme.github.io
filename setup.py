@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 import sys,os,re
 from datetime import datetime
 import urllib.parse
-from flask import Flask, render_template, render_template_string, redirect
+from flask import Flask, render_template, render_template_string
 
 from flask_frozen import Freezer
 from flask_flatpages import (
@@ -48,6 +48,20 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 pages = FlatPages(app)
 freezer = Freezer(app)
+
+def redirect(link):
+    return f"""
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='{link}'" />
+  </head>
+  <body>
+    <p>Please follow <a href="{link}">this link</a>.</p>
+  </body>
+</html>
+"""
+
 
 def fix_url(line):
     for url in list(re.compile(r'\[([^\]]+)\]\(([^)]+)\)').findall(line)):
@@ -102,15 +116,15 @@ Expires: 2025-12-31T18:00:00.000Z
 
 @app.route('/resume.pdf')
 def resume_pdf():
-    return redirect("https://rebrand.ly/frantzme_resume", code=302)
+    return redirect("https://rebrand.ly/frantzme_resume"), 200, {'Content-Type':'text/plain'}
 
 @app.route('/resume')
 def resume_web():
-    return redirect("https://rebrand.ly/frantzme_webresume", code=302)
+    return redirect("https://rebrand.ly/frantzme_webresume"), 200, {'Content-Type':'text/plain'}
 
 @app.route('/cv.pdf')
 def cv():
-    return redirect("https://rebrand.ly/frantzme_cv", code=302)
+    return redirect("https://rebrand.ly/frantzme_cv"), 200, {'Content-Type':'text/plain'}
 
 @app.route('/robots.txt')
 def robots():
