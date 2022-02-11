@@ -116,15 +116,21 @@ Expires: 2025-12-31T18:00:00.000Z
 
 @app.route('/resume')
 def resume_pdf():
-    return redirect("https://rebrand.ly/frantzme_resume"), 200, {'Content-Type':'text/plain'}
+    return f"""
+# Miles Frantz Website
+Contact: mailto:{base_info['EMAIL']}
+Preferred-Languages: en
+Expires: 2025-12-31T18:00:00.000Z
+""", 200, {'Content-Type':'text/plain'}
+    #return redirect("https://rebrand.ly/frantzme_resume"), 200, {'Content-Type':'text/plain'}
 
 #@app.route('/webresume')
 #def resume_web():
 #    return redirect("https://rebrand.ly/frantzme_webresume"), 200, {'Content-Type':'text/plain'}
 
-@app.route('/cv')
-def cv():
-    return redirect("https://rebrand.ly/frantzme_cv"), 200, {'Content-Type':'text/plain'}
+#@app.route('/cv')
+#def cv():
+#    return redirect("https://rebrand.ly/frantzme_cv"), 200, {'Content-Type':'text/plain'}
 
 @app.route('/robots.txt')
 def robots():
