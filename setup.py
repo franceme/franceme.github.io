@@ -118,9 +118,9 @@ Expires: 2025-12-31T18:00:00.000Z
 def resume_pdf():
     return redirect("https://rebrand.ly/frantzme_resume"), 200, {'Content-Type':'text/plain'}
 
-@app.route('/webresume')
-def resume_web():
-    return redirect("https://rebrand.ly/frantzme_webresume"), 200, {'Content-Type':'text/plain'}
+#@app.route('/webresume')
+#def resume_web():
+#    return redirect("https://rebrand.ly/frantzme_webresume"), 200, {'Content-Type':'text/plain'}
 
 @app.route('/cv')
 def cv():
