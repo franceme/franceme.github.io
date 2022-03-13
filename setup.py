@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 import sys,os,re
 from datetime import datetime
 import urllib.parse
-from flask import Flask, render_template, render_template_string
+from flask import Flask, render_template, render_template_string, redirect
 
 from flask_frozen import Freezer
 from flask_flatpages import (
@@ -90,6 +90,10 @@ def index():
 def page(path):
     page = pages.get_or_404(path)
     return render_template('pages/page.html', page=page, base_info=base_info)
+
+@app.route('/diagrams')
+def diagrams():
+    return redirect('https://rebrand.ly/graphz',code=302)
 
 @app.route('/security.txt')
 def security():
