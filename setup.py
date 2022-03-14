@@ -4,8 +4,7 @@ from setuptools import find_packages, setup
 import sys,os,re
 from datetime import datetime
 import urllib.parse
-from flask import Flask, render_template, render_template_string, redirect
-
+from flask import Flask, render_template, render_template_string
 from flask_frozen import Freezer
 from flask_flatpages import (
     FlatPages, pygmented_markdown, pygments_style_defs)
@@ -71,6 +70,23 @@ def nice_times(num):
 def returnRange(val):
     return list(range(1,int(val)))
 
+def page_redirect(url):
+    return f"""<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="0; url={url}">
+        <script type="text/javascript">
+             window.location.href = "{url}"
+        </script>
+        <title>Page Redirection</title>
+    </head>
+    <body>
+        If you are not redirected automatically, follow this <a href='{url}'>link to example</a>.
+    </body>
+</html>
+"""
+
 app.jinja_env.filters['fix_url'] = fix_url
 app.jinja_env.filters['setup_latex_url'] = setup_latex_url
 app.jinja_env.filters['setup_google'] = setup_google
@@ -93,7 +109,16 @@ def page(path):
 
 @app.route('/diagrams')
 def diagrams():
-    return redirect('https://rebrand.ly/graphz',code=302)
+    return page_redirect('https://rebrand.ly/graphz')
+
+@app.route('/resume')
+def resume_grab():
+    return page_redirect('https://rebrand.ly/frantzme_resume')
+
+@app.route('/cv')
+def cv_grab():
+    return page_redirect('https://rebrand.ly/frantzme_cv')
+
 
 @app.route('/security.txt')
 def security():
