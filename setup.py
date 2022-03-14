@@ -109,15 +109,15 @@ def page(path):
 
 @app.route('/diagrams')
 def diagrams():
-    return page_redirect('https://rebrand.ly/graphz')
+    return page_redirect('https://rebrand.ly/graphz',mimetype='text/html')
 
 @app.route('/resume')
 def resume_grab():
-    return page_redirect('https://rebrand.ly/frantzme_resume')
+    return page_redirect('https://rebrand.ly/frantzme_resume',mimetype='text/html')
 
 @app.route('/cv')
 def cv_grab():
-    return page_redirect('https://rebrand.ly/frantzme_cv')
+    return page_redirect('https://rebrand.ly/frantzme_cv',mimetype='text/html')
 
 
 @app.route('/security.txt')
