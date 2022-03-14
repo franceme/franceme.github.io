@@ -85,7 +85,7 @@ def page_redirect(url):
         If you are not redirected automatically, follow this <a href='{url}'>link to example</a>.
     </body>
 </html>
-"""
+""",302,{'Content-Type':'text/html'}
 
 app.jinja_env.filters['fix_url'] = fix_url
 app.jinja_env.filters['setup_latex_url'] = setup_latex_url
@@ -109,15 +109,15 @@ def page(path):
 
 @app.route('/diagrams')
 def diagrams():
-    return page_redirect('https://rebrand.ly/graphz',mimetype='text/html')
+    return page_redirect('https://rebrand.ly/graphz')
 
 @app.route('/resume')
 def resume_grab():
-    return page_redirect('https://rebrand.ly/frantzme_resume',mimetype='text/html')
+    return page_redirect('https://rebrand.ly/frantzme_resume')
 
 @app.route('/cv')
 def cv_grab():
-    return page_redirect('https://rebrand.ly/frantzme_cv',mimetype='text/html')
+    return page_redirect('https://rebrand.ly/frantzme_cv')
 
 
 @app.route('/security.txt')
