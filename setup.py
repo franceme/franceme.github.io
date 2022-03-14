@@ -85,7 +85,7 @@ def page_redirect(url):
         If you are not redirected automatically, follow this <a href='{url}'>link to example</a>.
     </body>
 </html>
-""",302,{'Content-Type':'text/html'}
+""", 200, {'Content-Type':'text/html'}
 
 app.jinja_env.filters['fix_url'] = fix_url
 app.jinja_env.filters['setup_latex_url'] = setup_latex_url
