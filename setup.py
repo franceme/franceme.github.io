@@ -42,6 +42,7 @@ FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_HTML_RENDERER = prerender_jinja
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite']
+FREEZER_IGNORE_MIMETYPE_WARNINGS = True
 
 app = Flask(__name__)
 app.config.from_object(__name__)
