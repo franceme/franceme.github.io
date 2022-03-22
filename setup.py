@@ -120,6 +120,9 @@ def resume_grab():
 def cv_grab():
     return page_redirect('https://rebrand.ly/frantzme_cv')
 
+@app.route('/sok.html')
+def sok_grab():
+    return page_redirect('https://oaklandsok.github.io')
 
 @app.route('/security.txt')
 def security():
