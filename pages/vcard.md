@@ -1,3 +1,2 @@
 title: vcard
-
-<img src = "/static/images/VCard.svg" alt="My VCard"/>
+<img src = "{{url_for('static',filename='images/VCard.svg')}}" alt="VCard Code" style="">
