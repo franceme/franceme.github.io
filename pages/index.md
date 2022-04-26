@@ -3,7 +3,10 @@ title: BasePage
 <h3><a href="{{url_for('index',_anchor='AboutMe')}}" id='AboutMe'>About Me</a></h3>
 
 <p style="display:flex;">
-    <img style="width:25%;min-width:15%;" src="/static/images/low_res.jpg" />
+<span style="width: 100%;  height: 120px;  display: flex;  flex-direction: column;">
+    <img style="max-width:75%;min-width:50%;" src="/static/images/low_res.jpg" />
+    <img style="max-width:75%;min-width:50%;" src="/static/images/VCard.svg" />
+    </span>
     <span style="float:right;">
     	My Ph.D. research focuses on creating code analysis tools to assist developers by identifying cryptographic misuse in software repositories.
 	My tools save developers time by using on-demand static code analysis to specifically scan for the cryptographic rules that may be broken.
