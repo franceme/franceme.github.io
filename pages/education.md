@@ -11,7 +11,7 @@ title: education
                 "DEPT_NAME":"cs.vt.edu",
                 "TITLE":"Ph.D. Computer Science",
                 "FROM":"May 2020",
-                "TO":"May 2023",
+                "TO":"2023",
                 "QUOTE":"Ut Prosim, That I May Serve.",
                 "TEXT-DESC":[
                     'I have been working under [http://people.cs.vt.edu/danfeng/](Dr. Danfeng Yao) on [https://github.com/franceme/cryptoguard](Cryptoguard) related projects and other static analysis projects.',
