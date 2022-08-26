@@ -4,10 +4,26 @@ from setuptools import find_packages, setup
 import sys,os,re
 from datetime import datetime
 import urllib.parse
-from flask import Flask, render_template, render_template_string
-from flask_frozen import Freezer
-from flask_flatpages import (
-    FlatPages, pygmented_markdown, pygments_style_defs)
+
+try:
+    from flask import Flask, render_template, render_template_string
+    from flask_frozen import Freezer
+    from flask_flatpages import (
+        FlatPages, pygmented_markdown, pygments_style_defs)
+except:
+    for x in [
+            'flask==2.0.1',
+            'flask_flatpages==0.7.3',
+            'frozen_flask==0.18',
+            'pygments==2.10.0',
+            'elsa==0.1.6'
+        ]:
+        os.system(str(sys.executable) + " -m pip install " + str(x))
+
+    from flask import Flask, render_template, render_template_string
+    from flask_frozen import Freezer
+    from flask_flatpages import (
+        FlatPages, pygmented_markdown, pygments_style_defs)
 
 
 
