@@ -10,7 +10,6 @@ plugins/
 _site/
 _config.yml
 _config.yml.base64
-.vscode/
 _data/
 coder.json
 machineid

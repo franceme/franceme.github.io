@@ -6,7 +6,7 @@ from datetime import datetime
 import urllib.parse
 
 try:
-    from flask import Flask, render_template, render_template_string
+    from flask import Flask, render_template, render_template_string,Response
     from flask_frozen import Freezer
     from flask_flatpages import (
         FlatPages, pygmented_markdown, pygments_style_defs)
@@ -20,7 +20,7 @@ except:
         ]:
         os.system(str(sys.executable) + " -m pip install " + str(x))
 
-    from flask import Flask, render_template, render_template_string
+    from flask import Flask, render_template, render_template_string,Response
     from flask_frozen import Freezer
     from flask_flatpages import (
         FlatPages, pygmented_markdown, pygments_style_defs)
@@ -111,12 +111,25 @@ app.jinja_env.filters['nice_divide'] = nice_divide
 app.jinja_env.filters['nice_times'] = nice_times
 app.jinja_env.filters['returnRange'] = returnRange
 
+#https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
+def get_file(filename):  # pragma: no cover
+    try:
+        src = filename
+        # Figure out how flask returns static files
+        # Tried:
+        # - render_template
+        # - send_file
+        # This should not be so non-obvious
+        return open(src).read()
+    except IOError as exc:
+        return str(exc)
+
 # === URL Routes === #
 
 @app.route('/')
 def index():
     page = pages.get_or_404('index')
-    return render_template('pages/index.html', page=page, base_info=base_info)
+    return Response(get_file('index.html'),mimetype="text/html") #render_template('pages/index.html', page=page, base_info=base_info)
 
 
 @app.route('/<path:path>/')

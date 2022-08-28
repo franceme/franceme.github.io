@@ -1,0 +1,32 @@
+{
+	"todo-tree.regex.regex": "(\\|%)\s*($TAGS)",
+	"todo-tree.general.tags": [
+		"BUG",
+		"HACK",
+		"FIXME",
+		"TODO",
+		"XXX",
+		"[ ]",
+		"[x]",
+		":>TODO",
+		"note"
+	],
+	"github.copilot.enable": {
+		"*": true,
+		"yaml": false,
+		"plaintext": false,
+		"markdown": false
+	},
+	"l13Diff.confirmCopy": false,
+	"editor.wordWrap": "on",
+	"workbench.colorTheme": "Default Light+",
+	"editor.minimap.enabled": false,
+	"latex-workshop.message.error.show": false,
+	"latex-workshop.message.warning.show": false,
+	"telemetry.enableTelemetry": false,
+	"telemetry.enableCrashReporter": false,
+	"telemetry.telemetryLevel":"off",
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter-notebook"
+	}
+}
