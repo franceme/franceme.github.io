@@ -25,12 +25,7 @@ except:
     from flask_flatpages import (
         FlatPages, pygmented_markdown, pygments_style_defs)
 
-
-
-def prerender_jinja(text):
-    """ Pre-renders Jinja templates before markdown. """
-    return pygmented_markdown(render_template_string(text))
-
+prerender_jinja = lambda text: pygmented_markdown(render_template_string(text))
 
 base_info = {
     'NAME':"Miles Frantz",
@@ -60,32 +55,14 @@ FLATPAGES_HTML_RENDERER = prerender_jinja
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite']
 FREEZER_IGNORE_MIMETYPE_WARNINGS = True
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    static_url_path='',
+    static_folder='static',
+)
 app.config.from_object(__name__)
 pages = FlatPages(app)
 freezer = Freezer(app)
-
-def fix_url(line):
-    for url in list(re.compile(r'\[([^\]]+)\]\(([^)]+)\)').findall(line)):
-        link,name = url[0],url[1]
-        md,tex = f"[{link}]({name})",f"<a href=\"{link}\">{name}</a>"
-        line = line.replace(md,tex)
-    return line
-
-def setup_latex_url(name, url):
-    return f"\href{{{url}}}{{{name}}}"
-
-def setup_google(name):
-    return f"https://google.com/search?q={urllib.parse.quote(name)}"
-
-def nice_divide(num):
-    return -(int(num) // -2)
-
-def nice_times(num):
-    return int(num) * 2
-
-def returnRange(val):
-    return list(range(1,int(val)))
 
 def page_redirect(url):
     return f"""<!DOCTYPE HTML>
@@ -104,17 +81,13 @@ def page_redirect(url):
 </html>
 """, 200, {'Content-Type':'text/html'}
 
-app.jinja_env.filters['fix_url'] = fix_url
-app.jinja_env.filters['setup_latex_url'] = setup_latex_url
-app.jinja_env.filters['setup_google'] = setup_google
-app.jinja_env.filters['nice_divide'] = nice_divide
-app.jinja_env.filters['nice_times'] = nice_times
-app.jinja_env.filters['returnRange'] = returnRange
-
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
-def get_file(filename):  # pragma: no cover
+def get_file(filename, base=None):  # pragma: no cover
     try:
-        src = filename
+        if base:
+            src = os.path.join(base,filename)
+        else:
+            src = filename
         # Figure out how flask returns static files
         # Tried:
         # - render_template
@@ -129,13 +102,21 @@ def get_file(filename):  # pragma: no cover
 @app.route('/')
 def index():
     page = pages.get_or_404('index')
-    return Response(get_file('index.html'),mimetype="text/html") #render_template('pages/index.html', page=page, base_info=base_info)
+    print('Index', flush=True)
+    return Response(get_file('index.html'),mimetype="text/html")
+    #return Response(get_file('index.html'),mimetype="text/html") #render_template('pages/index.html', page=page, base_info=base_info)
 
-
-@app.route('/<path:path>/')
-def page(path):
+@app.route('/css/')
+def get_css():
+    print(f"css ", flush=True)
     page = pages.get_or_404(path)
-    return render_template('pages/page.html', page=page, base_info=base_info)
+    return Response(get_file(page,'css'),mimetype="text/css") #render_template('pages/page.html', page=page, base_info=base_info)
+
+@app.route('/path:str/')
+def test_route(path):
+    print('Hi', flush=True)
+    return Response(get_file('index.html'),mimetype="text/html")
+
 
 @app.route('/diagrams.html')
 def diagrams():
@@ -172,10 +153,6 @@ User-agent: *
 Disallow: /
 """, 200, {'Content-Type':'text/plain'}
 
-@app.route('/pygments.css')
-def pygments_css():
-    return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
-
 
 # === Main function  === #
 
@@ -187,7 +164,8 @@ if arg('build'):
     freezer.freeze()
     sys.exit(0)
 elif arg('run'):
-    port = int(sys.argv[2]) if len(sys.argv) >= 2 else 49849
+    port = int(sys.argv[2]) if len(sys.argv) >= 2 else 8
+    899
     app.run(host='0.0.0.0', port=port)
     sys.exit(0)
 elif arg('install'):

@@ -45,6 +45,7 @@
 					"hbenl.vscode-test-explorer",
 					"ritwickdey.LiveServer",
 					"yzhang.markdown-all-in-one",
+					"MS-SarifVSCode.sarif-viewer",
 					"wholroyd.jinja"
 				]
 			}
