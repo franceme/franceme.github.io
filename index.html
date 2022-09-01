@@ -73,15 +73,19 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#experience" title="Experience"><span class="menu-title">Experience</span></a>
+                <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio" title="Portfolio"><span class="menu-title">Portfolio</span></a>
+                <li class="nav-item"><a class="nav-link" href="#projects" title="Projects"><span class="menu-title">Projects</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#references" title="References"><span class="menu-title">References</span></a>
+                <li class="nav-item"><a class="nav-link" href="#groups" title="Groups"><span class="menu-title">Groups</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span class="menu-title">Contact</span></a>
+                <li class="nav-item"><a class="nav-link" href="#mentees" title="Mentees"><span class="menu-title">Mentees</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#submissions" title="Submissions"><span class="menu-title">Submissions</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#talks" title="Talks"><span class="menu-title">Talks</span></a>
                 </li>
               </ul>
             </nav>
@@ -196,43 +200,383 @@
   </div>
   <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
     <div class="skills-section">
-      <h2 class="h2 fw-light mb-4">Professional Skills</h2>
+      <h2 class="h2 fw-light mb-4">Technical Skills</h2>
       <div class="row">
         <div class="col-md-6">
-          {{ 'HTML'|get_skill(100)|safe }}
+          {{'Python3'|get_skill(100)|safe}}
+          {{'Bash Scripts'|get_skill(50)|safe}}
+          {{'C#'|get_skill(25)|safe}}
+          {{'SQL'|get_skill(65)|safe}}
+          {{'GO'|get_skill(40)|safe}}
+          {{'C++'|get_skill(1)|safe}}
+
+          {{'Maven'|get_skill(85)|safe}}
+          {{'Gradle'|get_skill(65)|safe}}
+          {{'Flask'|get_skill(25)|safe}}
+          {{'Mako'|get_skill(40)|safe}}
+
+          {{'Rest Webservices'|get_skill(65)|safe}}
         </div>
         <div class="col-md-6">
-          {{ 'Algebra'|get_skill(25,False)|safe }}
+          {{'Java EE'|get_skill(90,False)|safe}}
+          {{'Rust'|get_skill(20,False)|safe}}
+          {{'Tasktop Integrations'|get_skill(85,False)|safe}}
+          {{'HTML'|get_skill(50,False)|safe}}
+          {{'.NET'|get_skill(25,False)|safe}}
+          {{'Scala'|get_skill(65,False)|safe}}
+          {{'JavaScript'|get_skill(15,False)|safe}}
+
+          {{'Spring'|get_skill(50,False)|safe}}
+          {{'Jenkins'|get_skill(50,False)|safe}}
+          {{'Tensorflow'|get_skill(30,False)|safe}}
+
+          {{'Soap Webservices'|get_skill(75,False)|safe}}
+          {{'Machine Learning'|get_skill(40,False)|safe}}
         </div>
       </div>
     </div>
   </div>
-  <div class="shadow-1-strong bg-white my-5 p-5" id="experience">
-    <div class="work-experience-section">
-      <h2 class="h2 fw-light mb-4">Work Experience</h2>
-      <div class="timeline">
-        {{"Base"|get_base('co_name', '_from','_to','desc')|safe}}
-      </div>
-      </div>
-    </div>
-  </div>
+
   <div class="shadow-1-strong bg-white my-5 p-5" id="education">
     <div class="education-section">
       <h2 class="h2 fw-light mb-4">Education</h2>
       <div class="timeline">
-
         {{
-          "Masters in Information Technology"|get_base(
-            'International University',
-            '2011',
-            '2013',
-            'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.',
-            False)|safe
-        }}
+          "Ph.D. Computer Science"|get_base(
+          "Virginia Polytechnic Institute and State University",
+          "May 2020",
+          "Present",
+          "I have been working under Dr. Danfeng Yao on Cryptoguard related projects and other static analysis projects. I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.",
+          False)|safe
+       }}
+       {{
+          "M.S. Computer Science"|get_base(
+          "Virginia Polytechnic Institute and State University",
+          "August 2018",
+          "May 2020",
+          "I have been working under Dr. Danfeng Yao on Cryptoguard related projects and other static analysis projects. I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.",
+          False)|safe
+       }}
+       {{
+          "B.S. Computer Engineering"|get_base(
+          "University of Cincinnati",
+          "August 2013",
+          "April 2018",
+          "During my Undergraduate Program, I learned a lot throughout the classes I took and the Co-Ops I was a part of. The Co-Ops was the best part of the degree, as it gave me real-world experience and a chance for practical application.",
+          False)|safe
+       }}
         
       </div>
     </div>
   </div>
+
+  <div class="shadow-1-strong bg-white my-5 p-5" id="experience">
+    <div class="work-experience-section">
+      <h2 class="h2 fw-light mb-4">Work Experience</h2>
+      <div class="timeline">
+        {{
+          "Assistant"|get_base(
+          "Virginia Polytechnic Institute and State University",
+          "08/01/2021",
+          "Present",
+          "Assisting students with their problems. Enhancing the autograding capabilities via Python scripting.<br><br>Skills: Static Analysis, Canvas Scripting, Mitosheet, VirtualBox, Attack Surface Evaluation, Red Team")|safe
+       }}
+       {{
+          "Assistant"|get_base(
+          "Virginia Polytechnic Institute and State University",
+          "01/19/2021",
+          "08/01/2021",
+          "Researching Static Code Analysis for my future project. Creating and examining dynamic test bench. Creating reproducible testing for future additional tests.<br><br>Skills: Static Code Analysis, Reproducible testing, Dynamic Languages")|safe
+       }}
+       {{
+          "Assistant"|get_base(
+          "Virginia Polytechnic Institute and State University",
+          "08/05/2020",
+          "12/20/2020",
+          "Helped record videos for the lab lectures.<br><br>Skills: Managing Students, Handling Lectures, Detailing and Recording Labs")|safe
+       }}
+       {{
+          "Intern"|get_base(
+          "Oracle",
+          "01/19/2021",
+          "01/19/2021",
+          "Due to Covid the internship was not started.")|safe
+       }}
+       {{
+          "Assistant"|get_base(
+          "Virginia Polytechnic Institute and State University",
+          "07/31/2019",
+          "07/31/2020",
+          "Created a live Jupyter notebook for extended documentation on Cryptoguard use. Worked on the open-source project Cryptoguard. Exploring various avenues to make Cryptoguard more easily available. Created both Gradle and Maven plugin supporting Cryptoguard within the build process (IDE independent). Creating a live Java Jupyter notebook through MyBinder for live and public demonstrations.<br><br>Skills: Cryptoguard, Jupyter Notebook, IJava Jupyter Notebook, Gradle Plugin, Maven Plugin, Dockerfile")|safe
+       }}
+       {{
+          "Internship"|get_base(
+          "Worldpay from FIS",
+          "05/03/2019",
+          "07/31/2019",
+          "Enhanced multiple Tasktop integrations by making custom JavaScript logic. Improved Terraform scripts to dynamically build Virtual Machines. Enabled the Open Source Project Hygieia for system and tool monitoring. Implemented a Python3 script to track Hygieia usage and automatically start and stop the project. Enabled users to work with various tools owned and managed by the team.<br><br>Skills: Hygieia, Tasktop, Github Enterprise, Splunk, Nexus, Jenkins, Terraform, Ansible, Teamforge, Rally, TFS, Checkmarx, DataPower, XLDeploy, XLRelease, DevOps, DexVMs, DevSecOps, Bash")|safe
+       }}
+       {{
+          "Assistant"|get_base(
+          "Virginia Polytechnic Institute and State University",
+          "10/01/2018",
+          "05/03/2019",
+          "Worked with an external consumer to create a specific output adapter for their service. Designed a system to create any of three different outputs dependent on the user. Worked on the open-source project Cryptoguard. Used a design akin to common flat data-base designs.<br><br>Skills: Cryptoguard, Research Skills, Soot, Modularization Design, Adapter Design, Abstract Factory")|safe
+       }}
+       {{
+          "Assistant"|get_base(
+          "Virginia Polytechnic Institute and State University",
+          "07/01/2018",
+          "12/19/2018",
+          "Helped split the students into anonymized groups for a research study. Helped the students out with their inquiries. Graded various student assignments including the finals.<br><br>Skills: Managing Students, Grading Reports, Creating Groups")|safe
+       }}
+       {{
+          "Co-Op"|get_base(
+          "WorldPay from FIS",
+          "01/09/2017",
+          "08/12/2017",
+          "Fundamentally enhanced a highly utilized SOAP API with an overall average response time &lt; 100 ms. Mentored two Computer Science Students. Enhanced and rectified various incidents on existing Java/Webmethods Webservices. Designed several SOAP Webservices. Created an API that supports both SOAP and REST as a POC. Combined Reflection and Aspect-oriented programming to dynamically filter Java SOAP API output. Worked closely with a DevOps team to support and showcase both XL Deploy and XL Release using internal APIs. Trained two other interns on the team and led several KT sessions.<br><br>Skills: Java EE, JUnit 4, Mockito, Leadership, IBM Websphere, Software AG, Webmethods, SOAP, Splunk, DataPower, XebiaLabs, XLDeploy, XLRelease, REST, DevOps, SoapUI, SQL, AQT, Postman")|safe
+       }}
+       {{
+          "Co-Op"|get_base(
+          "WorldPay from FIS",
+          "05/2016",
+          "08/2016",
+          "Led an Agile team to design and create a Caching Web Application through Dynamic Server Pages. The Caching Web Application compared values cached in a server to live data-base values. Enhanced and rectified various incidents on existing Java/Webmethods Webservices.<br><br>Skills: Java EE, IBM Websphere, Leadership, Webmethods, SOAP, SoapUI, Server Cache Web App, DSP, SQL, AQT")|safe
+       }}
+       {{
+          "Co-Op"|get_base(
+          "WorldPay from FIS",
+          "08/2015",
+          "01/2016",
+          "Created an API Operation to store tiff images for internal client issue management. Setup a deletion API Operation to clear issues for multiple internal clients. Enhanced and rectified various incidents on existing Java/Webmethods Webservices.<br><br>Skills: Software AG, Webmethods, SOAP, SoapUI, SQL, AQT, Bash")|safe
+       }}
+       {{
+          "Co-Op"|get_base(
+          "WorldPay from FIS",
+          "01/2015",
+          "04/2015",
+          "Implemented several Bash scripts to track API usage. Created a lightweight Java program to translate a phone-digit-text based input to alphabet characters.<br><br>Skills: Software AG, Bash, Static")|safe
+       }}
+       
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="shadow-1-strong bg-white my-5 p-5" id="projects">
+    <div class="projects-section">
+      <h2 class="h2 fw-light mb-4">Projects</h2>
+      <div class="timeline">
+        {{
+          "franceme.github.io"|get_base(
+          "<a href='https://github.com/franceme/franceme.github.io'>Website</a>",
+          "2019",
+          "Present",
+          "This is my ‘now and again’ public website. I’ve used the same framework to generate the static website, and I have migrated the build to GitHub actions to ensure public transparency. I only made it public after hiding some of the web content since the build for the website is activated AFTER the Resume repo is complete. This was a neat trick that allows the Website to automatically download and host the most recent documents, as well as load the most recent web content (since this website used yml files that were created from the Resume Repo).")|safe
+       }}
+       {{
+          "WaveNetExploration"|get_base(
+          "<a href='https://github.com/franceme/WaveNetExploration'>Website</a>",
+          "2019",
+          "2019",
+          "This was a class project created for an Advanced Machine Learning class. The purpose of this project was to replicate an existing papers work and to add onto it. For this, my group chose to replicate the paper [https://arxiv.org/pdf/1609.03499.pdf](WaveNet) and to enhance the results by running it on music samples. Unfortunately, we were unable to create any sound samples that mimic actual music, however from the website, there is a clear improvement in the music generation from the models.")|safe
+       }}
+       {{
+          "GradleGuard"|get_base(
+          "<a href='https://github.com/franceme/gradleguard'>Website</a>",
+          "2019",
+          "2020",
+          "This is the Gradle plugin for my thesis project Cryptoguard. This was created to help ease the access and use for developers to be able to use Cryptoguard.")|safe
+       }}
+       {{
+          "MavenGuard"|get_base(
+          "<a href='https://github.com/franceme/mavenguard'>Website</a>",
+          "2019",
+          "2020",
+          "This is the Maven plugin for my thesis project Cryptoguard. This was created to help ease the access and use for developers to be able to use Cryptoguard.")|safe
+       }}
+       {{
+          "CryptoGuard"|get_base(
+          "<a href='https://github.com/franceme/cryptoguard'>Website</a>",
+          "2019",
+          "2020",
+          "This is a static and compiled code analyzer, serving as my current thesis project. This project will scan cryptographic misuse in Java Projects (Maven/Gradle based) and Android Projects. Recent works with this project have included making an enhanced interface for this to work with other programs and tools.")|safe
+       }}
+       
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="shadow-1-strong bg-white my-5 p-5" id="groups">
+    <div class="groups-section">
+      <h2 class="h2 fw-light mb-4">Groups</h2>
+      <div class="timeline">
+        {{
+          "Advisor"|get_base(
+          "Graduate Student Council",
+          "2022",
+          "Present",
+          "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department. It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings.")|safe
+       }}
+       {{
+          "President"|get_base(
+          "Graduate Student Council",
+          "2021",
+          "2022",
+          "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department. It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings.")|safe
+       }}
+       {{
+          "Slack Admin"|get_base(
+          "iMentor",
+          "2020",
+          "2020",
+          "From the [https://sites.google.com/vt.edu/imentor/home](homepage). iMentor focuses squarely on attracting, mentoring, and career advising early-stage graduate students from underrepresented communities who want to pursue a career in computer security. Being virtually co-located with the ACM Conference on Computer and Communications Security (ACM CCS) 2020, the workshop provides an opportunity for attendees to also participate in the main conference and benefit from it. ACM CCS is a top-tier venue for the quick and wide dissemination of cutting-edge research results in computer and communications security.")|safe
+       }}
+       {{
+          "Vice President"|get_base(
+          "Graduate Student Council",
+          "2020",
+          "2021",
+          "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department. It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings. I have set up the GitHub Organization and the website to auto-build using GitHub Actions.")|safe
+       }}
+       {{
+          "Member"|get_base(
+          "Order of The Engineer",
+          "2018",
+          "Present",
+          "Upholding Devotion to the Standards and Dignity of the Engineering Profession. This group is a ceremonious group acknowledging members' commitments to uphold high qualities and their duty as an engineer.")|safe
+       }}
+      </div>
+    </div>
+  </div>
+
+  <div class="shadow-1-strong bg-white my-5 p-5" id="mentees">
+    <div class="mentees-section">
+      <h2 class="h2 fw-light mb-4">Mentees</h2>
+      <div class="timeline">
+        {{
+          "UNLISTED"|get_base(
+          "UNLISTED",
+          "08/29/2020",
+          "01/01/2021",
+          "Instructed about assistance on the CryptoGuard Project. Helping instruct them on creating an IDE plugin.")|safe
+       }}
+       {{
+          "Bachelor in Computer Science"|get_base(
+          "Jason",
+          "06/08/2020",
+          "08/22/2020",
+          "Instructed about assistance on the CryptoGuard Project. Read the proper review [https://docs.google.com/document/d/18Xa6M5ymDyZ-zvPFqN5tAlQuIPqd27nWBdp2pevpytU/edit?usp=sharing](here).")|safe
+       }}
+       {{
+          "UNLISTED"|get_base(
+          "UNLISTED",
+          "01/22/2020",
+          "05/30/2020",
+          "Help lead them on the Cryptoguard project. Help to instruct them on current Java research.")|safe
+       }}
+       {{
+          "UNLISTED"|get_base(
+          "UNLISTED",
+          "01/09/2017",
+          "08/12/2017",
+          "Instructed them on current project workflows. Helped them to build up them Java API skills.")|safe
+       }}
+       {{
+          "UNLISTED"|get_base(
+          "UNLISTED",
+          "01/09/2017",
+          "08/12/2017",
+          "Instructed them on current project workflows. Helped to teach them about the projects within the teams.")|safe
+       }}
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="shadow-1-strong bg-white my-5 p-5" id="submissions">
+    <div class="submissions-section">
+      <h2 class="h2 fw-light mb-4">Submissions</h2>
+      <div class="timeline">
+        {{
+          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Principles and Practices of Secure Cryptographic Coding in Java</a>"|get_base(
+          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php'>Esorics</a>",
+          "September 2021",
+          "",
+          "")|safe
+       }}
+       {{
+          "<a href='https://secdev.ieee.org/2020/accepted/' >Tutorial: Principles and Practices of Secure Cryptographic Coding in Java</a>"|get_base(
+          "<a href='https://secdev.ieee.org/2020/accepted/'>SecDev20</a>",
+          "September 2020",
+          "",
+          "")|safe
+       }}
+       {{
+          "<a href='https://rebrand.ly/frantzme_cryptoguard_ccs' >CryptoGuard: High Precision Detection of Cryptographic Vulnerabilities in Massive-sized Java Projects</a>"|get_base(
+          "<a href='https://sigsac.org/ccs/CCS2019/'>ACM CCS</a>",
+          "November 2019",
+          "",
+          "")|safe
+       }}
+       {{
+          "<a href='https://rebrand.ly/frantzme_ms_thesis' >Enhancing CryptoGuard’s Deployability for Continuous Software Security Scanning</a>"|get_base(
+          "<a href='https://vtechworks.lib.vt.edu/handle/10919/5534'>VT ETDs</a>",
+          "May 2020",
+          "",
+          "")|safe
+       }}
+       {{
+          "<a href='https://rebrand.ly/frantzme_cryptoguard_poster' >Deployment-quality and Accessible Solutions for Cryptography Code Development</a>"|get_base(
+          "<a href='https://sigsac.org/ccs.html'>ACM SIGSAC</a>",
+          "November 2019",
+          "",
+          "")|safe
+       }}
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="shadow-1-strong bg-white my-5 p-5" id="talks">
+    <div class="talks-section">
+      <h2 class="h2 fw-light mb-4">Talks</h2>
+      <div class="timeline">
+        {{
+          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Esorics 2021 Demo</a>"|get_base(
+          "<a href='https://mybinder.org/v2/gh/franceme/Esorics_Conference/HEAD'>Jupyter Notebook</a>",
+          "September 2021",
+          "",
+          "")|safe
+       }}
+       {{
+          "TA: Course SQL Injection Demo"|get_base(
+          "<a href='https://www.youtube.com/watch?v=rLY2skQTeJE'>YouTube</a>",
+          "November 2020",
+          "",
+          "")|safe
+       }}
+       {{
+          "TA: Course Project Demo"|get_base(
+            "<a href='https://www.youtube.com/watch?v=wU5VFDHc11s'>YouTube</a>",
+          "November 2019",
+          "",
+          "")|safe
+       }}
+       {{
+          "<a href='https://www.youtube.com/watch?v=42Qw06OrjwM' >SecDev 2020 Tutorial</a>"|get_base(
+          "<a href='https://mybinder.org/v2/gh/franceme/cryptoguard/2020_SecDev_Tutorial?filepath=SecDev_Tutorial.ipynb'>Jupyter Notebook</a>",
+          "September 2020",
+          "",
+          "")|safe
+       }}
+       
+      </div>
+    </div>
+  </div>
+
   <!--
   <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio">
     <div class="portfolio-section">
@@ -270,7 +614,9 @@
     </div>
   </div>
   -->
-  <div class="shadow-1-strong bg-white my-5 p-5" id="references">
+  
+  <!--
+    <div class="shadow-1-strong bg-white my-5 p-5" id="references">
     <div class="reference-section">
       <h2 class="h2 fw-light mb-4">References</h2>
       <div class="row"> 
@@ -283,6 +629,8 @@
       </div>
     </div>
   </div>
+-->
+
   <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
     <div class="contant-section">
       <h2 class="h2 fw-light text mb-4">Contact</h2>
