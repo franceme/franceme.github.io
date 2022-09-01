@@ -9,6 +9,11 @@
 			"command": "invoke execute"
 		},
 		{
+			"label": "extensions",
+			"type": "shell",
+			"command": "python3 ${workspaceFolder}/.devcontainer/devcontainer.py"
+		},
+		{
 			"label": "sign_on",
 			"type": "shell",
 			"command": "git config --global user.email \"$(whodis)@docker\" && git config --global user.name \"Miles Frantz\""

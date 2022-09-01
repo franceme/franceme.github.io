@@ -28,3 +28,8 @@ def cleanenv(c):
 	]:
 		x = "yes|rm -r " + str(x)
 		print(x);os.system(x)
+
+@task
+def extensions(c):
+	cmd = f"{sys.executable} .devcontainer/devcontainer.py"
+	print(cmd);os.system(cmd)
