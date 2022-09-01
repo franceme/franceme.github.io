@@ -11,13 +11,10 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
     </noscript>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"  rel="stylesheet">
-    <!-- <link href="css/font-awesome/css/all.min.css?ver=1.2.1" rel="stylesheet"> -->
-    <!-- <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet"> -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css" rel="stylesheet">
-    <!--<link href="css/aos.css?ver=1.2.1" rel="stylesheet">-->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="css/font-awesome/css/all.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/main.css?ver=1.2.1" rel="stylesheet">
     <noscript>
       <style type="text/css">
         [data-aos] {
@@ -27,23 +24,23 @@
       </style>
     </noscript>
   </head>
-  <!-- Google tag (gtag.js) (https://analytics.google.com)-->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7R0M67LLC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-F7R0M67LLC');
-  </script>
+    <!-- Google tag (gtag.js) (https://analytics.google.com)-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7R0M67LLC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-F7R0M67LLC');
+    </script>
   <body class="bg-light" id="top">
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
         <div class="pt-4 clearfix">
-          <h1 class="site-title mb-0">Miles Frantz</h1>
+          <h1 class="site-title mb-0">{{name}}</h1>
           <div class="site-nav"> 
-            <nav role="navigation"  style="margin-bottom: 0%;">
-              <ul class="nav">
+            <nav role="navigation">
+              <ul class="nav justify-content-center">
                 <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a>
@@ -69,13 +66,13 @@
 <div class="resume-container">
   <div class="shadow-1-strong bg-white my-5" id="intro">
     <div class="bg-info text-white">
-      <div class="cover bg-image"><img src="/images/header-background.jpg"/>
+      <div class="cover bg-image"><img src="images/header-background.jpg"/>
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
           <div class="text-center p-5">
-            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="/images/avatar.jpg" width="160" height="160"/></div>
+            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/avatar.jpg" width="160" height="160"/></div>
             <div class="header-bio mt-3">
               <div data-aos="zoom-in" data-aos-delay="0">
-                <h2 class="h1">Miles Frantz</h2>
+                <h2 class="h1">{{name}}</h2>
                 <p>Front-end Developer and Graphic Designer</p>
               </div>
               <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
@@ -104,7 +101,7 @@
       <div class="row">
         <div class="col-md-6">
           <h2 class="h2 fw-light mb-4">About Me</h2>
-          <p>Hello! I’m Walter Patterson. I am passionate about UI/UX design and Web Design. I am a skilled <strong>front-end developer</strong> and master of graphic design tools such as Photoshop and Sketch. I am a quick learner and a team worker that gets the job done.</p>
+          <p>Hello! I’m {{name}}. I am passionate about UI/UX design and Web Design. I am a skilled <strong>front-end developer</strong> and master of graphic design tools such as Photoshop and Sketch. I am a quick learner and a team worker that gets the job done.</p>
           <p>I can easily capitalize on low hanging fruits and quickly maximize timely deliverables for real-time schemas.</p>
         </div>
         <div class="col-md-5 offset-lg-1">
@@ -268,7 +265,7 @@
     <div class="portfolio-section">
       <h2 class="h2 fw-light mb-4">Portfolio</h2>
       <div class="row g-0">
-        <div class="col-md-6"><a href="https://dribbble.com/" target="_blank"><img class="img-fluid" src="/images/project-1.jpg" width="800" height="500"/></a></div>
+        <div class="col-md-6"><a href="https://dribbble.com/" target="_blank"><img class="img-fluid" src="images/project-1.jpg" width="800" height="500"/></a></div>
         <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
           <div class="m-4 mt-md-2">
             <p class="text-teal text-small">Frontend / HTML / CSS / JavaScript</p>
@@ -285,10 +282,10 @@
             <p class="text-muted">Web design for popular resturant chain involving complex layouts done in both Photoshop and Sketch. Collaborated with back-end and front-end team for finished product.</p>
           </div>
         </div>
-        <div class="col-md-6"><a href="https://www.behance.net/" target="_blank"><img class="img-fluid" src="/images/project-2.jpg" width="800" height="500"/></a></div>
+        <div class="col-md-6"><a href="https://www.behance.net/" target="_blank"><img class="img-fluid" src="images/project-2.jpg" width="800" height="500"/></a></div>
       </div>
       <div class="row g-0">
-        <div class="col-md-6"><a href="https://dribbble.com/" target="_blank"><img class="img-fluid" src="/images/project-3.jpg" width="800" height="500"/></a></div>
+        <div class="col-md-6"><a href="https://dribbble.com/" target="_blank"><img class="img-fluid" src="images/project-3.jpg" width="800" height="500"/></a></div>
         <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
           <div class="m-4 mt-md-2">
             <p class="text-teal text-small">Frontend / HTML / CSS / JavaScript</p>
@@ -305,7 +302,7 @@
       <div class="row"> 
         <div class="col-md-6">
           <div class="d-flex mb-2">
-            <div class="avatar"><img src="/images/reference-image-1.jpg" width="60" height="60"/></div>
+            <div class="avatar"><img src="images/reference-image-1.jpg" width="60" height="60"/></div>
             <div class="header-bio m-3 mb-0">
               <h3 class="h6 mb-1" data-aos="fade-left" data-aos-delay="0">Aiyana</h3>
               <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100">CEO / Web Design Company</p>
@@ -317,7 +314,7 @@
         </div>
         <div class="col-md-6">
           <div class="d-flex mb-2">
-            <div class="avatar"><img src="/images/reference-image-2.jpg" width="60" height="60"/></div>
+            <div class="avatar"><img src="images/reference-image-2.jpg" width="60" height="60"/></div>
             <div class="header-bio m-3 mb-0">
               <h3 class="h6 mb-1" data-aos="fade-left" data-aos-delay="0">Alexander</h3>
               <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100">Front-end Developer / Web Design Company</p>
@@ -336,11 +333,28 @@
       <div class="row mb-4">
         <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
           <div class="mt-1">
-            <div class="h6"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i>+0718-111-0011</div>
+            <div class="h6"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> +0718-111-0011</div>
             <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> walter@company.com</div>
           </div>
+          <div class="mt-5 d-print-none"><form action="https://formspree.io/your@email.com"
+    method="POST">
+  <div class="form-outline mb-4">
+    <input type="text" id="name" class="form-control" required/>
+    <label class="form-label" for="name">Name</label>
+  </div>
+  <div class="form-outline mb-4">
+    <input type="email" id="email" class="form-control" required/>
+    <label class="form-label" for="email">Email address</label>
+  </div>
+  <div class="form-outline mb-4">
+    <textarea class="form-control" style="resize: none;" id="message" rows="4" required></textarea>
+    <label class="form-label" for="message">Message</label>
+  </div>
+  <button class="btn btn-info btn-block mb-4" type="submit">Send</button>
+</form>
+          </div>
         </div>
-        <!-- INSERT HERE-->
+        <div class="col-md-7 d-print-none" data-aos="zoom-in" data-aos-delay="100"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.9774799129763!2d-73.98032087190995!3d40.765927126473905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f9cfcb250d%3A0xdb570ddcb766e3a8!2sNew%20York%20City%20Center!5e0!3m2!1sen!2sin!4v1614183731149!5m2!1sen!2sin" width="500" height="400" style="border:0;width:100%;" allowfullscreen="" loading="lazy"></iframe></div>
       </div>
     </div>
   </div>
@@ -349,7 +363,7 @@
     <footer class="pt-4 pb-4 text-muted text-center d-print-none">
       <div class="container">
         <div class="my-3">
-          <div class="h4">Miles Frantz</div>
+          <div class="h4">{{name}}</div>
           <div class="footer-nav">
             <nav role="navigation">
               <ul class="nav justify-content-center">
@@ -371,11 +385,8 @@
         </div>
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--<script src="scripts/mdb.min.js?ver=1.2.1"></script>-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
-    <!--<script src="scripts/aos.js?ver=1.2.1"></script>-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="/scripts/main.js"></script>
+    <script src="scripts/mdb.min.js?ver=1.2.1"></script>
+    <script src="scripts/aos.js?ver=1.2.1"></script>
+    <script src="scripts/main.js?ver=1.2.1"></script>
   </body>
 </html>

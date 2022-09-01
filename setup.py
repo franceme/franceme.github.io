@@ -80,7 +80,17 @@ def page_redirect(url):
     </body>
 </html>
 """, 200, {'Content-Type':'text/html'}
+"""
+  <!-- Google tag (gtag.js) (https://analytics.google.com)-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7R0M67LLC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-F7R0M67LLC');
+  </script>
+"""
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
 def get_file(filename, base=None):  # pragma: no cover
     try:
@@ -101,11 +111,11 @@ def get_file(filename, base=None):  # pragma: no cover
 
 @app.route('/')
 def index():
-    page = pages.get_or_404('index')
-    print('Index', flush=True)
-    return Response(get_file('index.html'),mimetype="text/html")
-    #return Response(get_file('index.html'),mimetype="text/html") #render_template('pages/index.html', page=page, base_info=base_info)
+    return render_template_string(get_file('index.html'),mimetype="text/html",
+        name="Miles Frantz"
+    )
 
+"""
 @app.route('/css/<page>')
 def get_css(page):
     print(f"css ", flush=True)
@@ -115,6 +125,7 @@ def get_css(page):
 def test_route(path):
     print('Hi', flush=True)
     return Response(get_file('index.html'),mimetype="text/html")
+"""
 
 
 @app.route('/diagrams.html')
