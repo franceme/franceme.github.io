@@ -25,9 +25,9 @@ except:
     from flask_flatpages import (
         FlatPages, pygmented_markdown, pygments_style_defs)
 
-prerender_jinja = lambda text: pygmented_markdown(render_template_string(text))
 
 base_info = {
+    'name':"Miles Frantz",
     'NAME':"Miles Frantz",
     'EMAIL':"g00qhtdbp@relay.firefox.com",#"frantzme@vt.edu",
     'GITHUB':"franceme",
@@ -47,6 +47,9 @@ base_info = {
     'LINKEDIN': 'frantzme',
     # 'phone': '513-480-3169',
 }
+
+prerender_jinja = lambda text: pygmented_markdown(render_template_string(text))
+rendre = lambda page:render_template_string(get_file(page),mimetype="text/html",dyct=base_info)
 
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
@@ -80,17 +83,6 @@ def page_redirect(url):
     </body>
 </html>
 """, 200, {'Content-Type':'text/html'}
-"""
-  <!-- Google tag (gtag.js) (https://analytics.google.com)-->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7R0M67LLC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-F7R0M67LLC');
-  </script>
-"""
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
 def get_file(filename, base=None):  # pragma: no cover
     try:
@@ -111,9 +103,7 @@ def get_file(filename, base=None):  # pragma: no cover
 
 @app.route('/')
 def index():
-    return render_template_string(get_file('index.html'),mimetype="text/html",
-        name="Miles Frantz"
-    )
+    return rendre('index.html')
 
 """
 @app.route('/css/<page>')
