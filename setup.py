@@ -106,10 +106,9 @@ def index():
     return Response(get_file('index.html'),mimetype="text/html")
     #return Response(get_file('index.html'),mimetype="text/html") #render_template('pages/index.html', page=page, base_info=base_info)
 
-@app.route('/css/')
-def get_css():
+@app.route('/css/<page>')
+def get_css(page):
     print(f"css ", flush=True)
-    page = pages.get_or_404(path)
     return Response(get_file(page,'css'),mimetype="text/css") #render_template('pages/page.html', page=page, base_info=base_info)
 
 @app.route('/path:str/')
