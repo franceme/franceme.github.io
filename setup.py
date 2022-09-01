@@ -28,6 +28,7 @@ except:
 
 base_info = {
     'name':"Miles Frantz",
+    'title':"Cyber Security Ph.D. Student",
     'NAME':"Miles Frantz",
     'EMAIL':"g00qhtdbp@relay.firefox.com",#"frantzme@vt.edu",
     'GITHUB':"franceme",
@@ -155,6 +156,68 @@ Disallow: /
 
 
 # === Main function  === #
+def get_skill(name,amount, isLeft=True):
+    ranking = "No Experience"
+    if amount == 0:
+        ranking = "No Experience"
+    if amount >= 25:
+        ranking = "Beginner"
+    if amount >= 50:
+        ranking = "Journeyman"
+    if amount >= 75:
+        ranking = "Expert"
+    if amount >= 100:
+        ranking = "Master"
+
+    klass = "bg-info" if isLeft else "bg-secondary"
+
+    return render_template_string(f"""
+<div class="mb-3"><span class="fw-bolder">{name}</span>
+    <div class="progress my-2 rounded" style="height: 20px">
+        <div class="progress-bar {klass}" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: {amount}%;" aria-valuenow="{amount}" aria-valuemin="0" aria-valuemax="100">{ranking}</div>
+    </div>
+</div>
+""")
+
+app.jinja_env.filters['get_skill'] = get_skill
+
+def get_base(title,co_name, _from,_to,desc, is_info=True):
+
+    base_color = "timeline-card-info" if is_info else "timeline-card-success"
+
+    return render_template_string(f"""
+<div class="timeline-card {base_color}" data-aos="fade-in" data-aos-delay="0">
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">{title} <span class="text-muted h6">at {co_name}</span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">{_from} - {_to}</div>
+    <div>{desc}</div>
+    </div>
+</div>
+""")
+
+app.jinja_env.filters['get_base'] = get_base
+
+def get_ref(name, title, desc,left_side=True):
+
+    side = "timeline-card-info" if left_side else "timeline-card-success"
+
+    return render_template_string(f"""
+          <div class="d-flex mb-2">
+            <div class="avatar"><img src="images/reference-image-1.jpg" width="60" height="60"/></div>
+            <div class="header-bio m-3 mb-0">
+              <h3 class="h6 mb-1" data-aos="fade-left" data-aos-delay="0">{name}</h3>
+              <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100">{title}</p>
+            </div>
+          </div>
+          <div class="d-flex"><i class="text-secondary fas fa-quote-left"></i>
+            <p class="lead mx-2" data-aos="fade-left" data-aos-delay="100">{desc}</p>
+          </div>
+""")
+
+app.jinja_env.filters['get_ref'] = get_ref
+
 
 def arg(string):
     return __name__ == "__main__" and len(
