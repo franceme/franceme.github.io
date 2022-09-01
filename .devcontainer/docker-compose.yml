@@ -1,3 +1,4 @@
+#!/Users/maister/Projects/scripts/dockerPush.py -x run -d pydev:lite -p 8912 8899 --shebang
 version: '3.8'
 
 services:

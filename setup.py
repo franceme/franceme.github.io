@@ -164,8 +164,7 @@ if arg('build'):
     freezer.freeze()
     sys.exit(0)
 elif arg('run'):
-    port = int(sys.argv[2]) if len(sys.argv) >= 2 else 8
-    899
+    port = int(sys.argv[2]) if len(sys.argv) >= 2 else 8899
     app.run(host='0.0.0.0', port=port)
     sys.exit(0)
 elif arg('install'):
