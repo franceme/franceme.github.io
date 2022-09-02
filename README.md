@@ -8,4 +8,4 @@ Helpful HTML
 
 
 Distance: https://www.csauthors.net/distance/miles-frantz/Alberto-Bacchelli
-CARD: https://github.com/avibrazil/digital-business-card
+https://getbootstrap.com/docs/5.2/customize/css-variables/

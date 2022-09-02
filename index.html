@@ -92,9 +92,6 @@
                 {% if dyct['show_docker'] -%}
                 <li class="nav-item"><a class="nav-link" href="#my_dock" title="MyDocker"><span class="menu-title">My Docker</span></a></li>
                 {%- endif%}
-                {% if dyct['show_consult'] -%}
-                <li class="nav-item"><a class="nav-link" href="#consultations" title="Consultations"><span class="menu-title">Consultations</span></a></li>
-                {%- endif%}
                 {% if dyct['show_exp'] -%}
                 <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a></li>
                 {%- endif%}
@@ -104,6 +101,10 @@
                 {% if dyct['show_ment'] -%}
                 <li class="nav-item"><a class="nav-link" href="#mentees" title="Mentees"><span class="menu-title">Mentees</span></a></li>
                 {%- endif%}
+                {% if dyct['show_consult'] -%}
+                <li class="nav-item"><a class="nav-link" href="#consultations" title="Consultations"><span class="menu-title">Consultations</span></a></li>
+                {%- endif%}
+                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span class="menu-title">Contact</span></a></li>
               </ul>
             </nav>
           </div>
@@ -655,7 +656,7 @@
           "Jason",
           "06/08/2020",
           "08/22/2020",
-          "Instructed about assistance on the CryptoGuard Project. Read the proper review [https://docs.google.com/document/d/18Xa6M5ymDyZ-zvPFqN5tAlQuIPqd27nWBdp2pevpytU/edit?usp=sharing](here).",color="purple")|safe
+          "Instructed about assistance on the CryptoGuard Project. Read the proper review <a href='https://docs.google.com/document/d/18Xa6M5ymDyZ-zvPFqN5tAlQuIPqd27nWBdp2pevpytU/edit?usp=sharing'>here</a>.",color="purple")|safe
        }}
        {{
           "UNLISTED"|get_base(
@@ -776,6 +777,9 @@
           <div class="mt-1">
             <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i>
               <a href="mailto:{{dyct['EMAIL']}}">{{dyct['EMAIL']}}</a>
+              <br>
+              <br>
+              <img src="images/VCard.svg"/>
             </div>
           </div>
         </div>
