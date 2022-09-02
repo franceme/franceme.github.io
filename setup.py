@@ -190,12 +190,15 @@ def get_skill(name,amount, isLeft=True):
 
 app.jinja_env.filters['get_skill'] = get_skill
 
-def get_base(title,co_name, _from,_to,desc, is_info=True):
+def get_base(title,co_name, _from,_to,desc, is_info=True,color=None):
 
     base_color = "timeline-card-info" if is_info else "timeline-card-success"
 
+    if color is not None:
+        color = "timeline-card-" + color
+
     return render_template_string(f"""
-<div class="timeline-card {base_color}" data-aos="fade-in" data-aos-delay="0">
+<div class="timeline-card {color or base_color}" data-aos="fade-in" data-aos-delay="0" {color}>
     <div class="timeline-head px-4 pt-3">
     <div class="h5">{title} <span class="text-muted h6">at {co_name}</span></div>
     </div>

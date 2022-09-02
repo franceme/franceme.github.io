@@ -31,6 +31,21 @@
 .timeline-card-success:before {
   border-color: var(--bs-teal); }
 
+.timeline-card-yellow:before {
+    border-color: var(--bs-yellow); }
+
+.timeline-card-blue:before {
+  border-color: var(--bs-blue); }
+
+.timeline-card-orange:before {
+  border-color: var(--bs-orange); }
+
+.timeline-card-purple:before {
+  border-color: var(--bs-purple); }
+
+.timeline-card-red:before {
+  border-color: var(--bs-red); }
+
 html {
   scroll-behavior: smooth; }
 
