@@ -70,23 +70,8 @@
             <nav role="navigation">
               <ul class="nav justify-content-center">
                 <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a></li>
-                {% if dyct['show_skills'] -%}
-                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a></li>
-                {%- endif%}
-                {% if dyct['show_exp'] -%}
-                <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a></li>
-                {%- endif%}
                 {% if dyct['show_edu'] -%}
                 <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a></li>
-                {%- endif%}
-                {% if dyct['show_proj'] -%}
-                <li class="nav-item"><a class="nav-link" href="#projects" title="Projects"><span class="menu-title">Projects</span></a></li>
-                {%- endif%}
-                {% if dyct['show_grps'] -%}
-                <li class="nav-item"><a class="nav-link" href="#groups" title="Groups"><span class="menu-title">Groups</span></a></li>
-                {%- endif%}
-                {% if dyct['show_ment'] -%}
-                <li class="nav-item"><a class="nav-link" href="#mentees" title="Mentees"><span class="menu-title">Mentees</span></a></li>
                 {%- endif%}
                 {% if dyct['show_subs'] -%}
                 <li class="nav-item"><a class="nav-link" href="#submissions" title="Submissions"><span class="menu-title">Submissions</span></a></li>
@@ -94,7 +79,21 @@
                 {% if dyct['show_talks'] -%}
                 <li class="nav-item"><a class="nav-link" href="#talks" title="Talks"><span class="menu-title">Talks</span></a></li>
                 {%- endif%}
-
+                {% if dyct['show_proj'] -%}
+                <li class="nav-item"><a class="nav-link" href="#projects" title="Projects"><span class="menu-title">Projects</span></a></li>
+                {%- endif%}
+                {% if dyct['show_skills'] -%}
+                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a></li>
+                {%- endif%}
+                {% if dyct['show_exp'] -%}
+                <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a></li>
+                {%- endif%}
+                {% if dyct['show_grps'] -%}
+                <li class="nav-item"><a class="nav-link" href="#groups" title="Groups"><span class="menu-title">Groups</span></a></li>
+                {%- endif%}
+                {% if dyct['show_ment'] -%}
+                <li class="nav-item"><a class="nav-link" href="#mentees" title="Mentees"><span class="menu-title">Mentees</span></a></li>
+                {%- endif%}
               </ul>
             </nav>
           </div>
@@ -206,6 +205,169 @@
       </div>
     </div>
   </div>
+  {% if dyct['show_edu'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="education">
+    <div class="education-section">
+      <h2 class="h2 fw-light mb-4">Education</h2>
+      <div class="timeline">
+        {{
+          "Ph.D. Computer Science"|get_base(
+          "Virginia Polytechnic Institute and State University",
+          "May 2020",
+          "Present",
+          "I have been working under Dr. Danfeng Yao on Cryptoguard related projects and other static analysis projects. I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.",
+          False)|safe
+       }}
+       {{
+          "M.S. Computer Science"|get_base(
+          "Virginia Polytechnic Institute and State University",
+          "August 2018",
+          "May 2020",
+          "I have been working under Dr. Danfeng Yao on Cryptoguard related projects and other static analysis projects. I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.",
+          False)|safe
+       }}
+       {{
+          "B.S. Computer Engineering"|get_base(
+          "University of Cincinnati",
+          "August 2013",
+          "April 2018",
+          "During my Undergraduate Program, I learned a lot throughout the classes I took and the Co-Ops I was a part of. The Co-Ops was the best part of the degree, as it gave me real-world experience and a chance for practical application.",
+          False)|safe
+       }}
+        
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_sub'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="submissions">
+    <div class="submissions-section">
+      <h2 class="h2 fw-light mb-4">Submissions</h2>
+      <div class="timeline">
+        {{
+          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Principles and Practices of Secure Cryptographic Coding in Java</a>"|get_base(
+          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php'>Esorics</a>",
+          "September 2021",
+          "",
+          "",color="yellow")|safe
+       }}
+       {{
+          "<a href='https://secdev.ieee.org/2020/accepted/' >Tutorial: Principles and Practices of Secure Cryptographic Coding in Java</a>"|get_base(
+          "<a href='https://secdev.ieee.org/2020/accepted/'>SecDev20</a>",
+          "September 2020",
+          "",
+          "",color="yellow")|safe
+       }}
+       {{
+          "<a href='https://rebrand.ly/frantzme_cryptoguard_ccs' >CryptoGuard: High Precision Detection of Cryptographic Vulnerabilities in Massive-sized Java Projects</a>"|get_base(
+          "<a href='https://sigsac.org/ccs/CCS2019/'>ACM CCS</a>",
+          "November 2019",
+          "",
+          "",color="yellow")|safe
+       }}
+       {{
+          "<a href='https://rebrand.ly/frantzme_ms_thesis' >Enhancing CryptoGuard’s Deployability for Continuous Software Security Scanning</a>"|get_base(
+          "<a href='https://vtechworks.lib.vt.edu/handle/10919/5534'>VT ETDs</a>",
+          "May 2020",
+          "",
+          "",color="yellow")|safe
+       }}
+       {{
+          "<a href='https://rebrand.ly/frantzme_cryptoguard_poster' >Deployment-quality and Accessible Solutions for Cryptography Code Development</a>"|get_base(
+          "<a href='https://sigsac.org/ccs.html'>ACM SIGSAC</a>",
+          "November 2019",
+          "",
+          "",color="yellow")|safe
+       }}
+       
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_talks'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="talks">
+    <div class="talks-section">
+      <h2 class="h2 fw-light mb-4">Talks</h2>
+      <div class="timeline">
+        {{
+          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Esorics 2021 Demo</a>"|get_base(
+          "<a href='https://mybinder.org/v2/gh/franceme/Esorics_Conference/HEAD'>Jupyter Notebook</a>",
+          "September 2021",
+          "",
+          "",color="red")|safe
+       }}
+       {{
+          "TA: Course SQL Injection Demo"|get_base(
+          "<a href='https://www.youtube.com/watch?v=rLY2skQTeJE'>YouTube</a>",
+          "November 2020",
+          "",
+          "",color="red")|safe
+       }}
+       {{
+          "TA: Course Project Demo"|get_base(
+            "<a href='https://www.youtube.com/watch?v=wU5VFDHc11s'>YouTube</a>",
+          "November 2019",
+          "",
+          "",color="red")|safe
+       }}
+       {{
+          "<a href='https://www.youtube.com/watch?v=42Qw06OrjwM' >SecDev 2020 Tutorial</a>"|get_base(
+          "<a href='https://mybinder.org/v2/gh/franceme/cryptoguard/2020_SecDev_Tutorial?filepath=SecDev_Tutorial.ipynb'>Jupyter Notebook</a>",
+          "September 2020",
+          "",
+          "",color="red")|safe
+       }}
+       
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_proj'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="projects">
+    <div class="projects-section">
+      <h2 class="h2 fw-light mb-4">Projects</h2>
+      <div class="timeline">
+        {{
+          "franceme.github.io"|get_base(
+          "<a href='https://github.com/franceme/franceme.github.io'>Website</a>",
+          "2019",
+          "Present",
+          "This is my ‘now and again’ public website. I’ve used the same framework to generate the static website, and I have migrated the build to GitHub actions to ensure public transparency. I only made it public after hiding some of the web content since the build for the website is activated AFTER the Resume repo is complete. This was a neat trick that allows the Website to automatically download and host the most recent documents, as well as load the most recent web content (since this website used yml files that were created from the Resume Repo).",color="blue")|safe
+       }}
+       {{
+          "WaveNetExploration"|get_base(
+          "<a href='https://github.com/franceme/WaveNetExploration'>Website</a>",
+          "2019",
+          "2019",
+          "This was a class project created for an Advanced Machine Learning class. The purpose of this project was to replicate an existing papers work and to add onto it. For this, my group chose to replicate the paper [https://arxiv.org/pdf/1609.03499.pdf](WaveNet) and to enhance the results by running it on music samples. Unfortunately, we were unable to create any sound samples that mimic actual music, however from the website, there is a clear improvement in the music generation from the models.",color="blue")|safe
+       }}
+       {{
+          "GradleGuard"|get_base(
+          "<a href='https://github.com/franceme/gradleguard'>Website</a>",
+          "2019",
+          "2020",
+          "This is the Gradle plugin for my thesis project Cryptoguard. This was created to help ease the access and use for developers to be able to use Cryptoguard.",color="blue")|safe
+       }}
+       {{
+          "MavenGuard"|get_base(
+          "<a href='https://github.com/franceme/mavenguard'>Website</a>",
+          "2019",
+          "2020",
+          "This is the Maven plugin for my thesis project Cryptoguard. This was created to help ease the access and use for developers to be able to use Cryptoguard.",color="blue")|safe
+       }}
+       {{
+          "CryptoGuard"|get_base(
+          "<a href='https://github.com/franceme/cryptoguard'>Website</a>",
+          "2019",
+          "2020",
+          "This is a static and compiled code analyzer, serving as my current thesis project. This project will scan cryptographic misuse in Java Projects (Maven/Gradle based) and Android Projects. Recent works with this project have included making an enhanced interface for this to work with other programs and tools.",color="blue")|safe
+       }}
+       
+        
+      </div>
+    </div>
+  </div>
+  {%- endif %}
   {% if dyct['show_skills'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
     <div class="skills-section">
@@ -242,40 +404,6 @@
           {{'Soap Webservices'|get_skill(75,False)|safe}}
           {{'Machine Learning'|get_skill(40,False)|safe}}
         </div>
-      </div>
-    </div>
-  </div>
-  {%- endif %}
-  {% if dyct['show_edu'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="education">
-    <div class="education-section">
-      <h2 class="h2 fw-light mb-4">Education</h2>
-      <div class="timeline">
-        {{
-          "Ph.D. Computer Science"|get_base(
-          "Virginia Polytechnic Institute and State University",
-          "May 2020",
-          "Present",
-          "I have been working under Dr. Danfeng Yao on Cryptoguard related projects and other static analysis projects. I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.",
-          False)|safe
-       }}
-       {{
-          "M.S. Computer Science"|get_base(
-          "Virginia Polytechnic Institute and State University",
-          "August 2018",
-          "May 2020",
-          "I have been working under Dr. Danfeng Yao on Cryptoguard related projects and other static analysis projects. I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.",
-          False)|safe
-       }}
-       {{
-          "B.S. Computer Engineering"|get_base(
-          "University of Cincinnati",
-          "August 2013",
-          "April 2018",
-          "During my Undergraduate Program, I learned a lot throughout the classes I took and the Co-Ops I was a part of. The Co-Ops was the best part of the degree, as it gave me real-world experience and a chance for practical application.",
-          False)|safe
-       }}
-        
       </div>
     </div>
   </div>
@@ -375,52 +503,6 @@
     </div>
   </div>
   {%- endif %}
-  {% if dyct['show_proj'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="projects">
-    <div class="projects-section">
-      <h2 class="h2 fw-light mb-4">Projects</h2>
-      <div class="timeline">
-        {{
-          "franceme.github.io"|get_base(
-          "<a href='https://github.com/franceme/franceme.github.io'>Website</a>",
-          "2019",
-          "Present",
-          "This is my ‘now and again’ public website. I’ve used the same framework to generate the static website, and I have migrated the build to GitHub actions to ensure public transparency. I only made it public after hiding some of the web content since the build for the website is activated AFTER the Resume repo is complete. This was a neat trick that allows the Website to automatically download and host the most recent documents, as well as load the most recent web content (since this website used yml files that were created from the Resume Repo).",color="blue")|safe
-       }}
-       {{
-          "WaveNetExploration"|get_base(
-          "<a href='https://github.com/franceme/WaveNetExploration'>Website</a>",
-          "2019",
-          "2019",
-          "This was a class project created for an Advanced Machine Learning class. The purpose of this project was to replicate an existing papers work and to add onto it. For this, my group chose to replicate the paper [https://arxiv.org/pdf/1609.03499.pdf](WaveNet) and to enhance the results by running it on music samples. Unfortunately, we were unable to create any sound samples that mimic actual music, however from the website, there is a clear improvement in the music generation from the models.",color="blue")|safe
-       }}
-       {{
-          "GradleGuard"|get_base(
-          "<a href='https://github.com/franceme/gradleguard'>Website</a>",
-          "2019",
-          "2020",
-          "This is the Gradle plugin for my thesis project Cryptoguard. This was created to help ease the access and use for developers to be able to use Cryptoguard.",color="blue")|safe
-       }}
-       {{
-          "MavenGuard"|get_base(
-          "<a href='https://github.com/franceme/mavenguard'>Website</a>",
-          "2019",
-          "2020",
-          "This is the Maven plugin for my thesis project Cryptoguard. This was created to help ease the access and use for developers to be able to use Cryptoguard.",color="blue")|safe
-       }}
-       {{
-          "CryptoGuard"|get_base(
-          "<a href='https://github.com/franceme/cryptoguard'>Website</a>",
-          "2019",
-          "2020",
-          "This is a static and compiled code analyzer, serving as my current thesis project. This project will scan cryptographic misuse in Java Projects (Maven/Gradle based) and Android Projects. Recent works with this project have included making an enhanced interface for this to work with other programs and tools.",color="blue")|safe
-       }}
-       
-        
-      </div>
-    </div>
-  </div>
-  {%- endif %}
   {% if dyct['show_grp'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="groups">
     <div class="groups-section">
@@ -504,89 +586,6 @@
           "01/09/2017",
           "08/12/2017",
           "Instructed them on current project workflows. Helped to teach them about the projects within the teams.",color="purple")|safe
-       }}
-       
-      </div>
-    </div>
-  </div>
-  {%- endif %}
-  {% if dyct['show_sub'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="submissions">
-    <div class="submissions-section">
-      <h2 class="h2 fw-light mb-4">Submissions</h2>
-      <div class="timeline">
-        {{
-          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Principles and Practices of Secure Cryptographic Coding in Java</a>"|get_base(
-          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php'>Esorics</a>",
-          "September 2021",
-          "",
-          "",color="yellow")|safe
-       }}
-       {{
-          "<a href='https://secdev.ieee.org/2020/accepted/' >Tutorial: Principles and Practices of Secure Cryptographic Coding in Java</a>"|get_base(
-          "<a href='https://secdev.ieee.org/2020/accepted/'>SecDev20</a>",
-          "September 2020",
-          "",
-          "",color="yellow")|safe
-       }}
-       {{
-          "<a href='https://rebrand.ly/frantzme_cryptoguard_ccs' >CryptoGuard: High Precision Detection of Cryptographic Vulnerabilities in Massive-sized Java Projects</a>"|get_base(
-          "<a href='https://sigsac.org/ccs/CCS2019/'>ACM CCS</a>",
-          "November 2019",
-          "",
-          "",color="yellow")|safe
-       }}
-       {{
-          "<a href='https://rebrand.ly/frantzme_ms_thesis' >Enhancing CryptoGuard’s Deployability for Continuous Software Security Scanning</a>"|get_base(
-          "<a href='https://vtechworks.lib.vt.edu/handle/10919/5534'>VT ETDs</a>",
-          "May 2020",
-          "",
-          "",color="yellow")|safe
-       }}
-       {{
-          "<a href='https://rebrand.ly/frantzme_cryptoguard_poster' >Deployment-quality and Accessible Solutions for Cryptography Code Development</a>"|get_base(
-          "<a href='https://sigsac.org/ccs.html'>ACM SIGSAC</a>",
-          "November 2019",
-          "",
-          "",color="yellow")|safe
-       }}
-       
-      </div>
-    </div>
-  </div>
-  {%- endif %}
-  {% if dyct['show_talks'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="talks">
-    <div class="talks-section">
-      <h2 class="h2 fw-light mb-4">Talks</h2>
-      <div class="timeline">
-        {{
-          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Esorics 2021 Demo</a>"|get_base(
-          "<a href='https://mybinder.org/v2/gh/franceme/Esorics_Conference/HEAD'>Jupyter Notebook</a>",
-          "September 2021",
-          "",
-          "",color="red")|safe
-       }}
-       {{
-          "TA: Course SQL Injection Demo"|get_base(
-          "<a href='https://www.youtube.com/watch?v=rLY2skQTeJE'>YouTube</a>",
-          "November 2020",
-          "",
-          "",color="red")|safe
-       }}
-       {{
-          "TA: Course Project Demo"|get_base(
-            "<a href='https://www.youtube.com/watch?v=wU5VFDHc11s'>YouTube</a>",
-          "November 2019",
-          "",
-          "",color="red")|safe
-       }}
-       {{
-          "<a href='https://www.youtube.com/watch?v=42Qw06OrjwM' >SecDev 2020 Tutorial</a>"|get_base(
-          "<a href='https://mybinder.org/v2/gh/franceme/cryptoguard/2020_SecDev_Tutorial?filepath=SecDev_Tutorial.ipynb'>Jupyter Notebook</a>",
-          "September 2020",
-          "",
-          "",color="red")|safe
        }}
        
       </div>
