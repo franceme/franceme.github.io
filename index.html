@@ -65,7 +65,9 @@
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
         <div class="pt-4 clearfix">
-          <h1 class="site-title mb-0">{{dyct['name']}}</h1>
+          <h1 class="site-title mb-0">{{dyct['name']}} <br>
+            {{ "Research"|get_main_url()|safe }} {{ "Industry"|get_main_url()|safe }} {{ "Full"|get_main_url()|safe }}
+          </h1>
           <div class="site-nav"> 
             <nav role="navigation">
               <ul class="nav justify-content-center">
@@ -710,7 +712,9 @@
       
       // When the user clicks on the button, scroll to the top of the document
       function goto(location) {
-        window.location.href = location;
+        //window.location.href = location;
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
     </script>
   </body>

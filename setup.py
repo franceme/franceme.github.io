@@ -115,6 +115,26 @@ def page_redirect(url):
 
 @app.route('/')
 def index():
+    for x in ['show_skills','show_ment']:
+        base_info[x] = False
+    return rendre('index.html')
+
+@app.route('/research')
+def research():
+    for x in ['show_skills','show_exp','show_grp']:
+        base_info[x] = False
+    return rendre('index.html')
+
+@app.route('/industry')
+def industry():
+    for x in ['show_edu','show_talks','show_sub']:
+        base_info[x] = False
+    return rendre('index.html')
+
+@app.route('/full')
+def full():
+    for x in ["show_edu",    "show_exp",    "show_proj",    "show_grp",    "show_ment",    "show_sub",    "show_talks",    "show_skills"]:
+        base_info[x] = True
     return rendre('index.html')
 
 """
@@ -238,6 +258,11 @@ def get_ref(name, title, desc,left_side=True):
 
 app.jinja_env.filters['get_ref'] = get_ref
 
+def get_main_url(page_name):
+    page_name = str(page_name)
+    return render_template_string(f""" <a href="/{page_name.lower()}">{page_name.title()}</a> """)
+
+app.jinja_env.filters['get_main_url'] = get_main_url
 
 def arg(string):
     return __name__ == "__main__" and len(
