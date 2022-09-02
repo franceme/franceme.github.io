@@ -69,24 +69,32 @@
           <div class="site-nav"> 
             <nav role="navigation">
               <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#projects" title="Projects"><span class="menu-title">Projects</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#groups" title="Groups"><span class="menu-title">Groups</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#mentees" title="Mentees"><span class="menu-title">Mentees</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#submissions" title="Submissions"><span class="menu-title">Submissions</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#talks" title="Talks"><span class="menu-title">Talks</span></a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a></li>
+                {% if dyct['show_skills'] -%}
+                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a></li>
+                {%- endif%}
+                {% if dyct['show_exp'] -%}
+                <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a></li>
+                {%- endif%}
+                {% if dyct['show_edu'] -%}
+                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a></li>
+                {%- endif%}
+                {% if dyct['show_proj'] -%}
+                <li class="nav-item"><a class="nav-link" href="#projects" title="Projects"><span class="menu-title">Projects</span></a></li>
+                {%- endif%}
+                {% if dyct['show_grps'] -%}
+                <li class="nav-item"><a class="nav-link" href="#groups" title="Groups"><span class="menu-title">Groups</span></a></li>
+                {%- endif%}
+                {% if dyct['show_ment'] -%}
+                <li class="nav-item"><a class="nav-link" href="#mentees" title="Mentees"><span class="menu-title">Mentees</span></a></li>
+                {%- endif%}
+                {% if dyct['show_subs'] -%}
+                <li class="nav-item"><a class="nav-link" href="#submissions" title="Submissions"><span class="menu-title">Submissions</span></a></li>
+                {%- endif%}
+                {% if dyct['show_talks'] -%}
+                <li class="nav-item"><a class="nav-link" href="#talks" title="Talks"><span class="menu-title">Talks</span></a></li>
+                {%- endif%}
+
               </ul>
             </nav>
           </div>
@@ -198,6 +206,7 @@
       </div>
     </div>
   </div>
+  {% if dyct['show_skills'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
     <div class="skills-section">
       <h2 class="h2 fw-light mb-4">Technical Skills</h2>
@@ -236,7 +245,8 @@
       </div>
     </div>
   </div>
-
+  {%- endif %}
+  {% if dyct['show_edu'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="education">
     <div class="education-section">
       <h2 class="h2 fw-light mb-4">Education</h2>
@@ -269,7 +279,8 @@
       </div>
     </div>
   </div>
-
+  {%- endif %}
+  {% if dyct['show_exp'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="experience">
     <div class="work-experience-section">
       <h2 class="h2 fw-light mb-4">Work Experience</h2>
@@ -363,7 +374,8 @@
       </div>
     </div>
   </div>
-
+  {%- endif %}
+  {% if dyct['show_proj'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="projects">
     <div class="projects-section">
       <h2 class="h2 fw-light mb-4">Projects</h2>
@@ -408,7 +420,8 @@
       </div>
     </div>
   </div>
-
+  {%- endif %}
+  {% if dyct['show_grp'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="groups">
     <div class="groups-section">
       <h2 class="h2 fw-light mb-4">Groups</h2>
@@ -451,7 +464,8 @@
       </div>
     </div>
   </div>
-
+  {%- endif %}
+  {% if dyct['show_ment'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="mentees">
     <div class="mentees-section">
       <h2 class="h2 fw-light mb-4">Mentees</h2>
@@ -495,7 +509,8 @@
       </div>
     </div>
   </div>
-
+  {%- endif %}
+  {% if dyct['show_sub'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="submissions">
     <div class="submissions-section">
       <h2 class="h2 fw-light mb-4">Submissions</h2>
@@ -539,7 +554,8 @@
       </div>
     </div>
   </div>
-
+  {%- endif %}
+  {% if dyct['show_talks'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="talks">
     <div class="talks-section">
       <h2 class="h2 fw-light mb-4">Talks</h2>
@@ -576,7 +592,7 @@
       </div>
     </div>
   </div>
-
+  {%- endif %}
   <!--
   <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio">
     <div class="portfolio-section">
@@ -697,6 +713,6 @@
       function goto(location) {
         window.location.href = location;
       }
-      </script>
+    </script>
   </body>
 </html>

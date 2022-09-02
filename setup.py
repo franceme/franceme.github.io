@@ -47,6 +47,14 @@ base_info = {
     'WEBSITE': 'franceme.github.io',
     'LINKEDIN': 'frantzme',
     # 'phone': '513-480-3169',
+    "show_edu":True,
+    "show_exp":True,
+    "show_proj":True,
+    "show_grp":True,
+    "show_ment":True,
+    "show_sub":True,
+    "show_talks":True,
+    "show_skills":True
 }
 
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
