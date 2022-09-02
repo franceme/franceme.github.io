@@ -37,6 +37,9 @@
 .timeline-card-blue:before {
   border-color: var(--bs-blue); }
 
+  .timeline-card-pink:before {
+    border-color: var(--bs-pink); }
+
 .timeline-card-orange:before {
   border-color: var(--bs-orange); }
 

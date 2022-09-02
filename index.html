@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
     </noscript>
@@ -43,7 +45,7 @@
         cursor: pointer;
         padding: 15px;
         border-radius: 4px;
-        opacity: 0.25;
+        opacity: 0.45;
       }
       
       #myBtn:hover {
@@ -65,7 +67,7 @@
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
         <div class="pt-4 clearfix">
-          <h1 class="site-title mb-0">{{dyct['name']}} <br>
+          <h1 class="site-title mb-0"><a href="/" >{{dyct['name']}}</a> <br>
             {{ "Research"|get_main_url()|safe }} {{ "Industry"|get_main_url()|safe }} {{ "Full"|get_main_url()|safe }}
           </h1>
           <div class="site-nav"> 
@@ -86,6 +88,12 @@
                 {%- endif%}
                 {% if dyct['show_skills'] -%}
                 <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a></li>
+                {%- endif%}
+                {% if dyct['show_docker'] -%}
+                <li class="nav-item"><a class="nav-link" href="#my_dock" title="MyDocker"><span class="menu-title">My Docker</span></a></li>
+                {%- endif%}
+                {% if dyct['show_consult'] -%}
+                <li class="nav-item"><a class="nav-link" href="#consultations" title="Consultations"><span class="menu-title">Consultations</span></a></li>
                 {%- endif%}
                 {% if dyct['show_exp'] -%}
                 <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a></li>
@@ -119,15 +127,74 @@
               <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
                 <nav role="navigation">
                   <ul class="nav justify-content-center">
-                <!--
-                <li class="nav-item"><a class="nav-link" href="https://twitter.com/templateflip" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/{{dyct['GITHUB']}}" title="Github">
+                    <i class="fab fa-github"></i>
+                    <span style="padding:10px;" class="menu-title sr-only">Github</span>
+                  </a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/templateflip" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/templateflip" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a>
-                </li>
-                -->
-                <li class="nav-item"><a class="nav-link" href="https://github.com/{{dyct['GITHUB']}}" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
+                <li>
+              {% if 'DOCKER' in dyct  %}
+              <li>
+                  <a class="nav-link" href="https://hub.docker.com/u/{{ dyct['DOCKER'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-docker" title="Docker link"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'LINKEDIN_USERNAME' in dyct  %}
+              <li>
+                      <a class="nav-link" href="https://www.linkedin.com/in/{{ dyct['LINKEDIN_USERNAME']|escape }}" title="Linkedin">
+                      <i style="padding:10px;" class="fab fa-linkedin" title="Linkedin link"></i>
+                  </a>
+              </li>
+              {% endif  %}
+               {% if 'SCHOLAR_USERNAME' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://scholar.google.com/citations?user={{ dyct['SCHOLAR_USERNAME'] }}" title="Linkedin">
+                      <i style="padding:10px;" class="ai ai-google-scholar-square" title="Google Scholar"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'MENDELEY_USERNAME' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://www.mendeley.com/profiles/{{ dyct['MENDELEY_USERNAME'] }}" title="Docker">
+                      <i style="padding:10px;" class="ai ai-mendeley" title="Mendeley Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'IEEE' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://ieee-collabratec.ieee.org/app/p/{{ dyct['IEEE'] }}" title="Docker">
+                     <i style="padding:10px;" class="ai ai-ieee" title="IEEE Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'MEDIUM' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://medium.com/@{{ dyct['MEDIUM'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-medium" title="Medium Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'ORCID' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://orcid.org/{{ dyct['ORCID'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-orcid" title="Orcid Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if False and 'ZENODO' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://zenodo.org/search?page=1&size=20&q=owners:{{ dyct['ZENODO'] }}" title="Docker">
+                      <img class="custom-icon" style="padding-top:30%;" src="https://about.zenodo.org/static/img/logos/zenodo-white.svg" width="80%"/>
+                  </a>
+              </li>
+              {% endif  %}
+               <li>
+                    <a class="nav-link" href="https://oca.opensource.oracle.com/?ojr=contrib-list" title="Docker">
+                      <i style="padding:10px;" class="fab fa-java" title="Java Oracle Contributor Agreement"></i>
+                  </a>
+              </li>
                   </ul>
                 </nav>
               </div>
@@ -168,6 +235,7 @@
         <div class="col-md-5 offset-lg-1">
           <div class="row mt-2">
             <h2 class="h2 fw-light mb-4">Bio</h2>
+            {#
             <!--
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Age</div>
@@ -176,12 +244,14 @@
               <div class="pb-2">28</div>
             </div>
             -->
+            #}
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2"><a href="mailto:{{dyct['EMAIL']}}">{{dyct['EMAIL']}}</a></div>
             </div>
+            {#
             <!--
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="fab fa-skype pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Skype</div>
@@ -199,6 +269,7 @@
               <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
             </div>
             -->
+            #}
             <div class="col-sm-7">
               <div class="pb-2">VA, U.S.A</div>
             </div>
@@ -207,6 +278,24 @@
       </div>
     </div>
   </div>
+  {% if False %}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="education">
+    <div class="education-section">
+      <h2 class="h2 fw-light mb-4">Education</h2>
+    </div>
+  </div>
+  {% endif%}
+  {% if dyct['show_docker'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="my_dock">
+    <div class="my_dock">
+      <h2 class="h2 fw-light mb-4">My Docker Setup</h2>
+      <a href="https://rebrand.ly/my_dock"><img src="https://rebrand.ly/my_dock" style="width:100%;height:100%;"/></a>
+      Since I use a various set of tools for different development and research environments, I needed to be able to easily switch my toolsets. Due to hard-drive space limitations, I started to leverage Docker. I used my familiarity with GitHub actions to create a chain creation of several Docker Images. The Scripts and PyScripts are both Python script repositories creating inbuilt scripts. BaseDocker is the first Docker Image that builds, and each subsequent Docker image builds off of it. For example, JavaDev is built off of BaseDocker using a script from PyScript to automatically download and include several packages.
+      <br><br>
+      Why did I do this? Simply to create an inheritence based environment tool chain. If I need a common utility between two docker images, I just include it in BaseDocker and the changes will trickle down. Many of these are private simply due to various custom builds processes I use.
+    </div>
+  </div>
+  {% endif%}
   {% if dyct['show_edu'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="education">
     <div class="education-section">
@@ -341,7 +430,7 @@
           "<a href='https://github.com/franceme/WaveNetExploration'>Website</a>",
           "2019",
           "2019",
-          "This was a class project created for an Advanced Machine Learning class. The purpose of this project was to replicate an existing papers work and to add onto it. For this, my group chose to replicate the paper [https://arxiv.org/pdf/1609.03499.pdf](WaveNet) and to enhance the results by running it on music samples. Unfortunately, we were unable to create any sound samples that mimic actual music, however from the website, there is a clear improvement in the music generation from the models.",color="blue")|safe
+          "This was a class project created for an Advanced Machine Learning class. The purpose of this project was to replicate an existing papers work and to add onto it. For this, my group chose to replicate the paper <a href='https://arxiv.org/pdf/1609.03499.pdf'>WaveNet</a> and to enhance the results by running it on music samples. Unfortunately, we were unable to create any sound samples that mimic actual music, however from the website, there is a clear improvement in the music generation from the models.",color="blue")|safe
        }}
        {{
           "GradleGuard"|get_base(
@@ -529,7 +618,7 @@
           "iMentor",
           "2020",
           "2020",
-          "From the [https://sites.google.com/vt.edu/imentor/home](homepage). iMentor focuses squarely on attracting, mentoring, and career advising early-stage graduate students from underrepresented communities who want to pursue a career in computer security. Being virtually co-located with the ACM Conference on Computer and Communications Security (ACM CCS) 2020, the workshop provides an opportunity for attendees to also participate in the main conference and benefit from it. ACM CCS is a top-tier venue for the quick and wide dissemination of cutting-edge research results in computer and communications security.",color="orange")|safe
+          "From the <a href='https://sites.google.com/vt.edu/imentor/home'>homepage</a>. iMentor focuses squarely on attracting, mentoring, and career advising early-stage graduate students from underrepresented communities who want to pursue a career in computer security. Being virtually co-located with the ACM Conference on Computer and Communications Security (ACM CCS) 2020, the workshop provides an opportunity for attendees to also participate in the main conference and benefit from it. ACM CCS is a top-tier venue for the quick and wide dissemination of cutting-edge research results in computer and communications security.",color="orange")|safe
        }}
        {{
           "Vice President"|get_base(
@@ -594,6 +683,37 @@
     </div>
   </div>
   {%- endif %}
+  {% if dyct['show_consult'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="consultations">
+    <div class="mentees-section">
+      <h2 class="h2 fw-light mb-4">Consultations</h2>
+      <div class="timeline">
+        {{
+          "Demo User"|get_base(
+          "<a href='https://www.pipedreams.org/'>PipeDreams</a>",
+          "08/30/2022",
+          "Current",
+          "I was recently introduced to the project and have taken to it well. I have attempted to use Zapier before but found it too constricting. I have already made <a href='https://github.com/PipedreamHQ/pipedream/issues/created_by/franceme'>several suggestions for additional app integrations</a> that I would be interested and look forward to using it.",color="pink")|safe
+       }}
+       {{
+          "User"|get_base(
+          "<a href='https://www.orchest.io/'>Orchest</a>",
+          "08/01/2021",
+          "Current",
+          "I have been currently using this for several of my data cleaning pipelines. Since I have had to do various processes this helps me visually organize the code flow. When I talked with the CTO many my changes were already being addressed. However with the extra addition of Webhooks, I also needed to create a enhanced transfer library. Shown <a href='https://github.com/franceme/messenger_python'>here</a> is the result of my work, as Orchest currently natively allows only one output to be transferred to other steps. This library allows me to transfer more data between steps.",color="pink")|safe
+       }}
+       {{
+          "An Original Member"|get_base(
+          "<a href='https://www.trymito.io/'>Mito</a>",
+          "01/22/2020",
+          "Current",
+          "I believe I was one of the early users of the project and had various meetings with the owners. Many of my contributions made it into the current project. My main idea contributed to the project is the idea of <a href='https://docs.trymito.io/how-to/using-the-generated-code'>code generation</a>. Since I truely believe in reproducible code, I saw the code generation as a necessity to transfer the steps to other people. This also enables the developers to quickly template dataframe changes using Mito and then copy paste the snippet to a seperate python script.",color="pink")|safe
+       }}
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {#
   <!--
   <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio">
     <div class="portfolio-section">
@@ -647,7 +767,7 @@
     </div>
   </div>
 -->
-
+#}
   <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
     <div class="contant-section">
       <h2 class="h2 fw-light text mb-4">Contact</h2>
@@ -671,16 +791,75 @@
           <div class="footer-nav">
             <nav role="navigation">
               <ul class="nav justify-content-center">
-                <!--
-                <li class="nav-item"><a class="nav-link" href="https://twitter.com/templateflip" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/{{dyct['GITHUB']}}" title="Github">
+                    <i class="fab fa-github"></i>
+                    <span style="padding:10px;" class="menu-title sr-only">Github</span>
+                  </a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/templateflip" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/templateflip" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a>
-                </li>
-                -->
-                <li class="nav-item"><a class="nav-link" href="https://github.com/{{dyct['GITHUB']}}" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
-                </li>
+                <li>
+
+              {% if 'DOCKER' in dyct  %}
+              <li>
+                  <a class="nav-link" href="https://hub.docker.com/u/{{ dyct['DOCKER'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-docker" title="Docker link"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'LINKEDIN_USERNAME' in dyct  %}
+              <li>
+                      <a class="nav-link" href="https://www.linkedin.com/in/{{ dyct['LINKEDIN_USERNAME']|escape }}" title="Linkedin">
+                      <i style="padding:10px;" class="fab fa-linkedin" title="Linkedin link"></i>
+                  </a>
+              </li>
+              {% endif  %}
+               {% if 'SCHOLAR_USERNAME' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://scholar.google.com/citations?user={{ dyct['SCHOLAR_USERNAME'] }}" title="Linkedin">
+                      <i style="padding:10px;" class="ai ai-google-scholar-square" title="Google Scholar"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'MENDELEY_USERNAME' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://www.mendeley.com/profiles/{{ dyct['MENDELEY_USERNAME'] }}" title="Docker">
+                      <i style="padding:10px;" class="ai ai-mendeley" title="Mendeley Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'IEEE' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://ieee-collabratec.ieee.org/app/p/{{ dyct['IEEE'] }}" title="Docker">
+                     <i style="padding:10px;" class="ai ai-ieee" title="IEEE Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'MEDIUM' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://medium.com/@{{ dyct['MEDIUM'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-medium" title="Medium Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'ORCID' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://orcid.org/{{ dyct['ORCID'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-orcid" title="Orcid Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if False and 'ZENODO' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://zenodo.org/search?page=1&size=20&q=owners:{{ dyct['ZENODO'] }}" title="Docker">
+                      <img class="custom-icon" style="padding-top:30%;" src="https://about.zenodo.org/static/img/logos/zenodo-white.svg" width="80%"/>
+                  </a>
+              </li>
+              {% endif  %}
+               <li>
+                    <a class="nav-link" href="https://oca.opensource.oracle.com/?ojr=contrib-list" title="Docker">
+                      <i style="padding:10px;" class="fab fa-java" title="Java Oracle Contributor Agreement"></i>
+                  </a>
+              </li>
               </ul>
             </nav>
           </div>

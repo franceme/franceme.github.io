@@ -4,6 +4,7 @@ from setuptools import find_packages, setup
 import sys,os,re
 from datetime import datetime
 import urllib.parse
+import requests
 
 try:
     from flask import Flask, render_template, render_template_string,Response
@@ -54,7 +55,9 @@ base_info = {
     "show_ment":True,
     "show_sub":True,
     "show_talks":True,
-    "show_skills":True
+    "show_skills":True,
+    "show_docker":True,
+    "show_consult":True
 }
 
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
@@ -121,7 +124,7 @@ def index():
 
 @app.route('/research')
 def research():
-    for x in ['show_skills','show_exp','show_grp']:
+    for x in ['show_skills','show_exp','show_grp','show_docker']:
         base_info[x] = False
     return rendre('index.html')
 
@@ -133,7 +136,7 @@ def industry():
 
 @app.route('/full')
 def full():
-    for x in ["show_edu",    "show_exp",    "show_proj",    "show_grp",    "show_ment",    "show_sub",    "show_talks",    "show_skills"]:
+    for x in ["show_edu","show_exp","show_proj","show_grp","show_ment","show_sub","show_talks","show_skills",'show_docker','show_consult']:
         base_info[x] = True
     return rendre('index.html')
 
