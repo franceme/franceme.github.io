@@ -1,0 +1,5 @@
+
+# robots.txt - for Miles Frantz Website
+
+User-agent: *
+Disallow: /
