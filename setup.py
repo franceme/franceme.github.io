@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from setuptools import find_packages, setup
-import sys,os
+import sys,os, base64
 
 try:
     from flask import Flask, render_template_string
@@ -114,7 +114,14 @@ def page_redirect(url):
 def easy_add_page(contents):
     return contents, 200, {'Content-Type':'text/html'}
 
+def easy_add_file(file):
+    return easy_add_page(open(file).read())
+
 # === URL Routes === #
+
+@app.route('/test_w.html')
+def route_test():
+    return easy_add_file('static/prototype/test_w.html')
 
 @app.route('/')
 @app.route('/index.html')
