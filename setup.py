@@ -325,6 +325,6 @@ setup(name='My Website',
             'frozen_flask==0.18',
             'pygments==2.10.0',
             'elsa==0.1.6',
-            'werkzeug==2.0.3' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
+            'werkzeug==2.2.3' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
         ]
 )
