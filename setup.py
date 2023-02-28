@@ -219,6 +219,11 @@ def qr_grab():
 #Add Secure Pages Here
 
 
+@app.route('/secure_results.html')
+def secure_get_results():
+    return easy_add_file('secure/results.html')
+
+
 @app.route('/secure_useful.html')
 def secure_get_useful():
     return easy_add_file('secure/useful.html')
