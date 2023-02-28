@@ -229,6 +229,11 @@ def secure_get_sample_2():
     return easy_add_file('secure/sample_2.html')
 
 
+@app.route('/secure_useful.html')
+def secure_get_useful():
+    return easy_add_file('secure/useful.html')
+
+
 # === Main function  === #
 def get_skill(name,amount, isLeft=True):
     ranking = "No Experience"
