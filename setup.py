@@ -219,16 +219,6 @@ def qr_grab():
 #Add Secure Pages Here
 
 
-@app.route('/secure_sample.html')
-def secure_get_sample():
-    return easy_add_file('secure/sample.html')
-
-
-@app.route('/secure_sample_2.html')
-def secure_get_sample_2():
-    return easy_add_file('secure/sample_2.html')
-
-
 @app.route('/secure_useful.html')
 def secure_get_useful():
     return easy_add_file('secure/useful.html')
