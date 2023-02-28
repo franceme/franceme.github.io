@@ -187,7 +187,7 @@
                 <input id="staticrypt-password"
                        type="password"
                        name="password"
-                       placeholder="Passphrase"
+                       placeholder="Password"
                        autofocus/>
 
                 <label id="staticrypt-remember-label" class="staticrypt-remember hidden">
@@ -218,8 +218,7 @@
 //# sourceMappingURL=crypto-js.min.js.map</script>
 
 <script>
-    var cryptoEngine = 
-    ((function(){
+    var cryptoEngine = ((function(){
   const exports = {};
   
 /**
@@ -293,9 +292,7 @@ exports.signMessage = signMessage;
 
   return exports;
 })())
-
-    var codec = 
-    ((function(){
+    var codec = ((function(){
   const exports = {};
   /**
  * Initialize the codec with the provided cryptoEngine - this return functions to encode and decode messages.
@@ -355,13 +352,12 @@ exports.init = init;
 
   return exports;
 })())
-
     var decode = codec.init(cryptoEngine).decode;
 
     // variables to be filled when generating the file
-    var encryptedMsg = '6774a0f575c127d2ac60e227609fcff6d90d80b8a6bd71bd18ad6238db92bbae3b1dea9d68d668cc98c9f02a6b3ca185U2FsdGVkX19MZBSUZvNBbAm7UVil6+zQRhBXhcm+Bzkpnhk2pRhDVwycC02FRcZ1i2PUliQWZxN6phMeEEkoJAAUDSOqtiNkkpjBnSfTVbKZga3pKnxkzt7Qo/YXWjBh2VuO3kP/Nr4GSBi+42lFD1iqTLBRKVUB8w5adHdUm2uElN/tj2hZ1FrpXcZGOuqCvpcxFP4zU9C1cuTAspcJeA==',
-        salt = 'acfeee06944ef53eb3705ac4a4ed0bee',
-        labelError = '',
+    var encryptedMsg = 'cc849d2c00ca9839e08271883601e39e11ceef10fbc7c196f480e85a67a0f1785499d86f40194f2157c28d27bd2ac660U2FsdGVkX1/UVYOlsKDCfbegUhGzfyL2jjkOEN/py5sfBgcIOdDmCRWtEbL8BrE4/RK6OGCW3Xge9b2bZBJACUBR2WXsDKb92ZxKzAivu0sih4RpiBs1mi1EjCjd0zKyHNs3CLHZIVvx9G6w+LB7KunAV6vbJhESjjVrdfB50Dk5YmcQUuqckTrvohYUhsD5imUPRzNkKTTM3UOUXokMg5exXqrP12uWLP2Mtf2OEe9yc8FVLMHVAEvJD1qhjMImGTa2k0bcsH3ZngkPYFATYQ==',
+        salt = 'a99d30ff4dd4e4b1bc9e3c5932d33ece',
+        labelError = 'Bad password!',
         isRememberEnabled = false,
         rememberDurationInDays = 0; // 0 means forever
 
