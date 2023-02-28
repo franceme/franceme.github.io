@@ -224,6 +224,11 @@ def secure_get_results():
     return easy_add_file('secure/results.html')
 
 
+@app.route('/secure_results_jlab.html')
+def secure_get_results_jlab():
+    return easy_add_file('secure/results_jlab.html')
+
+
 @app.route('/secure_useful.html')
 def secure_get_useful():
     return easy_add_file('secure/useful.html')
