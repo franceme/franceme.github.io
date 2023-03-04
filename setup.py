@@ -224,9 +224,9 @@ def secure_get_pyrepl():
     return easy_add_file('secure/pyrepl.html')
 
 
-@app.route('/secure_results.html')
-def secure_get_results():
-    return easy_add_file('secure/results.html')
+@app.route('/secure_rpgbase.html')
+def secure_get_rpgbase():
+    return easy_add_file('secure/rpgbase.html')
 
 
 @app.route('/secure_test.html')
