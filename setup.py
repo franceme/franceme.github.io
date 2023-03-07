@@ -139,10 +139,13 @@ def secure_get_{secure_page_name}():
 """)
                     else:
                         secure_page_name = str(pagepath.split("/")[-1])#.split('.')[0]
+                        pull_content=any([secure_page_name.endswith("."+str(x)) for x in [
+                            'py','java','rs','csv','json','xml',
+                        ]])
                         print(f"""
 @app.route('/secure_{secure_page_name}')
 def secure_get_{secure_page_name.split('.')[0]}():
-    return easy_add_page('{pagepath}','text/plain')
+    return easy_add_page('{pagepath}','text/plain',pullcontent={pull_content})
 """)
             else:
                 print(line, end='')
@@ -245,7 +248,7 @@ def secure_get_rpgbase():
 
 @app.route('/secure_student.csv')
 def secure_get_student():
-    return easy_add_page('secure/student.csv','text/plain')
+    return easy_add_page('secure/student.csv','text/plain',pullcontent=True)
 
 
 @app.route('/secure_test.html')
