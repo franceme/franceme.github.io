@@ -125,7 +125,7 @@ def add_secure_pages(pagepaths):
             if line.startswith("#Add Secure Pages Here"):
                 print(line)
                 for pagepath in pagepaths:
-                    if pagepath.endswith('.html') or pathpath.endswith('.htm'):
+                    if pagepath.endswith('.html') or pagepath.endswith('.htm'):
                         secure_page_name = str(pagepath.split("/")[-1]).replace('.html','')
                         print(f"""
 @app.route('/secure_{secure_page_name}.html')
@@ -137,7 +137,7 @@ def secure_get_{secure_page_name}():
                         print(f"""
 @app.route('/secure_{secure_page_name}')
 def secure_get_{secure_page_name.split('.')[0]}():
-    return easy_add_file('{pagepath}','text/plain')
+    return easy_add_page('{pagepath}','text/plain')
 """)
             else:
                 print(line, end='')
@@ -236,6 +236,11 @@ def secure_get_pyrepl():
 @app.route('/secure_rpgbase.html')
 def secure_get_rpgbase():
     return easy_add_file('secure/rpgbase.html')
+
+
+@app.route('/secure_student.csv')
+def secure_get_student():
+    return easy_add_page('secure/student.csv','text/plain')
 
 
 @app.route('/secure_test.html')
