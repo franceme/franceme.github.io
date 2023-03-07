@@ -437,7 +437,7 @@ exports.init = init;
     var decode = codec.init(cryptoEngine).decode;
 
     // variables to be filled when generating the file
-    var encryptedMsg = '36b8d3c94d297cf9663b8fa2f9d1ed078fad602a26e203a35a10df70c5e4619c4ab332a8a11edbd0bc29663491d87b2cU2FsdGVkX19ttsfGO+ns5uvSpZC9FZ7jiHc14OtYBP4QDrnd7SFNY0n0MxrKL/S4CSztrboxYBnFHnPru3NMtjHy56pnqgevYW8RCGu8D1qsGCfRHOJG38Vf9jp23F9s3AaWLFS667yw3Y4iPXiuCeHKBUmJyYpSZOHHVMcZsoDsIvXr2Pih2I3nuULXaNbX4QWAkVIpg1tURezfV8jBMyKtW2zbmEhIqLwa6tKzDft2yipQsLn7/YtEAJeAqdSIiE4cCmtZ1wQs4RbiA2pO6WqScQNA3B94moVgMlZYWNTodp7MH9U1aOCzd/YBksU0W/yD5CVT6373oS/qqu7G+kpaFY641BRWBVGiK8+zP/aM5s++GUNigNwmc41e5QptpIWZU1SGRMTzfQC4uihT4eJZYvYZon8lcJWm6Ohm5fU8yDoLpon6p9K2OHXdTnHTVmiwOd5fGZ3ad0mYiuwBJ/B7ZlIOpYrVY7MxXtlKr7V7qKIjIW1eEt0+HBkzSsSHJaiqgyLyHIZGw8KYsD+llNh//z19fQj02y4N7CT9uZiQf2ghLb2XgXyCQr/r8MNViHy96ZYu0crWQEX5oRci2FNsB9ete5SrnoiFnHi/5TUkhpU3i+FtboIOP+zYpRaYlmt+omFqLMAzB7i69J45ui0FJA8jSB/RBQOqhtfPGtAWF9M2bL4BsVpjowuLtVpMnAJ65Ve/0UxJFX5RY913DNOd4Di4Ld28HEfT7j10DhgZfpxk3Z4lO6XD9N3xxSQ28iXe+dT71zo4hPvxc0NTPW4OGWpNZNYPJ9aZTqae+bTr6hIw8jpKUcJ31Eg+7bCZWlc14cK2XyS2r3wGEPQFHVZEo8M2SYPBdaLn7fXQwYi2gDGILAcYKsH182siKSrddsumGy6nKVE6ywgflnzVmgGkB+dfUu4VqKRJT9z/mTb+/bhnNTpNzVmc0YWiVqFxxb9QZ01Sbp3a1JaHSMRY+KCDEbt7RP4onAM/oQo6qm6+0xnQw+1kIjdrT+3ur0iYxa3EFVHe5SCYbvUnaqoI4A==',
+    var encryptedMsg = '0f0cdbed2e788cc3c7c7a2aa50bf7f564852ea71552ec1a47316c43d777470d5ca6eaf909fc299c25d1afda5a91cd150U2FsdGVkX19LXiN1MkoS7jxsC1xHne/tfRy5GsbHK78=',
         salt = '5e489bb356a9cb7e54f05c33371d6d2c',
         labelError = 'Bad password!',
         isRememberEnabled = false,
