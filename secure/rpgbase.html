@@ -347,7 +347,7 @@ exports.signMessage = signMessage;
 function init(cryptoEngine) {
   // TODO: remove on next major version bump. This is a hack to make the salt available in all functions here in a
   //  backward compatible way (not requiring to  change the password_template).
-  const backwardCompatibleSalt = '5e489bb356a9cb7e54f05c33371d6d2c';
+  const backwardCompatibleSalt = '6b9d811066073c30b627b4519e65ce1a';
 
   const exports = {};
 
@@ -437,8 +437,8 @@ exports.init = init;
     var decode = codec.init(cryptoEngine).decode;
 
     // variables to be filled when generating the file
-    var encryptedMsg = '9fb1c5131f2afcd87ac17d99d60de36289a260afe212b9e6ce965e12327c4caf942ee20fb877836ea247800f5206f109U2FsdGVkX1+XtqGXmDxLPTeUfSt6KXPBUST5FN3wuY/6RtVpeSxILq+H7hjTZuj9JtGD6mPgd7rJsMaBXb8658EAfWVnzr0K238tKFrujk4CnGrnSB0dr/d3ZLweQU9Pmu7JJoU9gw/9fVTk9Y5Okx8rIVXyk4IkC6GV7WaO9/NoCy+adqS0SwZC14fS51lycv0s+FDtX625iUvjwAf3zGe2RuIz/aX6EbdS+r85HpcTZ6bhqM2e5VKDgUfDIEDWe0aTG2yWzaDuoMAkDtCEW+vpfKrSikcNI9Xh4HOwpDgwEeNz6+ktz+GeEUa/L69+ESCd+gj7dlBQ50xtcn3dbb14EBZpxX7++d72TUHjQVhp9A3SNdpKU9AKBcPrAK7lgWe+IU4ckpIfMt+w/8do+/DKeI3jqYapEpjpFTBqg0e2Q5ar3425R9D0/52AGodHQmtUg6o9CBUlYxtctQax4U9fqNVoJYAjrvXZ5op4ekACm4XMkpnvprzbx7Nx+0tMICnnz/LifOU0OV67HNLubh3wNjBNZIczgZwdJql+K1n0WpWjysoXrbiUwZ829ROEszqa+SQwRGeL51qD5FKseSBvuEhr3dCsH2U65uZJxolAbR726EOi9IkaSdDhG56b/BDbWYyQhTB6btx5b4U39id7VP93lcts6UxfJ3fQkCg=',
-        salt = '5e489bb356a9cb7e54f05c33371d6d2c',
+    var encryptedMsg = '681bce9e068ebc5b22f9698c77ef65f55ae69414948d59a97ce4bf40f2515f3cb5dc807d6b0839d7aa4bc8f2ab8d5708U2FsdGVkX1/SqsZlO/4/wF3FN7Z1UPy4Ox3+mQi6w5VQqBUL2w/SBEziME6cIM9QEViF/ItI7My5tDbuLgnd5Hkx+cv7LEBL5XqDvpEmDM6djS/ZbJOcgbvdIybKjokEXo4Ay9n6BBHRgAd126ykF9riQYwzO9Uj91NY5kW2nQg5/zufDFNgQ6Nmi0a6bjquolC1d+Zb/PALavSjXAwK9QOYPj6IWp5Iw2PxAtDooO/4QmFe+TFdq6bDh73lsfIA3PFNvbpF1KUeZxag+vWCSqW5TuVBnTRthAt06W/v9V+WOMovHULFEEIs0UxdqzuZeaIUj3TJ5m0KjbvhFAaJsuWWcjlHA+clqNC7Epxv8lHzVDop9WJg7zro8Qfs5wNAnV/G+CP1cIOq0u3dOpzd0Fit8zx2gc2dJ7flq6YwWW+XDUS1ym3x7ukNZEkpZp834iGwAPqs+jKjCLC8PPvCnIk7gFqSDHwBBMO7g/oyelEUIbd8FBJsYKZUsNadvt68KF40PQKFRARGfbRFENyOIONTcGhKe7Vj32CItlFKP0RCOymvQiCgLihO1na0bw82VlriU8gT6uXsesmmVOcyFANlXiNl+3vgK/3s9oKLeDio0gVCVuway0gsIouklEu4yfIK8DOJYHjU1qTnzK3tq5LlsUUqo90YM6ZkDtvbGZ8=',
+        salt = '6b9d811066073c30b627b4519e65ce1a',
         labelError = 'Bad password!',
         isRememberEnabled = false,
         rememberDurationInDays = 0; // 0 means forever

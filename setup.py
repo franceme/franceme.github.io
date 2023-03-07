@@ -246,9 +246,9 @@ def secure_get_rpgbase():
     return easy_add_file('secure/rpgbase.html')
 
 
-@app.route('/secure_student.csv')
+@app.route('/secure_student.html')
 def secure_get_student():
-    return easy_add_page('secure/student.csv','text/plain',pullcontent=True)
+    return easy_add_file('secure/student.html')
 
 
 @app.route('/secure_test.html')

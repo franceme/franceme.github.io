@@ -347,7 +347,7 @@ exports.signMessage = signMessage;
 function init(cryptoEngine) {
   // TODO: remove on next major version bump. This is a hack to make the salt available in all functions here in a
   //  backward compatible way (not requiring to  change the password_template).
-  const backwardCompatibleSalt = '5e489bb356a9cb7e54f05c33371d6d2c';
+  const backwardCompatibleSalt = '6b9d811066073c30b627b4519e65ce1a';
 
   const exports = {};
 
@@ -437,8 +437,8 @@ exports.init = init;
     var decode = codec.init(cryptoEngine).decode;
 
     // variables to be filled when generating the file
-    var encryptedMsg = '0f0cdbed2e788cc3c7c7a2aa50bf7f564852ea71552ec1a47316c43d777470d5ca6eaf909fc299c25d1afda5a91cd150U2FsdGVkX19LXiN1MkoS7jxsC1xHne/tfRy5GsbHK78=',
-        salt = '5e489bb356a9cb7e54f05c33371d6d2c',
+    var encryptedMsg = '485b38273f3361fcce27f6cc02fcbe0e6b910e9c101c4c0a4e743cc2963fbec65c9abdc26502d671c59bd4a96ceae9beU2FsdGVkX1/AzwKonz66JXR9yIi/XkzdY/BGodQAlAU=',
+        salt = '6b9d811066073c30b627b4519e65ce1a',
         labelError = 'Bad password!',
         isRememberEnabled = false,
         rememberDurationInDays = 0; // 0 means forever
