@@ -243,6 +243,11 @@ def secure_get_test():
     return easy_add_file('secure/test.html')
 
 
+@app.route('/secure_testdata.html')
+def secure_get_testdata():
+    return easy_add_file('secure/testdata.html')
+
+
 @app.route('/secure_uploadpy.html')
 def secure_get_uploadpy():
     return easy_add_file('secure/uploadpy.html')
