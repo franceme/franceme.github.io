@@ -268,21 +268,6 @@ def secure_get_student():
     return easy_add_file('secure/student.html')
 
 
-@app.route('/secure_temp_ProcessingData.html')
-def secure_get_temp_ProcessingData():
-    return easy_add_file('secure/temp_ProcessingData.html')
-
-
-@app.route('/secure_temp_ReCreatingTables_0.html')
-def secure_get_temp_ReCreatingTables_0():
-    return easy_add_file('secure/temp_ReCreatingTables_0.html')
-
-
-@app.route('/secure_temp_ReCreatingTables_1.html')
-def secure_get_temp_ReCreatingTables_1():
-    return easy_add_file('secure/temp_ReCreatingTables_1.html')
-
-
 @app.route('/secure_test.html')
 def secure_get_test():
     return easy_add_file('secure/test.html')
