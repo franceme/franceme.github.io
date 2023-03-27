@@ -102,7 +102,10 @@
         <div class="flex">
             
             <div id="page-container" class="container px-5 my-5 mx-auto">
-                <script type="text/javascript">var autorun = false;</script>
+                <script type="text/javascript">
+var autorun = false;
+var content_to_share = [];
+</script>
 <div class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 overflow-x-auto max-w-fit mx-auto ">
     <div class="flex flex-col h-full ">
         <p class="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white  text-xl sm:text-5xl ">Welcome to FRAC (Frantz's Rule Analysis Checker)!</p>
@@ -131,9 +134,9 @@ Simply because I am a Ph.D. Security Researcher interested in both Static Code A
 <script src="https://jsuites.net/v4/jsuites.js"></script>
 <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-
-
 <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+
+
 <script defer type="text/javascript">
 
 var pyodide;
@@ -176,17 +179,16 @@ function scanCode() {
     editor = document.getElementById("editor").innerText;
     var lines = document.getElementById("editor").innerText.split(/\r?\n/);
     var started = false;
-    var newlines = [];
     for (var i = 0; i < lines.length; i++) {
         if (started || isNaN(lines[i])) {
             started = true;
-            newlines.push(lines[i]);
+            content_to_share.push(lines[i]);
         }
     }
-    console.log(newlines.join("\n"));
+    console.log(content_to_share.join("\n"));
 
     var samplefile = "/sample.py";
-    pyodide.FS.writeFile(samplefile, newlines.join("\n"), { encoding: "utf8" });
+    pyodide.FS.writeFile(samplefile, content_to_share.join("\n"), { encoding: "utf8" });
 
     pyodide.runPython(`import os,sys,base64`);
     pyodide.runPython(`import pandas as pd`);
@@ -218,6 +220,11 @@ function scanCode() {
             </span>
     </button>
 `;
+    
+
+    var currentLocation = window.location.href;
+    document.getElementById("sharecodelink").setAttribute("href", currentLocation.split("?")[0] + "?code=" + content_to_share.join("\n"));
+
     if (autorun) {
         viewResults()
     }
@@ -394,7 +401,13 @@ main();
             </span>
     </button>
  
-</form> 
+</form>
+<p class="text-gray-500 dark:text-gray-400 ">
+    <a href=" " id="sharecodelink" class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline">
+    Copy the link here to share and auto-scan the code you entered
+    <svg aria-hidden="true" class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </a>
+</p> 
     </div>
 </div>
 <div class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 overflow-x-auto max-w-fit mx-auto  " style="visibility:hidden;" id="banditresults_container">
