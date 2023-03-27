@@ -102,7 +102,8 @@
         <div class="flex">
             
             <div id="page-container" class="container px-5 my-5 mx-auto">
-                <div class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 overflow-x-auto max-w-fit mx-auto ">
+                <script type="text/javascript">var autorun = false;</script>
+<div class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 overflow-x-auto max-w-fit mx-auto ">
     <div class="flex flex-col h-full ">
         <p class="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white  text-xl sm:text-5xl ">Welcome to FRAC (Frantz's Rule Analysis Checker)!</p>
 <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">by <a href="https://rebrand.ly/frantzme" target="_blank"><strong>Miles Frantz</strong></a></p>
@@ -129,6 +130,7 @@ Simply because I am a Ph.D. Security Researcher interested in both Static Code A
 <link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" />
 <script src="https://jsuites.net/v4/jsuites.js"></script>
 <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 
 
 <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
@@ -157,6 +159,9 @@ async function main(){
             </span>
     </button>
 `;
+    if (autorun) {
+        scanCode()
+    }
 }
 
 function scanCode() {
@@ -213,6 +218,9 @@ function scanCode() {
             </span>
     </button>
 `;
+    if (autorun) {
+        viewResults()
+    }
 }
 
 function viewResults() {
@@ -401,22 +409,21 @@ main();
  <div id="dlint_demo" style="width: 100%;"></div>  
     </div>
 </div>
-
 <script type="text/javascript">
 let url = new URL(window.location.href);
 let params = new URLSearchParams(url.search);
 
 let current_code = params.get('code');
 document.getElementById("editor").innerHTML = current_code;
+if (current_code) {
+    autorun = true;
+}
 </script>
-
-<script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
-    editor.session.setMode("ace/mode/python");
-</script>
- 
+<script type="text/javascript">
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/monokai");
+editor.session.setMode("ace/mode/python");
+</script> 
             </div>
         </div>
         <footer class="text-gray-600 body-font">
