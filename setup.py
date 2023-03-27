@@ -243,44 +243,9 @@ def qr_grab():
 #Add Secure Pages Here
 
 
-@app.route('/secure_ReviewingData.html')
-def secure_get_ReviewingData():
-    return easy_add_file('secure/ReviewingData.html')
-
-
-@app.route('/secure_base.html')
-def secure_get_base():
-    return easy_add_file('secure/base.html')
-
-
-@app.route('/secure_pyrepl.html')
-def secure_get_pyrepl():
-    return easy_add_file('secure/pyrepl.html')
-
-
-@app.route('/secure_rpgbase.html')
-def secure_get_rpgbase():
-    return easy_add_file('secure/rpgbase.html')
-
-
 @app.route('/secure_student.html')
 def secure_get_student():
     return easy_add_file('secure/student.html')
-
-
-@app.route('/secure_test.html')
-def secure_get_test():
-    return easy_add_file('secure/test.html')
-
-
-@app.route('/secure_testdata.html')
-def secure_get_testdata():
-    return easy_add_file('secure/testdata.html')
-
-
-@app.route('/secure_uploadpy.html')
-def secure_get_uploadpy():
-    return easy_add_file('secure/uploadpy.html')
 
 
 @app.route('/secure_useful.html')
