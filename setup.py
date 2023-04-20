@@ -4,6 +4,7 @@ import sys,os, base64
 
 try:
     from flask import Flask, render_template_string, make_response
+    from mystring import string as str
     from flask_frozen import Freezer
     from flask_flatpages import (
         FlatPages, pygmented_markdown)
@@ -19,8 +20,7 @@ except:
         os.system(str(sys.executable) + " -m pip install " + str(x))
     from flask import Flask, render_template_string, make_response
     from flask_frozen import Freezer
-    from flask_flatpages import (
-        FlatPages, pygmented_markdown)
+    from flask_flatpages import (FlatPages, pygmented_markdown)
 
 
 base_info = {
@@ -138,7 +138,7 @@ def add_secure_pages(pagepaths):
                 print(line)
                 for pagepath in pagepaths:
                     if pagepath.endswith('.html') or pagepath.endswith('.htm'):
-                        secure_page_name = str(pagepath.split("/")[-1]).replace('.html','')
+                        secure_page_name = str(pagepath.split("/")[-1]).replace('.html','').replace("*","")
                         print(f"""
 @app.route('/secure_{secure_page_name}.html')
 def secure_get_{secure_page_name}():
@@ -245,11 +245,6 @@ def qr_grab():
     return svg, 200, {'Content-Type':'image/svg+xml'}
 
 #Add Secure Pages Here
-
-
-@app.route('/secure_student.html')
-def secure_get_student():
-    return easy_add_file('secure/student.html')
 
 
 @app.route('/secure_useful.html')
