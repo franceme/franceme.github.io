@@ -11,7 +11,7 @@ try:
 except:
     for x in [
             'requests',
-            'flask==2.0.1',
+            'flask==2.3.2',
             'flask_flatpages==0.7.3',
             'frozen_flask==0.18',
             'pygments==2.10.0',
@@ -363,7 +363,7 @@ setup(name='My Website',
         url='',
         packages=find_packages(),
         install_requires=[
-            'flask==2.0.1',
+            'flask==2.3.2',
             'flask_flatpages==0.7.3',
             'frozen_flask==0.18',
             'pygments==2.10.0',
