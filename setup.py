@@ -14,7 +14,7 @@ except:
             'flask==2.0.1',
             'flask_flatpages==0.7.3',
             'frozen_flask==0.18',
-            'pygments==2.10.0',
+            'pygments==2.15.0',
             'elsa==0.1.6'
         ]:
         os.system(str(sys.executable) + " -m pip install " + str(x))
@@ -366,7 +366,7 @@ setup(name='My Website',
             'flask==2.0.1',
             'flask_flatpages==0.7.3',
             'frozen_flask==0.18',
-            'pygments==2.10.0',
+            'pygments==2.15.0',
             'elsa==0.1.6',
             'werkzeug==2.0.3' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
         ]
