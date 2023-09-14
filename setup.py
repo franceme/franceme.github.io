@@ -242,17 +242,21 @@ def paperRss():
         content = []
         with open(foil, 'r') as reader:
             for line in reader.readlines():
-                content += [json.loads(line)]
+                try:
+                    content += [json.loads(line)]
+                except:
+                    pass
 
         for article in content:
             fe = fg.add_entry()
             fe.title(article['Title'])
-            link = article['Link'].replace('https://franceme.github.io/<','').replace('>','')
+            link = article['Link'].replace('https://franceme.github.io/','').replace('<','').replace('>','')
             fe.link(href=link)
-            fe.description(article['Content'])
+            fe.description(article['Content'].replace('Twitter] ;LinkedIn] Facebook]','').replace('"',"'"))
             fe.guid(link, permalink=True)
             fe.author(name=article['AuthorName'], email=article['AuthorEmail'])
-            fe.pubDate(article['PubDate'])
+            if article['PubDate'] != "":
+                fe.pubDate(article['PubDate'])
 
     response = make_response(fg.rss_str())
     response.headers.set('Content-Type', 'application/rss+xml')
