@@ -289,6 +289,11 @@ def qr_grab():
 #Add Secure Pages Here
 
 
+@app.route('/secure_timeline.html')
+def secure_get_timeline():
+    return easy_add_file('secure/timeline.html')
+
+
 @app.route('/secure_useful.html')
 def secure_get_useful():
     return easy_add_file('secure/useful.html')
