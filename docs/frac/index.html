@@ -1,0 +1,485 @@
+<!doctype html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.pycob.com/pyvibe/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.pycob.com/pyvibe/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.pycob.com/pyvibe/favicon-16x16.png">
+    <link rel="mask-icon" href="https://cdn.pycob.com/pyvibe/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://cdn.pycob.com/pyvibe/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="https://cdn.pycob.com/pyvibe/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRAC</title>
+    <meta property="og:title" content="FRAC">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+    <script>
+    function toggleDarkMode() {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark')
+            document.getElementById("moon").classList.add("hidden")
+            document.getElementById("sun").classList.remove("hidden")
+        } else {
+            document.documentElement.classList.add('dark')
+            document.getElementById("sun").classList.add("hidden")
+            document.getElementById("moon").classList.remove("hidden")
+        }
+    }
+
+    function setLoading(el) {
+        el.querySelectorAll("button[type=submit]").forEach((button) => {
+            button.innerHTML = '<svg aria-hidden="true" role="status" class="inline w-4 h-4 mr-3 text-white animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="#E5E7EB"/><path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentColor"/></svg>Loading...';
+            button.disabled = true;
+        });
+    }
+
+    function toggleMore(button) {
+        x = button
+
+        if (x.innerHTML === "more") {
+            x.innerHTML = "less";
+            text_full = x.getAttribute("data-text-full")
+            text_truncated = x.getAttribute("data-text-truncated")
+
+            x.parentElement.innerHTML = text_full + ' <button data-text-full="' + text_full + '" data-text-truncated="' + text_truncated + '" onclick="toggleMore(this)" class="text-blue-500">less</button>'
+        } else {
+            x.innerHTML = "more";
+            text_full = x.getAttribute("data-text-full")
+            text_truncated = x.getAttribute("data-text-truncated")
+
+            x.parentElement.innerHTML = text_truncated + ' <button data-text-full="' + text_full + '" data-text-truncated="' + text_truncated + '" onclick="toggleMore(this)" class="text-blue-500">more</button>'
+        }
+    }
+    </script>
+    <style>
+    .gradient-background {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 180s ease infinite;
+    }
+
+    .gradient-text {
+        color: transparent;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: gradient 2s ease infinite;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    </style>
+    </head>
+    <body class="flex flex-col h-screen dark:bg-gray-900 ">
+        
+        <div class="flex">
+            
+            <div id="page-container" class="container px-5 my-5 mx-auto">
+                <script type="text/javascript">
+var autorun = false;
+var content_to_share = [];
+</script>
+<div class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 overflow-x-auto max-w-fit mx-auto ">
+    <div class="flex flex-col h-full ">
+        <p class="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white  text-xl sm:text-5xl ">Welcome to FRAC (Frantzs Rule Analysis Checker)!</p>
+<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">by <a href="https://rebrand.ly/frantzme" target="_blank"><strong>Miles Frantz</strong></a></p>
+<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">This is a very rudimentary completely static Python Playground that allows you to analyse your code for common security issues. This process only happens within your browser thanks to the power of Pyodide.</p>
+<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Why did I do this?
+Simply because I am a Ph.D. Security Researcher interested in both Static Code Analysis and I want security tools to be more accessible!
+
+No code computation, source code, or results are sent or saved anywhere.
+I only have the bare Google analytics on to see if people do use this.
+You can check this in the <a href="https://github.com/franceme/franceme.github.io/blob/master/frac.py">source code</a>.
+</p>
+<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">The following Python Security Tools have been included within this playground:</p>
+<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+<a href="https://github.com/franceme/cryptolation" target="_blank"><strong>Cryptolation</strong></a> - A state-of-the-art Python security analysis tool I wrote, --currently-- being integrated.
+<a href="https://github.com/PyCQA/bandit" target="_blank"><strong>Bandit</strong></a> - A Python security tool designed and created by the fine team PyCQA.
+<a href="https://github.com/dlint-py/dlint" target="_blank"><strong>DLint</strong></a> - A security-based Python linter that extends flake8.
+</p>
+<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">How do you use this?</p>
+<p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+1) Write your Python code into the text editor or add it as a url (here?code=import os,sys,hashlib;print(hashlib.sha1('This is insecure'))).
+2) Wait for the first button on the left to change to "Scan the Code" (loading pyodide).
+3) Once you click it, wait for the middle button to change to "View Results".
+4) Once you see the results, you can refresh the page to start over or click the "Reset the page" button.
+</p> 
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" />
+<link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" />
+<script src="https://jsuites.net/v4/jsuites.js"></script>
+<script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+
+<!-- Google tag (gtag.js), I just want to see if anyone else is using this besides me -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JSVB5LYE9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JSVB5LYE9F');
+</script>
+
+
+
+<script defer type="text/javascript">
+
+var pyodide;
+var loaded = false;
+var bandit_results = null;
+var dlint_results = null;
+
+async function main(){
+    pyodide = await loadPyodide({fullStdLib:true});
+    await pyodide.loadPackage("micropip");
+    const micropip = pyodide.pyimport("micropip");
+    await micropip.install("pyvibe");
+    await micropip.install("flake8");
+    await micropip.install("flake8-csv");
+    await micropip.install("dlint");
+    await micropip.install("pandas");
+    await micropip.install("bandit");
+    loaded = true;
+    console.log("done");
+    document.getElementById("scansubmission").innerHTML = `<button id="scansubmission" false onclick="scanCode()"  class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Scan the code.
+            </span>
+    </button>
+`;
+    if (autorun) {
+        scanCode()
+    }
+}
+
+function scanCode() {
+    document.getElementById("scansubmission").innerHTML = `<button id="scansubmission" true  class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Scanning
+            </span>
+    </button>
+`;
+    console.log("Scanning");
+
+    editor = document.getElementById("editor").innerText;
+    var lines = document.getElementById("editor").innerText.split(/\r?\n/);
+    var started = false;
+    for (var i = 0; i < lines.length; i++) {
+        if (started || isNaN(lines[i])) {
+            started = true;
+            content_to_share.push(lines[i]);
+        }
+    }
+    console.log(content_to_share.join("\n"));
+
+    var samplefile = "/sample.py";
+    pyodide.FS.writeFile(samplefile, content_to_share.join("\n"), { encoding: "utf8" });
+
+    pyodide.runPython(`import os,sys,base64`);
+    pyodide.runPython(`import pandas as pd`);
+    pyodide.runPython(`sys.exit = lambda x: print('Trying to exit with code := '+str(x))`);
+
+    pyodide.runPython(`import bandit.cli.main as banditmain`);
+    pyodide.runPython(`sys.argv = "bandit -f csv -o /bandit.csv /sample.py".split()`);
+    pyodide.runPython(`banditmain.main()`);
+    pyodide.runPython(`bandit_results = pd.read_csv("/bandit.csv")`);
+    bandit_results = pyodide.globals.get("bandit_results");
+
+    pyodide.runPython(`import flake8.main.cli as dlintmain`);
+    pyodide.runPython(`sys.argv = "flake8 --select=DUO /sample.py --format=csv --output-file=/dlint.csv".split()`);
+    pyodide.runPython(`dlintmain.main()`);
+    pyodide.runPython(`dlint_results = pd.read_csv("/dlint.csv")`);
+    pyodide.runPython(`print(dlint_results)`);
+    dlint_results = pyodide.globals.get("dlint_results");
+
+    console.log("Completed");
+    document.getElementById("scansubmission").innerHTML = `<button id="scansubmission" true  class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Scanned
+            </span>
+    </button>
+`;
+    document.getElementById("viewresults").innerHTML = `<button id="viewresults" false onclick="viewResults()"  class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                View the results
+            </span>
+    </button>
+`;
+    
+
+    var currentLocation = window.location.href;
+    document.getElementById("sharecodelink").setAttribute("href", currentLocation.split("?")[0] + "?code=" + content_to_share.join("%0A"));
+
+    if (autorun) {
+        viewResults()
+    }
+}
+
+function viewResults() {
+    document.getElementById("viewresults").innerHTML = `<button id="scansubmission" true  class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Loading the results
+            </span>
+    </button>
+`;
+    console.log("Starting to view");
+
+    if (bandit_results != null) {
+        pyodide.runPython(`from js import bandit_results`);
+        pyodide.runPython(`
+            bandit_raw_arrz = bandit_results.to_dict('tight')['data'];
+        `);
+        pyodide.runPython(`
+        bandit_typez,bandit_titlez,bandit_widthz = [],[],[]
+        for kol in bandit_results.columns.tolist():
+            bandit_titlez += [kol]
+            bandit_typez += ['text']
+            bandit_widthz += [40]
+        `);
+        var bandit_mapping = [];
+        var bandit_titlez = pyodide.globals.get("bandit_titlez").toJs();
+        var bandit_typez = pyodide.globals.get("bandit_typez").toJs();
+        var bandit_widthz = pyodide.globals.get("bandit_widthz").toJs();
+
+        for (var i = 0; i < bandit_titlez.length; i++) {
+            bandit_mapping.push({
+                'title': bandit_titlez[i],
+                'type': bandit_typez[i],
+                'width': bandit_widthz[i],
+            });
+        }
+
+        jexcel(document.getElementById('bandit_demo'), container = {
+            data: pyodide.globals.get("bandit_raw_arrz").toJs(),
+            columns: bandit_mapping,
+            allowExport: true,
+            allowInsertColumn: false,
+            wordWrap: true,
+            rowResize: true,
+            columnResize: true,
+            editable: false,
+            search: false,
+            fullscreen: false,
+            loadingSpin: true,
+            tableHeight: '100%',
+            tableWidth: '100%',
+            columnSorting: true,
+            allowDeleteColumn: true,
+        });
+        document.getElementsByTagName("table")[0].setAttribute("style","width:100%;");
+        document.getElementById("banditresults_container").setAttribute("style","display:block;");
+    }
+
+    if (dlint_results != null) {
+        pyodide.runPython(`from js import dlint_results`);
+        pyodide.runPython(`
+            dlint_raw_arrz = dlint_results.to_dict('tight')['data'];
+        `);
+        pyodide.runPython(`
+        dlint_typez,dlint_titlez,dlint_widthz = [],[],[]
+        for kol in dlint_results.columns.tolist():
+            dlint_titlez += [kol]
+            dlint_typez += ['text']
+            dlint_widthz += [40]
+        `);
+        var dlint_mapping = [];
+        var dlint_titlez = pyodide.globals.get("dlint_titlez").toJs();
+        var dlint_typez = pyodide.globals.get("dlint_typez").toJs();
+        var dlint_widthz = pyodide.globals.get("dlint_widthz").toJs();
+
+        for (var i = 0; i < dlint_titlez.length; i++) {
+            dlint_mapping.push({
+                'title': dlint_titlez[i],
+                'type': dlint_typez[i],
+                'width': dlint_widthz[i],
+            });
+        }
+
+        jexcel(document.getElementById('dlint_demo'), container = {
+            data: pyodide.globals.get("dlint_raw_arrz").toJs(),
+            columns: dlint_mapping,
+            allowExport: true,
+            allowInsertColumn: false,
+            wordWrap: true,
+            rowResize: true,
+            columnResize: true,
+            editable: false,
+            search: false,
+            fullscreen: false,
+            loadingSpin: true,
+            tableHeight: '100%',
+            tableWidth: '100%',
+            columnSorting: true,
+            allowDeleteColumn: true,
+        });
+        document.getElementById("dlintresults_container").setAttribute("style","display:block;");
+    }
+    var tables = document.getElementsByTagName("table");//
+    for (k=0;k < tables.length;k++)
+    {
+        tables[k].setAttribute("style","width:100%;");
+    }
+
+    document.getElementById("viewresults").innerHTML = `<button id="scansubmission" true  class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Loaded the results
+            </span>
+    </button>
+`;
+    console.log("Finishing");
+}
+
+function resetResults() {
+    var currentLocation = window.location.href;
+    window.location.href = currentLocation.split("?")[0];
+}
+
+main();
+
+</script>
+
+<div class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 overflow-x-auto max-w-fit mx-auto ">
+    <div class="flex flex-col h-full ">
+        <p class="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white  text-xl sm:text-5xl ">Scan Code Here</p>
+ 
+        <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    
+<form class="max-w-full" style="width: 500px" onsubmit="setLoading(this)" action="return scanCode();" target="dummyframe" id="setcontent" method="GET">
+    
+<style type="text/css" media="screen">
+#editorContainer {
+    // width: calc( 100vw - 40px );
+    height: 500px;
+    max-height: calc( 80vh - 60px );
+    position: relative;
+    background-color: red;
+}
+#editor { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+</style>
+
+<div id="editorContainer">
+    <div id="editor">
+</div> 
+</div>
+
+<button id="scansubmission" true  class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Loading...
+            </span>
+    </button>
+
+<button id="viewresults" true  class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                No Results...
+            </span>
+    </button>
+
+<button id="viewresults" false onclick="resetResults()"  class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Reset the page
+            </span>
+    </button>
+ 
+</form>
+<p class="text-gray-500 dark:text-gray-400 ">
+    <a href=" " id="sharecodelink" class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline">
+    Copy the link here to share and auto-scan the code you entered
+    <svg aria-hidden="true" class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </a>
+</p> 
+    </div>
+</div>
+<div class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 overflow-x-auto max-w-fit mx-auto  " style="visibility:hidden;" id="banditresults_container">
+    <div class="flex flex-col h-full ">
+        <p class="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white  text-xl sm:text-5xl ">Bandit Results</p>
+ <div id="bandit_demo" style="width: 100%;"></div>  
+    </div>
+</div>
+<div class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 overflow-x-auto max-w-fit mx-auto  " style="visibility:hidden;" id="dlintresults_container">
+    <div class="flex flex-col h-full ">
+        <p class="mb-4 font-extrabold leading-none tracking-tight text-gray-900 dark:text-white  text-xl sm:text-5xl ">DLint Results</p>
+ <div id="dlint_demo" style="width: 100%;"></div>  
+    </div>
+</div>
+<script type="text/javascript">
+let url = new URL(window.location.href);
+let params = new URLSearchParams(url.search);
+
+let current_code = params.get('code');
+document.getElementById("editor").innerHTML = current_code;
+if (current_code) {
+    autorun = true;
+}
+</script>
+<script type="text/javascript">
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/monokai");
+editor.session.setMode("ace/mode/python");
+</script> 
+            </div>
+        </div>
+        <footer class="text-gray-600 body-font">
+    <div class="container px-5 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900 dark:text-white"><img class="object-scale-down h-10" src=""><span class="ml-3 text-xl"></span></a>
+            <p class="mt-2 text-sm text-gray-500"></p>
+        </div>
+        <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+    <h2 class="title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-3 uppercase">About</h2>
+    <nav class="list-none mb-10">
+        <li><a href="https://rebrand.ly/frantzme" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">About Me</a></li>
+<li><a href="https://yaogroup.cs.vt.edu/index.html" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">About My Lab</a></li> 
+    </nav>
+</div>
+<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+    <h2 class="title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-3 uppercase">Tech Used for Website</h2>
+    <nav class="list-none mb-10">
+        <li><a href="https://www.pyvibe.com/" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">PyVibe</a></li>
+<li><a href="https://pyodide.org" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Pyodide</a></li>
+<li><a href="https://bossanova.uk/jspreadsheet/v4" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">JSpreadSheet</a></li>
+<li><a href="https://ace.c9.io/" class="text-gray-600 hover:text-gray-800 dark:hover:text-white">Ace Code Editor</a></li> 
+    </nav>
+</div> 
+        </div>
+    </div>
+</footer>
+    </body>
+</html>

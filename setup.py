@@ -12,12 +12,13 @@ try:
 except:
     for x in [
             'requests',
-            'flask==2.0.1',
+            'flask==3.0.1',
             'flask_flatpages==0.7.3',
-            'frozen_flask==0.18',
+            'frozen_flask==1.0.1',
             'pygments==2.10.0',
             'feedgen==0.9.0',
-            'elsa==0.1.6'
+            'elsa==0.1.6',
+            'werkzeug==3.0.0'
         ]:
         os.system(str(sys.executable) + " -m pip install " + str(x))
     from flask import Flask, render_template_string, make_response
@@ -33,8 +34,8 @@ base_info = {
     'EMAIL':"codeanalysis@vt.edu",
     'GITHUB':"franceme",
     'DOCKER':"frantzme",
-    'RESUME':'https://rebrand.ly/frantzme_resume',
-    'CV':'https://rebrand.ly/frantzme_cv',
+    'RESUME':'https://drive.google.com/file/d/1wq_hU272QvwmW1Cj1on7MaufEvGxzA7C/view?usp=drive_link',
+    'CV':'https://drive.google.com/file/d/18qCa6lW4718-tTrpE5_H5Nr0s6ssG5Na/view?usp=drive_link',
     'GITHUB_USERNAME': 'franceme',
     'LINKEDIN_USERNAME': 'franceme',
     'SCHOLAR_USERNAME': 'RKKj9VgAAAAJ',
@@ -68,11 +69,6 @@ def get_file(filename, base=None):  # pragma: no cover
             src = os.path.join(base,filename)
         else:
             src = filename
-        # Figure out how flask returns static files
-        # Tried:
-        # - render_template
-        # - send_file
-        # This should not be so non-obvious
         return open(src).read()
     except IOError as exc:
         return str(exc)
@@ -198,6 +194,10 @@ def industry():
 def fracpage():
     return rendre('frac.html')
 
+@app.route('/frac')
+def fracpage_one():
+    return fracpage()
+
 @app.route('/full.html')
 def full():
     for x in base_info.keys():
@@ -205,25 +205,45 @@ def full():
             base_info[x] = True
     return rendre('index.html')
 
+@app.route('/full')
+def full_one():
+    return full()
+
 @app.route('/diagrams.html')
 def diagrams():
     return page_redirect('https://rebrand.ly/graphz')
 
+@app.route('/diagrams')
+def diagrams_one():
+    return diagrams()
+
 @app.route('/resume.html')
 def resume_grab():
-    return page_redirect('https://rebrand.ly/frantzme_resume')
+    return page_redirect(base_info["RESUME"])
+
+@app.route('/resume')
+def resume_grab_one():
+    return resume_grab()
 
 @app.route('/cv.html')
 def cv_grab():
-    return page_redirect('https://rebrand.ly/frantzme_cv')
+    return page_redirect(base_info["CV"])
+
+@app.route('/cv')
+def cv_grab_one():
+    return cv_grab()
 
 @app.route('/sok.html')
 def sok_grab():
     return page_redirect('https://oaklandsok.github.io')
 
-@app.route('/rss.html')
-def rss_grab():
-    return page_redirect('https://zapier.com/engine/rss/8296213/frantzme')
+@app.route('/sok')
+def sok_grab_one():
+    return sok_grab()
+
+@app.route('/365')
+def vt_microsoft_redirect():
+    return page_redirect('https://login.microsoftonline.com/?whr=virginiatech.onmicrosoft.com')
 
 @app.route('/paperss')
 def paperRss():
@@ -416,12 +436,12 @@ setup(name='My Website',
         url='',
         packages=find_packages(),
         install_requires=[
-            'flask==2.0.1',
+            'flask==3.0.1',
             'flask_flatpages==0.7.3',
-            'frozen_flask==0.18',
+            'frozen_flask==1.0.1',
             'pygments==2.10.0',
             'elsa==0.1.6',
             'feedgen==0.9.0',
-            'werkzeug==2.0.3' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
+            'werkzeug==3.0.0' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
         ]
 )

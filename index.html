@@ -60,45 +60,25 @@
   </head>
   {#
     https://analytics.google.com/analytics/web/#/p330218338/reports/reportinghub?params=_u..nav%3Dmaui
-  #}
     <!-- Google tag (gtag.js) (https://analytics.google.com)-->
+  #}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7R0M67LLC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-  
       gtag('config', 'G-F7R0M67LLC');
-    </script>
-    <script>
-      /*
-      printPdf = function (url) {
-        var iframe = this._printIframe;
-        if (!this._printIframe) {
-          iframe = this._printIframe = document.createElement('iframe');
-          document.body.appendChild(iframe);
-
-          iframe.style.display = 'none';
-          iframe.onload = function() {
-            setTimeout(function() {
-              iframe.focus();
-              iframe.contentWindow.print();
-            }, 1);
-          };
-        }
-
-        iframe.src = url;
-      }
-      */
     </script>
   <body class="bg-light" id="top">
     <button onclick="goto('/#top')" id="myBtn" title="Go to top" style="background-color:rgb(57, 100, 234);">Top</button>
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
         <div class="pt-4 clearfix">
+          {#
           <h1 class="site-title mb-0"><a href="/index.html" >{{dyct['name']}}</a> <br>
             {{ "Research"|get_main_url("Info")|safe }} {{ "Industry"|get_main_url("Info")|safe }} {{ "Full"|get_main_url("Info")|safe }}
           </h1>
+          #}
           <div class="site-nav"> 
             <nav role="navigation">
               <ul class="nav justify-content-center">
@@ -125,7 +105,7 @@
                 <li class="nav-item"><a class="nav-link" href="#my_dock" title="MyDocker"><span class="menu-title">My Docker</span></a></li>
                 {%- endif%}
                 {% if True -%}
-                <li class="nav-item"><a class="nav-link" href="https://rebrand.ly/frantzme_frac" title="FRAC"><span class="menu-title">FRAC</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="/frac" title="FRAC"><span class="menu-title">FRAC</span></a></li>
                 {%- endif%}
                 {% if dyct['show_exp'] -%}
                 <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a></li>
@@ -234,17 +214,19 @@
                       <i style="padding:10px;" class="fab fa-java" title="Java Oracle Contributor Agreement"></i>
                   </a>
               </li>
+              {#
               <li>
                     <a class="nav-link" href="/rss.html" title="RSS">
                       <i style="padding:10px;" class="fa fa-rss" title="RSS Feed"></i>
                   </a>
               </li>
+              #}
                   </ul>
                 </nav>
               </div>
               <div class="d-print-none">
-                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv.html" data-aos="fade-right" data-aos-delay="700">CV</a>
-                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume.html" data-aos="fade-left" data-aos-delay="700">Resume</a>
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv" data-aos="fade-right" data-aos-delay="700">CV</a>
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume" data-aos="fade-left" data-aos-delay="700">Resume</a>
               </div>
             </div>
           </div>
@@ -279,45 +261,15 @@
         <div class="col-md-5 offset-lg-1">
           <div class="row mt-2">
             <h2 class="h2 fw-light mb-4">Bio</h2>
-            {#
-            <!--
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Age</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">28</div>
-            </div>
-            -->
-            #}
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2"><a href="mailto:{{dyct['EMAIL']}}">{{dyct['EMAIL']}}</a></div>
             </div>
-            {#
-            <!--
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fab fa-skype pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Skype</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">username@skype.com</div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">+0718-111-0011</div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
-            </div>
-            -->
-            #}
             <div class="col-sm-7">
               <div class="pb-2">VA, U.S.A</div>
             </div>
-
             <br>
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder">Areas of Interest</div>
@@ -336,19 +288,11 @@
                 <li>Scripting</li>
               </ul></div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
-  {% if False %}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="education">
-    <div class="education-section">
-      <h2 class="h2 fw-light mb-4">Education</h2>
-    </div>
-  </div>
-  {% endif%}
   {% if dyct['show_edu'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="education">
     <div class="education-section">
