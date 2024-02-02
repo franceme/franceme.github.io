@@ -207,7 +207,7 @@ def full():
 
 @app.route('/full')
 def full_one():
-    full()
+    return full()
 
 @app.route('/diagrams.html')
 def diagrams():
