@@ -242,7 +242,7 @@ def sok_grab_one():
     return sok_grab()
 
 @app.route('/365')
-def diagrams():
+def vt_microsoft_redirect():
     return page_redirect('https://login.microsoftonline.com/?whr=virginiatech.onmicrosoft.com')
 
 @app.route('/paperss')
