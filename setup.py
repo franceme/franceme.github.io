@@ -494,7 +494,7 @@ def redirect_frantzme_frac():
 
 @app.route('/uful')
 def redirect_uful():
-    return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=9a7812570d7b488404e5eac2064b895980d03666d8ed57ef681f16326130ee68')
+    return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=f7a7f76bf890626eabf0756d32bc9dcb4a3b0bbd166d6d53563b87b03176d466')
 
 @app.route('/getab')
 def redirect_getab():
