@@ -532,6 +532,10 @@ def redirect_rustgameengines():
 def redirect_my_remotework():
     return page_redirect('https://www.plantuml.com/plantuml/svg/lP9FQy904CNlVeezjiYQFza_6q4KzT3sL11w4IcJsLbC6vCqkrBoxRkAb4BlifV7Cc_URuPP-G13EDMjFK4_cRBz_XX2x-T90dq_G-W1wr2JdzLTWYLaiieTpmeBN4YB74o670aBq2bAaRe4GEjSLy2TbXKNQ3Glyv9uYQWBAunMfDdhq7qG1dyuJARtowIcZeF2C5vZfsnD8OnH_I94WYpNipI-RAvAaIPBrpMMXaNYnnRPs-xYlDN_CsXZJD90jGpT9xKBKYGLvIAN6WKA8rIQAfi9S624Su9SAQqo1P0gXAISlPpxCT0GEznpBPbytsoUsUxOVIDuYj6Sios4g8Dd3xklfWxq63_v7o1R7S_LXODjrqzN5NqhQktja7u0')
 
+@app.route('/remotework')
+def redirect_remotework():
+    return page_redirect('https://www.plantuml.com/plantuml/svg/lP9FQy904CNlVeezjiYQFza_6q4KzT3sL11w4IcJsLbC6vCqkrBoxRkAb4BlifV7Cc_URuPP-G13EDMjFK4_cRBz_XX2x-T90dq_G-W1wr2JdzLTWYLaiieTpmeBN4YB74o670aBq2bAaRe4GEjSLy2TbXKNQ3Glyv9uYQWBAunMfDdhq7qG1dyuJARtowIcZeF2C5vZfsnD8OnH_I94WYpNipI-RAvAaIPBrpMMXaNYnnRPs-xYlDN_CsXZJD90jGpT9xKBKYGLvIAN6WKA8rIQAfi9S624Su9SAQqo1P0gXAISlPpxCT0GEznpBPbytsoUsUxOVIDuYj6Sios4g8Dd3xklfWxq63_v7o1R7S_LXODjrqzN5NqhQktja7u0')
+
 @app.route('/capz')
 def redirect_capz():
     return page_redirect('https://app.capacities.io/')
@@ -736,6 +740,10 @@ def redirect_rrun():
 def redirect_my_time():
     return page_redirect('https://wakatime.com/dashboard')
 
+@app.route('/time')
+def redirect_time():
+    return page_redirect('https://wakatime.com/dashboard')
+
 @app.route('/frantzme_qr')
 def redirect_frantzme_qr():
     return page_redirect('https://franceme.github.io/qr.html')
@@ -758,6 +766,10 @@ def redirect_sioyek():
 
 @app.route('/my_dock')
 def redirect_my_dock():
+    return page_redirect('https://www.plantuml.com/plantuml/svg/hPT1RzCm5CVl-nG-WggHEwTH2cYeWufkuZ1DaMERrio9BTiPoxV7oKlSOlMG5tEoNwJ_x_tqQZdDZVFK-beslARcQaKscZqBUrlJWt1NgnLvV3nwRzpxeZX8VsohTqpNnIzB6oPgKUoPbSOxCgvFJo4oCrDGvgLk7Fa0wwoiwKetjjnrPqqnoRJnl7n5dIZvC1oo3dkO4sGnuRGxdb2signQgVW_9W-tQtW6mAN4L6ykZOkNG26Ri3p8FeH8vVKiTUN6lkNt2iAuT6P_mPGqJamEdw0429gIwQAwrybZsxr269NExCyjVTRDfB0PAa1W6PaY1ysrdpo-z0K0a8HCYrhhqy6uwmi080dvTyQ52oFZklWFTuMIVXWCsOOD1179fPrDvu-wYVrtGucsY9JBBdYC5ywVPEv3bGZXK4kdyvk-q3YRhw70JIOXBBNuOqFOWiJFOOznYFdyOzAFKZQ7ywDo3u-Y49wMvLKhaBdR3WRapJVjoUTMgOxih316yBU0cidAKB6jy_6i_0W5xgmaXDG21J7ToMBNHGaq84e023iHnwYYayiUYYY38sJyBXLLIbZPKF1OJsKqmLEYIqB3_tyUtnkJMl8ccXIlho-ZcER26Sg48n_3Tjzl--Otek7ZzyjV')
+
+@app.route('/dock')
+def redirect_dock():
     return page_redirect('https://www.plantuml.com/plantuml/svg/hPT1RzCm5CVl-nG-WggHEwTH2cYeWufkuZ1DaMERrio9BTiPoxV7oKlSOlMG5tEoNwJ_x_tqQZdDZVFK-beslARcQaKscZqBUrlJWt1NgnLvV3nwRzpxeZX8VsohTqpNnIzB6oPgKUoPbSOxCgvFJo4oCrDGvgLk7Fa0wwoiwKetjjnrPqqnoRJnl7n5dIZvC1oo3dkO4sGnuRGxdb2signQgVW_9W-tQtW6mAN4L6ykZOkNG26Ri3p8FeH8vVKiTUN6lkNt2iAuT6P_mPGqJamEdw0429gIwQAwrybZsxr269NExCyjVTRDfB0PAa1W6PaY1ysrdpo-z0K0a8HCYrhhqy6uwmi080dvTyQ52oFZklWFTuMIVXWCsOOD1179fPrDvu-wYVrtGucsY9JBBdYC5ywVPEv3bGZXK4kdyvk-q3YRhw70JIOXBBNuOqFOWiJFOOznYFdyOzAFKZQ7ywDo3u-Y49wMvLKhaBdR3WRapJVjoUTMgOxih316yBU0cidAKB6jy_6i_0W5xgmaXDG21J7ToMBNHGaq84e023iHnwYYayiUYYY38sJyBXLLIbZPKF1OJsKqmLEYIqB3_tyUtnkJMl8ccXIlho-ZcER26Sg48n_3Tjzl--Otek7ZzyjV')
 
 @app.route('/7rqpa54')
@@ -812,12 +824,20 @@ def redirect_py_task():
 def redirect_my_conf():
     return page_redirect('https://www.plantuml.com/plantuml/svg/ZP5FQm8n4CNlVeevBsmYdafFsbMAi5B1taHap8vkQFw4pInRltqJfIZLGq-PWVT-UO-PHiQEhNQDnJ0gu9qSTMYWrkuhZee2Ak-Er95JbDS2DgJoMy1sspA7-2fbOmGgAtntakgcXbcrskqUj0SJiZ8D5x6CGSByhLu_IeTX4FRSzlg0JYXlx-1oyWBBLVNSeudeRnYP2jAtQDaQM2uMY-JyJmaPJADXNS-NLmEiwcS_iWy7p_4ICiqbasgTLcXAr2MwfhIcl0jJJiQJiOJFZtNYmUpAXihRW1sDRlX4FwBg3P-5YeBHzeAQNfvwVoGj8wbzXkuZ8-Tc-JImIKjCm2cvvlUgFm00')
 
+@app.route('/conf')
+def redirect_conf():
+    return page_redirect('https://www.plantuml.com/plantuml/svg/ZP5FQm8n4CNlVeevBsmYdafFsbMAi5B1taHap8vkQFw4pInRltqJfIZLGq-PWVT-UO-PHiQEhNQDnJ0gu9qSTMYWrkuhZee2Ak-Er95JbDS2DgJoMy1sspA7-2fbOmGgAtntakgcXbcrskqUj0SJiZ8D5x6CGSByhLu_IeTX4FRSzlg0JYXlx-1oyWBBLVNSeudeRnYP2jAtQDaQM2uMY-JyJmaPJADXNS-NLmEiwcS_iWy7p_4ICiqbasgTLcXAr2MwfhIcl0jJJiQJiOJFZtNYmUpAXihRW1sDRlX4FwBg3P-5YeBHzeAQNfvwVoGj8wbzXkuZ8-Tc-JImIKjCm2cvvlUgFm00')
+
 @app.route('/csgc_website')
 def redirect_csgc_website():
     return page_redirect('https://www.plantuml.com/plantuml/svg/nLHHRzCm47xlhpZj2T0QjzacMFUoRe9DGa9eBPjWweFZt1Apn8xiSwE2-E-SanPMfasW8SX3LITttttttNS-zYGTXReQJ3vuT53BM_GWGPNI50ZMmFLrITJuYH25fZ9aYRArE9sTEPa7INXgWr6w6bvgLsYZvHnLAPGlrB35p6j2EDDq7hB5ucWm-MjOa0LTvHweHDXyMshvPB8YgsmcQka9dKXw3D5QTtjJsTQB2wnGUanMTRMc0bD5sXeVspEM49mkIXe0m8ixP1WzaKwLUec9TKKyYtIKfgE3SShFuIWL_upt5MRJdifYyIlF9W9asdJbhqRB2tcmjm_luziJRJWUJHwx74p-ez3WqQn7_qKtSACh1BBn_FJnkxwkXysV-tETbxZv2kVJMInToYLszLLm3Wq1wHfviUec9doq0PGqZ0AXgQpCjrpRCj7kXPSrWk6VcFF6Ef21x90RQBZ1NOw7u1-eqeDuL9Q5-J6ZHZhIKJFOURr4ju9tiGKuYPkp0rzZcSbyIpIMWfLAb4-Mb60Un8ObYwvPas20qOXpBkSmGyUe4v3D-6V6KOSwipLQ4-yHfLXoYfbyUCXeRr-bQZoVVWBbh24Prti8ptvtU_PUfeVYSLoslDnO_daaOxGf03jHJ1IbexqrPduuBSQ2fhkXuBLH64LmoAAiGus5Lguw6p92WIu6z9TKZ5YFP2FvGqACf4iFJlHdo96DiWAld6xep-JO7uz6ud7qRJbosvheIW-L9FPJpteN77EG2lsMvUwvrc3R9nmDlWsEkSzGLzy1')
 
 @app.route('/my_task')
 def redirect_my_task():
+    return page_redirect('https://app.asana.com/0/1202250158074124/list')
+
+@app.route('/task')
+def redirect_task():
     return page_redirect('https://app.asana.com/0/1202250158074124/list')
 
 @app.route('/frantzme_latex')
@@ -977,6 +997,14 @@ def redirect_good_guy_with_gun():
 def redirect_my_sok():
     return page_redirect('https://oaklandsok.github.io/')
 
+@app.route('/sok')
+def redirect_sok():
+    return page_redirect('https://oaklandsok.github.io/')
+
+@app.route('/mendeley')
+def redirect_mendeley():
+    return page_redirect('https://www.mendeley.com/reference-manager/library/all-references')
+
 @app.route('/my_mendeley')
 def redirect_my_mendeley():
     return page_redirect('https://www.mendeley.com/reference-manager/library/all-references')
@@ -999,6 +1027,10 @@ def redirect_frantzme_webresume():
 
 @app.route('/my_grad')
 def redirect_my_grad():
+    return page_redirect('https://virginiatech-my.sharepoint.com/:w:/r/personal/frantzme_vt_edu/_layouts/15/Doc.aspx?sourcedoc=%7B99B220B3-8EE3-43E1-AAFE-900D9AA430D4%7D&file=Graduation_Plan.docx&action=default&mobileredirect=true')
+
+@app.route('/grad')
+def redirect_grad():
     return page_redirect('https://virginiatech-my.sharepoint.com/:w:/r/personal/frantzme_vt_edu/_layouts/15/Doc.aspx?sourcedoc=%7B99B220B3-8EE3-43E1-AAFE-900D9AA430D4%7D&file=Graduation_Plan.docx&action=default&mobileredirect=true')
 
 @app.route('/fun_rt')
