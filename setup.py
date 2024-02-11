@@ -476,6 +476,11 @@ def redirect_rnoqw():
 def redirect_pmap():
     return page_redirect('https://www.mindmeister.com/map/2667079025')
 
+
+@app.route('/motivate')
+def redirect_pmap():
+    return page_redirect('https://homeforfiction.com/apps/locked/quoteJux/')
+
 @app.route('/dcap')
 def redirect_dcap():
     return page_redirect('https://app.capacities.io/c9a15b2f-13da-45dc-a81c-cec3a70c540f/154e5043-6462-48f6-b49f-b133bec368b6')
