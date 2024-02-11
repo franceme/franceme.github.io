@@ -477,6 +477,10 @@ def redirect_pmap():
     return page_redirect('https://www.mindmeister.com/map/2667079025')
 
 
+@app.route('/audible')
+def redirect_pmap():
+    return page_redirect('https://www.audible.com/webplayer?asin=B06X3QQTFH&contentDeliveryType=MultiPartBook&ref_=a_minerva_cloudplayer_B06X3QQTFH&overrideLph=false&initialCPLaunch=true')
+
 @app.route('/motivate')
 def redirect_pmap():
     return page_redirect('https://homeforfiction.com/apps/locked/quoteJux/')
