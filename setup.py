@@ -237,6 +237,10 @@ def sok_grab_one():
 def vt_microsoft_redirect():
     return page_redirect('https://login.microsoftonline.com/?whr=virginiatech.onmicrosoft.com')
 
+@app.route('/scheduling')
+def vt_schedule():
+    return page_redirect('https://outlook.office.com/findtime/dashboard')
+
 @app.route('/paperss')
 def paperRss():
     """
