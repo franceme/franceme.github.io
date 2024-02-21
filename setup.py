@@ -482,11 +482,11 @@ def redirect_pmap():
 
 
 @app.route('/audible')
-def redirect_pmap():
+def redirect_audible():
     return page_redirect('https://www.audible.com/webplayer?asin=B06X3QQTFH&contentDeliveryType=MultiPartBook&ref_=a_minerva_cloudplayer_B06X3QQTFH&overrideLph=false&initialCPLaunch=true')
 
 @app.route('/motivate')
-def redirect_pmap():
+def redirect_motivate():
     return page_redirect('https://homeforfiction.com/apps/locked/quoteJux/')
 
 @app.route('/dcap')
