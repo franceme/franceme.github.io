@@ -1401,6 +1401,10 @@ def redirect_vt_contract():
 def redirect_vt_contract():
     return page_redirect('https://suricrasia.online/iceberg/')
 
+@app.route('/md_folder')
+def redirect_md_folder():
+    return page_redirect('https://www.w3schools.io/file/markdown-folder-tree/')
+
 @app.route('/HokieSpa')
 def redirect_HokieSpa():
     return page_redirect('https://banweb.banner.vt.edu/ssb/prod/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu')
