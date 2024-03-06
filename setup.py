@@ -440,6 +440,10 @@ def redirect_vscod():
 def redirect_dulles():
     return page_redirect('https://www.google.com/maps/place/Dulles+International+Airport/@38.9522806,-77.4604559,17z/data=!3m1!4b1!4m6!3m5!1s0x89b64740174eb057:0x8e01cb201080601d!8m2!3d38.9522765!4d-77.457881!16zL20vMDg0MmI')
 
+@app.route('/to_qr')
+def redirect_to_qr():
+    return page_redirect('https://demos.hankruiger.com/kuu_er/')
+
 @app.route('/on_qr')
 def redirect_on_qr():
     return page_redirect('https://faizrktm.github.io/barcode-reader-wasm/')
