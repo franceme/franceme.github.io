@@ -1059,15 +1059,15 @@ def redirect_fun_rt():
 
 @app.route('/thenticate')
 def redirect_thenticate():
-    return page_redirect('https://app.ithenticate.com/en_us/folder')
+    return page_redirect('https://shibboleth.turnitin.com/shibboleth/ithenticate')
 
 @app.route('/ithenticate')
 def redirect_ithenticate():
-    return page_redirect('https://app.ithenticate.com/en_us/folder')
+    return page_redirect('https://shibboleth.turnitin.com/shibboleth/ithenticate')
 
 @app.route('/mythenticate')
 def redirect_mythenticate():
-    return page_redirect('https://app.ithenticate.com/en_us/folder')
+    return page_redirect('https://shibboleth.turnitin.com/shibboleth/ithenticate')
 
 @app.route('/my_feedly')
 def redirect_my_feedly():
