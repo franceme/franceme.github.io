@@ -1057,6 +1057,14 @@ def redirect_grad():
 def redirect_fun_rt():
     return page_redirect('https://forum.xda-developers.com/t/desktop-apps-ported-to-windows-rt.2092348/')
 
+@app.route('/thenticate')
+def redirect_thenticate():
+    return page_redirect('https://app.ithenticate.com/en_us/folder')
+
+@app.route('/ithenticate')
+def redirect_ithenticate():
+    return page_redirect('https://app.ithenticate.com/en_us/folder')
+
 @app.route('/mythenticate')
 def redirect_mythenticate():
     return page_redirect('https://app.ithenticate.com/en_us/folder')
