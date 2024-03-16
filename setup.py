@@ -1421,10 +1421,6 @@ def redirect_md_folder():
 def redirect_HokieSpa():
     return page_redirect('https://banweb.banner.vt.edu/ssb/prod/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu')
 
-@app.route('/thenticate')
-def redirect_thenticate():
-    return page_redirect('https://shibboleth.turnitin.com/shibboleth/ithenticate')
-
 @app.route('/vt_365')
 def redirect_vt_365():
     return page_redirect('https://login.microsoftonline.com/?whr=virginiatech.onmicrosoft.com')
