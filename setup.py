@@ -1409,6 +1409,10 @@ def redirect_DarkSideAttack():
 def redirect_vt_contract():
     return page_redirect('https://apps.es.vt.edu/gradcontract/home/contract/index')
 
+@app.route('/apt')
+def redirect_apartment_finding():
+    return page_redirect('https://www.google.com/maps/d/edit?mid=1rGzYJrLlP7jXkLxEG1uGb2yIiy8YbCY')
+
 @app.route('/iceberg')
 def redirect_vt_contracticeburg():
     return page_redirect('https://suricrasia.online/iceberg/')
