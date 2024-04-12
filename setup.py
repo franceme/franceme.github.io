@@ -509,6 +509,10 @@ def redirect_cchef():
 def redirect_frantzme_frac():
     return page_redirect('https://franceme.github.io/frac.html')
 
+@app.route('/wordle')
+def redirect_wordle():
+    return page_redirect('https://www.nytimes.com/games/wordle/index.html')
+
 @app.route('/uful')
 def redirect_uful():
     return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=f7a7f76bf890626eabf0756d32bc9dcb4a3b0bbd166d6d53563b87b03176d466')
