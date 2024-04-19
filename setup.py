@@ -521,6 +521,10 @@ def rsch_defense():
 def final_defense():
     return page_redirect('https://virginiatech.zoom.us/j/83512572602?pwd=OHY1MysxNVB6eWV0dTJqcDRjM0xFUT09')
 
+@app.route('/audio')
+def redirect_audio():
+    return page_redirect('https://noises.online/player.php?g=ca5fa5')
+
 @app.route('/uful')
 def redirect_uful():
     return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=f7a7f76bf890626eabf0756d32bc9dcb4a3b0bbd166d6d53563b87b03176d466')
