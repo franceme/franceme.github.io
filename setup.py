@@ -521,6 +521,10 @@ def rsch_defense():
 def final_defense():
     return page_redirect('https://virginiatech.zoom.us/j/83512572602?pwd=OHY1MysxNVB6eWV0dTJqcDRjM0xFUT09')
 
+@app.route('/final')
+def final():
+    return page_redirect('https://github.com/codespaces/cuddly-yodel-44vvjrvjqxfj595?editor=web')
+
 @app.route('/audio')
 def redirect_audio():
     return page_redirect('https://noises.online/player.php?g=ca5fa5')
