@@ -533,6 +533,16 @@ def redirect_audio():
 def redirect_uful():
     return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=f7a7f76bf890626eabf0756d32bc9dcb4a3b0bbd166d6d53563b87b03176d466')
 
+@app.route('/chef')
+def redirect_chef():
+    return page_redirect("""
+
+https://gchq.github.io/CyberChef/#recipe=Find_/_Replace(%7B'option':'Regex','string':'b64:'%7D,'',true,false,true,false)From_Base64('A-Za-z0-9%2B/%3D',true,false)Find_/_Replace(%7B'option':'Simple%20string','string':'As%20a%20security%20scanner,%20review%20the%20source%20code;%20identify%20if%20it%20has%20a%20vulnerability%20as%20$HASVULN$,%20identify%20the%20insecure%20code%20as%20$INSECURE$,%20identify%20the%20CWE%20code%20as%20$CWE$.%20Also%20correct%20the%20source%20code%20and%20return%20it%20as%20$SECURE$.Return%20the%20output%20exactly%20as%20%3CRESP%3E%7B%22CWE%22:$CWE$,%22INSECURE%22:$INSECURE$,%22SECURE%22:$SECURE$,%22HASVULN%22:$HASVULN$%7D%3C/RESP%3E.SOURCE%3D'%7D,'',true,false,true,false)&oeol=NEL
+
+""".strip())
+
+
+
 @app.route('/getab')
 def redirect_getab():
     return page_redirect('http://www.unicode-symbol.com/u/0009.html')
