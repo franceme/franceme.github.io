@@ -534,8 +534,8 @@ def redirect_uful():
     return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=f7a7f76bf890626eabf0756d32bc9dcb4a3b0bbd166d6d53563b87b03176d466')
 
 
-@app.route('/dorgle')
-def redirect_dorgle():
+@app.route('/gordle')
+def redirect_gordle():
     return page_redirect('https://gist.github.com/ikuamike/c2611b171d64b823c1c1956129cbc055')
 
 @app.route('/chef')
