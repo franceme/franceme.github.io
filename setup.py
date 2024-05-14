@@ -546,7 +546,9 @@ https://gchq.github.io/CyberChef/#recipe=Find_/_Replace(%7B'option':'Regex','str
 
 """.strip())
 
-
+@app.route('/tele')
+def redirect_telegram():
+    return page_redirect('https://web.telegram.org/z/')
 
 @app.route('/getab')
 def redirect_getab():
@@ -1468,6 +1470,14 @@ def redirect_vt_365():
 @app.route('/365')
 def redirect_365():
     return redirect_vt_365()
+
+@app.route('/odrive')
+def redirect_odrive():
+    return redirect_vt_365()
+
+@app.route('/gdrive')
+def redirect_gdrive():
+    return page_redirect('https://drive.google.com')
 
 @app.route('/myvt')
 def redirect_myvt():
