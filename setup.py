@@ -531,7 +531,7 @@ def redirect_audio():
 
 @app.route('/uful')
 def redirect_uful():
-    return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=3f44d18878e7da7eb614d563f13357e393b979b540499be5c4a8c4243eb0a29c')
+    return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=2ccc6b14bc7b5f1c0c4267fca79a52df704cd45d8662907bda34777d0f069aa6')
 
 
 @app.route('/gordle')
