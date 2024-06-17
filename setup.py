@@ -190,6 +190,10 @@ def industry():
         base_info[x] = False
     return rendre('index.html')
 
+@app.route('/uful')
+def redirect_uful():
+    return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=9befb4c4a149223bca56d9db353cd4fecf576f24105dd10ee3f929942f06ad35')
+
 @app.route('/frac.html')
 def fracpage():
     return rendre('frac.html')
@@ -528,10 +532,6 @@ def final():
 @app.route('/audio')
 def redirect_audio():
     return page_redirect('https://noises.online/player.php?g=ca5fa5')
-
-@app.route('/uful')
-def redirect_uful():
-    return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=f5a04bd5621d50cfe4b4d771ad69978f0db58b11b1c0315551fa3044b4a260b2')
 
 
 @app.route('/gordle')
