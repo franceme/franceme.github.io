@@ -1482,6 +1482,10 @@ def redirect_odrive():
 def redirect_gdrive():
     return page_redirect('https://drive.google.com')
 
+@app.route('/idrive')
+def redirect_idrive():
+    return page_redirect('https://www.icloud.com/iclouddrive/')
+
 @app.route('/myvt')
 def redirect_myvt():
     return page_redirect('https://onecampus.vt.edu/')
