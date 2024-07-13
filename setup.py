@@ -192,7 +192,7 @@ def industry():
 
 @app.route('/uful')
 def redirect_uful():
-    return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=f40d5adf5fca9e98802b5c191b16f09d5bad54ceaf820ee9fa84cce6ec575f1e')
+    return page_redirect('https://franceme.github.io/secure_useful.html#staticrypt_pwd=c8c1798e5114ececcbc748cca8ea3c41db8dda1401fa3b41841686145f72433b')
 
 @app.route('/frac.html')
 def fracpage():
