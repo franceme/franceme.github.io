@@ -218,7 +218,7 @@ def redirect_wedding_shortcut():
     return page_redirect('https://app.asana.com/0/1202241070180203/1208213130129953')
 
 @app.route('/germany')
-def redirect_wedding_shortcut():
+def redirect_germany_shortcut():
     return page_redirect('https://app.asana.com/0/1202241070180203/1208213130129961')
 
 @app.route('/resume.html')
