@@ -1,7 +1,15 @@
+#region Imports
 import os,sys
-import pyvibe as pv
-from pyvibe import HtmlComponent as html
-
+try:
+    import pyvibe as pv
+    from pyvibe import HtmlComponent as html
+except:
+    import pip
+    pip.main("install pyvibe".split())
+    import pyvibe as pv
+    from pyvibe import HtmlComponent as html
+#endregion
+#region Footer Section
 footer = pv.Footer()
 with footer.add_footercategory("About") as category:
     category.add_footerlink("About Me", "https://rebrand.ly/frantzme")
@@ -12,11 +20,13 @@ with footer.add_footercategory("Tech Used for Website") as category:
     category.add_footerlink("Pyodide", "https://pyodide.org")
     category.add_footerlink("JSpreadSheet", "https://bossanova.uk/jspreadsheet/v4")
     category.add_footerlink("Ace Code Editor","https://ace.c9.io/")
-
+#endregion
+#region Page Setup
 page = pv.Page("FRAC", navbar=None,footer=footer)
 page.href = lambda name,url: f"""<a href="{url}" target="_blank"><strong>{name}</strong></a>"""
 page.add_script = lambda content: page.add(html(f"""<script type="text/javascript">{content}</script>"""))
-
+#endregion
+#region Text and Front Setup
 page.add_script("""
 var autorun = false;
 var content_to_share = [];
@@ -53,7 +63,8 @@ You can check this in the <a href="https://github.com/franceme/franceme.github.i
 """
     await micropip.install("semgrep");
 """
-
+#endregion
+#region JS setup
 page.add_html("""
 <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" />
 <link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" />
@@ -73,7 +84,8 @@ page.add_html("""
 </script>
 
 """)
-
+#endregion
+#region Util Methods
 def base_button(id, name, disabledstring, onclick):
     return f"""<button id="{id}" {disabledstring} {onclick} class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -297,7 +309,8 @@ function resetResults() {{
 """
 
 page.add_html(core_pyodide())
-
+#endregion
+#region Setting Up Code Section
 with page.add_card() as card:
     card.add_header("Scan Code Here")
     card.add(html(""" 
@@ -360,6 +373,6 @@ var editor = ace.edit("editor");
 editor.setTheme("ace/theme/monokai");
 editor.session.setMode("ace/mode/python");
 """)
-
+#endregion
 with open(__file__.replace('.py','.html'),"w+") as writer:
     writer.write(page.to_html())

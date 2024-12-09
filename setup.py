@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#region Imports
 from setuptools import find_packages, setup
 import sys,os, base64
 
@@ -10,6 +11,7 @@ try:
         FlatPages, pygmented_markdown)
     from feedgen.feed import FeedGenerator
 except:
+    import pip
     for x in [
             'requests',
             'flask==3.0.1',
@@ -20,16 +22,16 @@ except:
             'elsa==0.1.6',
             'werkzeug==3.0.0'
         ]:
-        os.system(str(sys.executable) + " -m pip install " + str(x))
+        pip.main("install {0}".format(x).split())
     from flask import Flask, render_template_string, make_response
     from flask_frozen import Freezer
     from flask_flatpages import (FlatPages, pygmented_markdown)
     from feedgen.feed import FeedGenerator
-
-
+#endregion
+#region Core Imports
 base_info = {
-    'name':"Miles Frantz",
-    'title':"Cyber Security Ph.D. Student",
+    'name':"Dr. Miles Frantz",
+    'title':"Ph.D. Lead Associate at PeratonLabs",
     'NAME':"Miles Frantz",
     'EMAIL':"codeanalysis@vt.edu",
     'GITHUB':"franceme",
@@ -92,7 +94,8 @@ app = Flask(
 app.config.from_object(__name__)
 pages = FlatPages(app)
 freezer = Freezer(app)
-
+#endregion
+#region API URLs
 def page_redirect(url):
     return f"""<!DOCTYPE HTML>
 <html lang="en-US">
@@ -156,8 +159,8 @@ def secure_get_{secure_page_name.split('.')[0]}():
 """)
             else:
                 print(line, end='')
-
-# === URL Routes === #
+#endregion
+#region EZ Routes
 
 @app.route('/')
 @app.route('/index.html')
@@ -1506,20 +1509,8 @@ def redirect_frantzme():
 def redirect_cryptoguard4py():
     return page_redirect('https://github.com/franceme/CryptoGuard4Py')
 
-#Add Secure Pages Here
-
-
-@app.route('/secure_timeline.html')
-def secure_get_timeline():
-    return easy_add_file('secure/timeline.html')
-
-
-@app.route('/secure_useful.html')
-def secure_get_useful():
-    return easy_add_file('secure/useful.html')
-
-
-# === Main function  === #
+#endregion
+#region Skill & util Functions
 def get_skill(name,amount, isLeft=True):
     ranking = "No Experience"
     if amount == 0:
@@ -1606,7 +1597,8 @@ def get_main_url(page_name, extra_info=''):
     return render_template_string(f""" <a href="/{page_name.lower()}.html">{page_name.title()}_{extra_info}</a> """)
 
 app.jinja_env.filters['get_main_url'] = get_main_url
-
+#endregion
+#region Commands
 def arg(string):
     return __name__ == "__main__" and len(
         sys.argv) > 1 and sys.argv[0].endswith('setup.py') and str(sys.argv[1]).upper().replace("--",'') == str(string).upper()
@@ -1626,7 +1618,7 @@ elif arg('install'):
 elif __name__ == '__main__':
     from elsa import cli
     sys.exit(cli(app, base_url='https://franceme.github.io'))
-
+#endregion
 
 setup(name='My Website',
         version='0.0.0',
