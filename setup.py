@@ -31,7 +31,7 @@ except:
 #region Core Imports
 base_info = {
     'name':"Dr. Miles Frantz",
-    'title':"Ph.D. Lead Associate at PeratonLabs",
+    'title':"Ph.D. Lead Associate at Peraton Labs",
     'NAME':"Miles Frantz",
     'EMAIL':"codeanalysis@vt.edu",
     'GITHUB':"franceme",
