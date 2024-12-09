@@ -42,5 +42,11 @@
 		"**/User": true,
 		"**/machineid": true,
 		"**/coder.json": true,
-	},"sourcery.token": "user_30XspLkZ3bnmSRsC9xZi44qQCOOnxWjAjjioFupr5xz_rS5HBwlxqeH0bYI"
+		"**/.vscode/": true,
+		"**/.github/": true,
+		"**/.devcontainer/": true,
+		"**/static/": true,
+		"**/CNAME": true,
+		"**/.gitignore": true,
+	},
 }
