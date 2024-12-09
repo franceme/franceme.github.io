@@ -12,7 +12,7 @@ except:
 #region Footer Section
 footer = pv.Footer()
 with footer.add_footercategory("About") as category:
-    category.add_footerlink("About Me", "https://rebrand.ly/frantzme")
+    category.add_footerlink("About Me", "https://franceme.github.io")
     category.add_footerlink("About My Lab", "https://yaogroup.cs.vt.edu/index.html")
 
 with footer.add_footercategory("Tech Used for Website") as category:
@@ -34,7 +34,7 @@ var content_to_share = [];
 
 with page.add_card() as card:
     card.add_header("Welcome to FRAC (Frantzs Rule Analysis Checker)!")
-    card.add_text("by " + page.href("Miles Frantz", "https://rebrand.ly/frantzme"))
+    card.add_text("by " + page.href("Miles Frantz", "https://franceme.github.io"))
     card.add_text("""This is a very rudimentary completely static Python Playground that allows you to analyse your code for common security issues. This process only happens within your browser thanks to the power of Pyodide.""")
     card.add_text("""Why did I do this?
 Simply because I am a Ph.D. Security Researcher interested in both Static Code Analysis and I want security tools to be more accessible!
