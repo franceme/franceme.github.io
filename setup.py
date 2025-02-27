@@ -1,32 +1,16 @@
 #!/usr/bin/env python3
 #region Imports
-from setuptools import find_packages, setup
-import sys,os, base64
+import setuptools
+import sys
+import os
+import base64
+import mystring
 
-try:
-    from flask import Flask, render_template_string, make_response
-    from mystring import string as str
-    from flask_frozen import Freezer
-    from flask_flatpages import (
-        FlatPages, pygmented_markdown)
-    from feedgen.feed import FeedGenerator
-except:
-    import pip
-    for x in [
-            'requests',
-            'flask==3.0.1',
-            'flask_flatpages==0.7.3',
-            'frozen_flask==1.0.1',
-            'pygments==2.10.0',
-            'feedgen==0.9.0',
-            'elsa==0.1.6',
-            'werkzeug==3.0.0'
-        ]:
-        pip.main("install {0}".format(x).split())
-    from flask import Flask, render_template_string, make_response
-    from flask_frozen import Freezer
-    from flask_flatpages import (FlatPages, pygmented_markdown)
-    from feedgen.feed import FeedGenerator
+import flask
+import flask_frozen
+import flask_flatpages
+import feedgen
+
 #endregion
 #region Core Imports
 base_info = {
@@ -73,11 +57,11 @@ def get_file(filename, base=None):  # pragma: no cover
             src = filename
         return open(src).read()
     except IOError as exc:
-        return str(exc)
+        return mystring.string.str(exc)
 
-prerender_jinja = lambda text: pygmented_markdown(render_template_string(text))
-rendre = lambda page:render_template_string(get_file(page),mimetype="text/html",dyct=base_info)
-rendre_string = lambda page:render_template_string(page,mimetype="text/html",dyct=base_info)
+prerender_jinja = lambda text: flask_flatpages.pygmented_markdown(flask.render_template_string(text))
+rendre = lambda page:flask.render_template_string(get_file(page),mimetype="text/html",dyct=base_info)
+rendre_string = lambda page:flask.render_template_string(page,mimetype="text/html",dyct=base_info)
 
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
@@ -86,14 +70,14 @@ FLATPAGES_HTML_RENDERER = prerender_jinja
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite']
 FREEZER_IGNORE_MIMETYPE_WARNINGS = True
 
-app = Flask(
+app = flask.Flask(
     __name__,
     static_url_path='',
     static_folder='static',
 )
 app.config.from_object(__name__)
-pages = FlatPages(app)
-freezer = Freezer(app)
+pages = flask_flatpages.FlatPages(app)
+freezer = flask_frozen.Freezer(app)
 #endregion
 #region API URLs
 def page_redirect(url):
@@ -123,9 +107,14 @@ def easy_add_page(contents, contenttype='text/html',pullcontent=False):
         raw_contents = reader.readlines()
 
     if contents.endswith(".csv"): #Hard Test
-        output = make_response(raw_contents)
+        output = flask.make_response(raw_contents)
         output.headers["Content-Disposition"] = "attachment; filename=export.csv"
         output.headers["Content-type"] = "text/csv"
+        return output
+    elif contents.endswith(".json"): #Hard Test
+        output = flask.make_response(raw_contents)
+        output.headers["Content-Disposition"] = "attachment; filename=export.json"
+        output.headers["Content-type"] = "text/json"
         return output
 
     return '\n'.join(raw_contents), 200, {'Content-Type':contenttype}
@@ -141,15 +130,15 @@ def add_secure_pages(pagepaths):
                 print(line)
                 for pagepath in pagepaths:
                     if pagepath.endswith('.html') or pagepath.endswith('.htm'):
-                        secure_page_name = str(pagepath.split("/")[-1]).replace('.html','').replace("*","")
+                        secure_page_name = mystring.string.str(pagepath.split("/")[-1]).replace('.html','').replace("*","")
                         print(f"""
 @app.route('/secure_{secure_page_name}.html')
 def secure_get_{secure_page_name}():
     return easy_add_file('{pagepath}')
 """)
                     else:
-                        secure_page_name = str(pagepath.split("/")[-1])#.split('.')[0]
-                        pull_content=any([secure_page_name.endswith("."+str(x)) for x in [
+                        secure_page_name = mystring.string.str(pagepath.split("/")[-1])#.split('.')[0]
+                        pull_content=any([secure_page_name.endswith("."+mystring.string.str(x)) for x in [
                             'py','java','rs','csv','json','xml',
                         ]])
                         print(f"""
@@ -522,7 +511,7 @@ def paperRss():
     # https://www.reddit.com/r/flask/comments/evjcc5/question_on_how_to_generate_a_rss_feed/
     # https://github.com/lkiesow/python-feedgen
     """
-    fg = FeedGenerator()
+    fg = feedgen.feed.FeedGenerator()
     fg.title('Faper rss feed')
     fg.description('A feed of paper news pulled from the email')
     fg.link(href="https://franceme.github.io/paperss")
@@ -550,7 +539,7 @@ def paperRss():
             if article['PubDate'] != "":
                 fe.pubDate(article['PubDate'])
 
-    response = make_response(fg.rss_str())
+    response = flask.make_response(fg.rss_mystring.string.str())
     response.headers.set('Content-Type', 'application/rss+xml')
     return response
 
@@ -593,7 +582,7 @@ def get_skill(name,amount, isLeft=True):
 
     klass = "bg-info" if isLeft else "bg-secondary"
 
-    return render_template_string(f"""
+    return flask.render_template_string(f"""
 <div class="mb-3"><span class="fw-bolder">{name}</span>
     <div class="progress my-2 rounded" style="height: 20px">
         <div class="progress-bar {klass}" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: {amount}%;" aria-valuenow="{amount}" aria-valuemin="0" aria-valuemax="100">{ranking}</div>
@@ -628,7 +617,7 @@ def get_base(title, co_name, _from, _to, desc, is_info=True, color=None, html_id
     if html_id is not None:
         html_id = f"id='{html_id}'"
 
-    return render_template_string(f"""
+    return flask.render_template_string(f"""
 <div class="timeline-card {color or base_color}" data-aos="fade-in" data-aos-delay="0" {color} {html_id}>
     <div class="timeline-head px-4 pt-3">
     <div class="h5">{title} <span class="text-muted h6">{co_name}</span></div>
@@ -644,7 +633,7 @@ app.jinja_env.filters['get_base'] = get_base
 
 def get_ref(name, title, desc,left_side=True):
 
-    return render_template_string(f"""
+    return flask.render_template_string(f"""
           <div class="d-flex mb-2">
             <div class="avatar"><img src="images/reference-image-1.jpg" width="60" height="60"/></div>
             <div class="header-bio m-3 mb-0">
@@ -660,15 +649,15 @@ def get_ref(name, title, desc,left_side=True):
 app.jinja_env.filters['get_ref'] = get_ref
 
 def get_main_url(page_name, extra_info=''):
-    page_name = str(page_name)
-    return render_template_string(f""" <a href="/{page_name.lower()}.html">{page_name.title()}_{extra_info}</a> """)
+    page_name = mystring.string.str(page_name)
+    return flask.render_template_string(f""" <a href="/{page_name.lower()}.html">{page_name.title()}_{extra_info}</a> """)
 
 app.jinja_env.filters['get_main_url'] = get_main_url
 #endregion
 #region Commands
 def arg(string):
     return __name__ == "__main__" and len(
-        sys.argv) > 1 and sys.argv[0].endswith('setup.py') and str(sys.argv[1]).upper().replace("--",'') == str(string).upper()
+        sys.argv) > 1 and sys.argv[0].endswith('setup.py') and mystring.string.str(sys.argv[1]).upper().replace("--",'') == mystring.string.str(string).upper()
 
 if arg('build'):
     freezer.freeze()
@@ -687,13 +676,13 @@ elif __name__ == '__main__':
     sys.exit(cli(app, base_url='https://franceme.github.io'))
 #endregion
 
-setup(name='My Website',
+setuptools.setup(name='My Website',
         version='0.0.0',
         description='Python Website',
         author='Miles Frantz',
         author_email='frantzme@vt.edu',
         url='',
-        packages=find_packages(),
+        packages=setuptools.find_packages(),
         install_requires=[
             'flask==3.0.1',
             'flask_flatpages==0.7.3',
