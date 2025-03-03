@@ -59,14 +59,12 @@ def get_file(filename, base=None):  # pragma: no cover
     except IOError as exc:
         return mystring.string.str(exc)
 
-prerender_jinja = lambda text: flask_flatpages.pygmented_markdown(flask.render_template_string(text))
 rendre = lambda page:flask.render_template_string(get_file(page),mimetype="text/html",dyct=base_info)
-rendre_string = lambda page:flask.render_template_string(page,mimetype="text/html",dyct=base_info)
 
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
-FLATPAGES_HTML_RENDERER = prerender_jinja
+FLATPAGES_HTML_RENDERER = lambda text: flask_flatpages.pygmented_markdown(flask.render_template_string(text))
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite']
 FREEZER_IGNORE_MIMETYPE_WARNINGS = True
 
@@ -75,9 +73,11 @@ app = flask.Flask(
     static_url_path='',
     static_folder='static',
 )
+
 app.config.from_object(__name__)
 pages = flask_flatpages.FlatPages(app)
 freezer = flask_frozen.Freezer(app)
+
 #endregion
 #region API URLs
 def page_redirect(url):
@@ -289,7 +289,7 @@ for route, url in {
     '/prelim':'https://virginiatech.zoom.us/j/85652239554?pwd=VlZTRGIzNlZqaWh6NmxpZldoNDVYUT09',
     '/auroa':'https://www.authorea.com/users/579829-miles-frantz',
     '/pyhook':'https://raw.githubusercontent.com/franceme/staticpy/master/hook.py',
-    '/txtpad':'https://www.onlinetexteditor.com/',
+    '/txt':'https://www.onlinetexteditor.com/',
     '/installgh':'https://raw.githubusercontent.com/franceme/staticpy/master/install_gh.sh',
     '/office_hour':'https://virginiatech.zoom.us/j/81604121297?pwd=eGE5T2RlSU14ZTFUUzg0eWRWSlkrQT09',
     '/mdh':'https://mdh.cs.vt.edu/dashboard',
