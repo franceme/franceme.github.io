@@ -282,6 +282,7 @@ for route, url in {
     '/researchdefense':'https://www.mindmeister.com/map/2611141209',
     '/vt_hardener':'https://raw.githubusercontent.com/franceme/staticpy/master/hardener.sh',
     '/pypyg':'https://github.com/Kanaries/pygwalker',
+    '/playlists':'https://www.chosic.com/',
     '/hermy':'https://web.telegram.org/k/#@HermesFeetBot',
     '/projectbreakdown':'https://www.plantuml.com/plantuml/png/VP11IyD048Nl_HNlvXge9AaLSslHivIWU9JLZ6HrCnjs9zNyUuUjI27WQHQ-xprukqjYemoEky6Egm9LMTx2j6Jz-Zb4t-4GmmUzoUMgA5vm0_COHhIMF-aF9MKvMEjLQLl3F0J1_cYTjw-UiETv297KKx7Pbdfpst-UyWhctdLy8UZjaM1vnc6MFZ3UdQTqfbNd05zEtvD0UiBLE8E-XJYvmAS4ckiQTrECn8AMqkGbASXTcpnmlHnu2cuQc2TUuXrnz_k7Fm00',
     '/veedly':'https://www.veed.io/workspaces/34d68d13-42c8-4c30-b56c-91893f5181fa/home',
