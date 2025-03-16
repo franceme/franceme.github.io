@@ -9,7 +9,7 @@ import mystring
 import flask
 import flask_frozen
 import flask_flatpages
-import feedgen
+from feedgen.feed import FeedGenerator
 
 #endregion
 #region Core Imports
@@ -433,7 +433,7 @@ def paperRss():
     # https://www.reddit.com/r/flask/comments/evjcc5/question_on_how_to_generate_a_rss_feed/
     # https://github.com/lkiesow/python-feedgen
     """
-    fg = feedgen.feed.FeedGenerator()
+    fg = FeedGenerator()
     fg.title('Faper rss feed')
     fg.description('A feed of paper news pulled from the email')
     fg.link(href="https://franceme.github.io/paperss")
