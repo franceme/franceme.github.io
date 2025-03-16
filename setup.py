@@ -461,7 +461,7 @@ def paperRss():
             if article['PubDate'] != "":
                 fe.pubDate(article['PubDate'])
 
-    response = flask.make_response(fg.rss_mystring.string.str())
+    response = flask.make_response(fg.rss_str())
     response.headers.set('Content-Type', 'application/rss+xml')
     return response
 
