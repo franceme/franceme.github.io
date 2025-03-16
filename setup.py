@@ -357,7 +357,12 @@ for route, url in {
     '/vmale':'https://outlook.office.com/mail/',
     '/365':'https://login.microsoftonline.com/?whr=virginiatech.onmicrosoft.com',
 
+    #Locations
+    '/atl':'https://maps.app.goo.gl/rtEHkrYyEidJfXiu7',
+    '/ewr':'https://maps.app.goo.gl/E2jr4V3oByCD2KE98',
+
     #Personal
+    '/travel':'https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI1LTAxLTMwagcIARIDRVdScgcIARIDQVRMGh4SCjIwMjUtMDItMDNqBwgBEgNBVExyBwgBEgNFV1JAAUgBcAGCAQsI____________AZgBAQ',
     '/gift_rents':'https://docs.google.com/document/d/14CYdx3o_15LrhV9wCYv0X-MJv5fqhgPI/edit?usp=sharing&ouid=103289071436703194896&rtpof=true&sd=true',
     '/gift_rent':'http://google.com',
     '/gift_shak':'https://docs.google.com/document/d/1Hock_q21oJto4zHtZilbDIMDRT0HX7n-/edit?usp=sharing&ouid=103289071436703194896&rtpof=true&sd=true',
