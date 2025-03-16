@@ -50,6 +50,17 @@ base_info = {
 
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
 def get_file(filename, base=None):  # pragma: no cover
+    """
+    Reads the content of a file.
+
+    Args:
+        filename (str): The name of the file to read.
+        base (str, optional): The base directory to prepend to the filename. Defaults to None.
+
+    Returns:
+        str: The content of the file if it is successfully read.
+        str: An error message if an IOError occurs.
+    """
     try:
         if base:
             src = os.path.join(base,filename)
@@ -73,6 +84,7 @@ app = flask.Flask(
     static_url_path='',
     static_folder='static',
 )
+app._current_rules = lambda: [x.endpoint for x in app.url_map.iter_rules()]
 
 app.config.from_object(__name__)
 pages = flask_flatpages.FlatPages(app)
@@ -99,6 +111,17 @@ def page_redirect(url):
 
 #https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 def easy_add_page(contents, contenttype='text/html',pullcontent=False):
+    """
+    Processes and returns the contents of a file or a string, with optional content type and file handling.
+
+    Args:
+        contents (str): The content to be processed. This can be a string or a file path.
+        contenttype (str, optional): The MIME type of the content. Defaults to 'text/html'.
+        pullcontent (bool, optional): If True, the function will attempt to read the contents from a file. Defaults to False.
+
+    Returns:
+        tuple: A tuple containing the processed content, HTTP status code, and a dictionary of headers.
+    """
     if not pullcontent or not os.path.exists(contents):
         return contents, 200, {'Content-Type':contenttype}
 
@@ -123,6 +146,29 @@ def easy_add_file(file):
     return easy_add_page(open(file).read())
 
 def add_secure_pages(pagepaths):
+    """
+    Adds secure routes for the given list of page paths to the Flask application.
+
+    This function reads the current file and inserts Flask route definitions for each
+    page path provided in the `pagepaths` list. The routes are added at the location
+    marked by the comment "#Add Secure Pages Here".
+
+    Args:
+        pagepaths (list): A list of file paths to be added as secure pages. The paths
+                          can be for HTML files or other file types such as Python,
+                          Java, Rust, CSV, JSON, and XML.
+
+    The function distinguishes between HTML files and other file types. For HTML files,
+    it creates a route that serves the file directly. For other file types, it creates
+    a route that serves the file with a 'text/plain' content type and determines whether
+    to pull the content based on the file extension.
+
+    Example:
+        add_secure_pages(['path/to/page1.html', 'path/to/script.py'])
+
+    Note:
+        This function modifies the current file in place.
+    """
     from fileinput import FileInput as finput
     with finput(__file__, inplace=True, backup=False) as file:
         for line in file:
@@ -201,6 +247,20 @@ def full():
 @app.route('/full')
 def full_one():
     return full()
+
+def create_dynamic_function(name, code):
+    """
+    Creates a new function dynamically.
+
+    Args:
+        name (str): The name of the function.
+        code (str): The code of the function as a string.
+
+    Returns:
+        function: The dynamically created function.
+    """
+    exec(code)
+    return locals()[name]
 
 for route, url in {
     '/uful':'https://franceme.github.io/secure_useful.html#staticrypt_pwd=47b333df359460a3ff8812fb5db669f0083a25d3fd1c6cd4073f2685f0cb5a41',
@@ -504,7 +564,15 @@ for route, url in {
     '/cv.html':base_info["CV"],
     '/cv':base_info["CV"],
 }.items():
-    app.add_url_rule(route, view_func=lambda url=url: page_redirect(url))
+    if route.replace('/','') in app._current_rules():
+        print(f"Route /{route} already exists")
+        sys.exit(-1)
+
+    function_name = "def_gen_" + route.replace('/','').replace('.','_').replace('-','_')
+    app.add_url_rule(route, view_func=create_dynamic_function(function_name, f"""
+def {function_name}():
+    return page_redirect("{url}")
+""".strip()))
 
 @app.route('/paperss')
 def paperRss():
@@ -633,7 +701,6 @@ def get_base(title, co_name, _from, _to, desc, is_info=True, color=None, html_id
 app.jinja_env.filters['get_base'] = get_base
 
 def get_ref(name, title, desc,left_side=True):
-
     return flask.render_template_string(f"""
           <div class="d-flex mb-2">
             <div class="avatar"><img src="images/reference-image-1.jpg" width="60" height="60"/></div>
@@ -657,8 +724,7 @@ app.jinja_env.filters['get_main_url'] = get_main_url
 #endregion
 #region Commands
 def arg(string):
-    return __name__ == "__main__" and len(
-        sys.argv) > 1 and sys.argv[0].endswith('setup.py') and mystring.string.str(sys.argv[1]).upper().replace("--",'') == mystring.string.str(string).upper()
+    return __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[0].endswith('setup.py') and mystring.string(sys.argv[1]).upper().replace("--",'') == mystring.string(string).upper()
 
 if arg('build'):
     freezer.freeze()
