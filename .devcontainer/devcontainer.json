@@ -39,13 +39,13 @@
 					"littlefoxteam.vscode-python-test-adapter",
 					"ms-python.python",
 					"njpwerner.autodocstring",
-					"sourcery.sourcery",
 					"GitHub.copilot",
 					"hbenl.vscode-test-explorer",
 					"ritwickdey.LiveServer",
 					"yzhang.markdown-all-in-one",
-					"MS-SarifVSCode.sarif-viewer",
-					"wholroyd.jinja"
+					"wholroyd.jinja",
+					"GitHub.vscode-github-actions",
+					"ms-python.black-formatter"
 				]
 			}
 		}
