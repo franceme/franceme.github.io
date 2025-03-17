@@ -306,7 +306,7 @@ for route, url in {
     '/qscala2':'https://notebooks.gesis.org/binder/jupyter/user/almond-sh-examples-tc0zflur/lab',
     '/qscala':'https://www.tutorialspoint.com/scala/scala_quick_guide.htm',
     '/scala':'https://scastie.scala-lang.org',
-    '/scalajs':'https://scribble.ninja/u/scribble-ninja/cmykeyibjiayiacsnsqkxwtuznjw',
+    '/scalajs':'https://scribble.ninja/',
 
     #Tech Guides
     '/ondock':'https://www.plantuml.com/plantuml/svg/SoWkIImgoStCIybDBE3IKd39JyvEBUBIqbA8ZiueAIaejjBNpqbCAjOho4cir2tFBCdGJG4hqKlEpzLNyC_BoSnBZOr5rL2UcPsfbvXJ09G2IfTMwEKNfOC5zI76ApY2vHHA2r8IIq2w7LBpKg1k0000',
