@@ -308,6 +308,7 @@ for route, url in {
     '/scala':'https://scastie.scala-lang.org',
     '/scalajs':'https://scribble.ninja/',
     '/dart':'https://dartpad.thermion.dev/',
+    '/plantuml':'https://www.plantuml.com/plantuml/uml/',
 
     #Tech Guides
     '/ondock':'https://www.plantuml.com/plantuml/svg/SoWkIImgoStCIybDBE3IKd39JyvEBUBIqbA8ZiueAIaejjBNpqbCAjOho4cir2tFBCdGJG4hqKlEpzLNyC_BoSnBZOr5rL2UcPsfbvXJ09G2IfTMwEKNfOC5zI76ApY2vHHA2r8IIq2w7LBpKg1k0000',
