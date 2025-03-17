@@ -305,6 +305,7 @@ for route, url in {
     '/dock':'https://www.plantuml.com/plantuml/svg/hPT1RzCm5CVl-nG-WggHEwTH2cYeWufkuZ1DaMERrio9BTiPoxV7oKlSOlMG5tEoNwJ_x_tqQZdDZVFK-beslARcQaKscZqBUrlJWt1NgnLvV3nwRzpxeZX8VsohTqpNnIzB6oPgKUoPbSOxCgvFJo4oCrDGvgLk7Fa0wwoiwKetjjnrPqqnoRJnl7n5dIZvC1oo3dkO4sGnuRGxdb2signQgVW_9W-tQtW6mAN4L6ykZOkNG26Ri3p8FeH8vVKiTUN6lkNt2iAuT6P_mPGqJamEdw0429gIwQAwrybZsxr269NExCyjVTRDfB0PAa1W6PaY1ysrdpo-z0K0a8HCYrhhqy6uwmi080dvTyQ52oFZklWFTuMIVXWCsOOD1179fPrDvu-wYVrtGucsY9JBBdYC5ywVPEv3bGZXK4kdyvk-q3YRhw70JIOXBBNuOqFOWiJFOOznYFdyOzAFKZQ7ywDo3u-Y49wMvLKhaBdR3WRapJVjoUTMgOxih316yBU0cidAKB6jy_6i_0W5xgmaXDG21J7ToMBNHGaq84e023iHnwYYayiUYYY38sJyBXLLIbZPKF1OJsKqmLEYIqB3_tyUtnkJMl8ccXIlho-ZcER26Sg48n_3Tjzl--Otek7ZzyjV',
     '/qscala2':'https://notebooks.gesis.org/binder/jupyter/user/almond-sh-examples-tc0zflur/lab',
     '/qscala':'https://www.tutorialspoint.com/scala/scala_quick_guide.htm',
+    '/scala':'https://scastie.scala-lang.org',
 
     #Tech Guides
     '/ondock':'https://www.plantuml.com/plantuml/svg/SoWkIImgoStCIybDBE3IKd39JyvEBUBIqbA8ZiueAIaejjBNpqbCAjOho4cir2tFBCdGJG4hqKlEpzLNyC_BoSnBZOr5rL2UcPsfbvXJ09G2IfTMwEKNfOC5zI76ApY2vHHA2r8IIq2w7LBpKg1k0000',
