@@ -419,6 +419,7 @@ for route, url in {
     '/mythenticate':'https://shibboleth.turnitin.com/shibboleth/ithenticate',
     '/feedly':'https://feedly.com/i/collection/content/user/420bc1de-a3e3-4023-84fa-752509fde431/category/global.all',
     '/g_task':'https://tasks.google.com/embed/?origin=https://calendar.google.com&fullWidth=1',
+    '/mystyle':'https://microsoft.github.io/monaco-editor/playground.html?source=v0.47.0#XQAAAALxBQAAAAAAAABBqQkHQ5NjdMjwa-jY7SIQ9S7DNlzs5W-mwj0fe1ZCDRFc9ws9XQE0SJE1jc2VKxhaLFIw9vEWSxW3yscw90jXk_7RazJicGma_Q8LY2zb375ZqBuQq_-5GpwXDc85sdScnpTdZ--ejP2looyAiLrZ-h-hUssb7EK7rGXcnvfH8rWGNVkAnHlJxrmRcBk4hqzBMVwwNhnlPdVRgYRHqD6B8fhWqV9VdzyOwUmx7HW0USmWnhAVrCPRW-EQu3tpg7Ou14ijGjQBkWWCa-uD02QJJ8MpwRb9_oGwhfDDrdpO-XF9emCzikyw-cZZiy6A-xtQCA05w4pQ5BUllqFrLi1WNsGvnI_ZW4gcZiHunuweWYBlVcmKG0jSxwu4a7wn_8tKyi3ecraM0PHYHemwzu7QS5xEZEKlL4-71mQD3i1o6xiwssF8tJrmghZN4IzXLygDnoHd55MSpAa0I6VUvWynbFRbWNJ6uA8LAoE925B3CqsY4P06mFJTtEMR1vSZ0cL2eDE8kZ9SYezMCxPxZ1Mcr_HWGbi6UC_I_A-XJ1sllZ99SDfdhzzjJWA9Uu7KMgPCwE3ojXMgtcnMDEk36_8I54kOU1cHVZI_Y-l7vtu6DCu5IIaMuAWsrHeVWSJIjHTXhfmaKqIWYaqikyyUblDgiwCFFziuNvzwnH_3iGF468fabKJG-0t3NwJ9Xrr_5PTMIHXwtB71YW5ZNqYce7L8EmV89khGySPPiUQjgZgagZxo2ZL8IIDtC0EOIHgAzg_cXtBVN2TB5uPwv2IABpaTz0JMiOmQo1frxoDg__ly2jyncIZRtmQEPLdVC5rWZY_AR-_zCXI5ae5-ArJbVk31g7KJ93aA6Di8laG96soqqyn2zA6vA0C7TwvHDkn_FkyPM-3Yyk7bG6mQ2VLq1WU1xnMwNC6tD_bi4AsuT2OIKP46GFXiyolUWvCl7nvTMRjfUB6bNB7uvdfGK7wd_-hP6mo',
 
 }.items():
     if route.replace('/','') in app._current_rules():
