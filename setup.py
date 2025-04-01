@@ -395,6 +395,7 @@ for route, url in {
     '/chief':'https://gchq.github.io/CyberChef/',
     '/txt':'https://www.onlinetexteditor.com/',
     '/smartware':'https://github.com/Malware-Research/Resources',
+    '/timezones':'https://www.timeanddate.com/worldclock/converter.html',
     '/telatex':'https://www.latex-tables.com/#',
     '/xelatex':'https://www.latex-tables.com/#',
     '/latex_table':'https://texblog.org/2012/07/30/single-column-figuretable-in-a-two-multi-column-environment/',
