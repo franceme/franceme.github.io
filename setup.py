@@ -364,6 +364,7 @@ for route, url in {
     #Locations
     '/atl':'https://maps.app.goo.gl/rtEHkrYyEidJfXiu7',
     '/ewr':'https://maps.app.goo.gl/E2jr4V3oByCD2KE98',
+    '/flights':'https://www.google.com/travel/flights/search?tfs=CBwQAhonEgoyMDI1LTAzLTA3OgJHNGoMCAISCC9tLzBocHRtcgcIARIDQVRMGicSCjIwMjUtMDMtMTA6Akc0agcIARIDQVRMcgwIAhIIL20vMGhwdG1AAUgBcAGCAQsI____________AZgBAQ&tfu=EgoIABABGAAgAigB',
 
     #Personal
     '/travel':'https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI1LTAxLTMwagcIARIDRVdScgcIARIDQVRMGh4SCjIwMjUtMDItMDNqBwgBEgNBVExyBwgBEgNFV1JAAUgBcAGCAQsI____________AZgBAQ',
