@@ -389,6 +389,9 @@ for route, url in {
     '/rsc_gen':'https://www.plantuml.com/plantuml/svg/RT7FIiD040RmUvzYm6D95pnwgWJffNYeMW-bbEdks2pidxWxIUhRknqN3E9nvfllHyYkCsDYRuFns2-M9zXGe8GETfJZa3JbnR9iMtGK3AOoBE5mw9Zx1wMcQLfrxDszrUXMEdfL7Bgk-gw7nu6ZHxubxWjq8cG215qX-4ZHmzjkUppEp5nGiJocmKGM4ref_rPffC1PYYVObkWASwD-cBi53UFPKHRdhjw-oghMt-dyRBLbI_aVupCrEXfgBl9JE2Q1SdG3snYo6ZKcqzGh1VksZ1L-sM_WoTZI-GldyK8InE1i825_5chMAioQWgalymq0',
     '/uful':'https://franceme.github.io/secure_useful.html#staticrypt_pwd=47b333df359460a3ff8812fb5db669f0083a25d3fd1c6cd4073f2685f0cb5a41',
 
+    #ML DEFENSE
+    '/glaze':'https://glaze.cs.uchicago.edu/downloads.html',
+
     #Utils
     '/frantzme_frac':'https://franceme.github.io/frac.html',
     '/frantzme_frac_hashsha_example_00':'https://franceme.github.io/frac.html?code=from%20hashlib%20import%20sha1%0Ainsecure_value%20=%20sha1(%22My%20Password%22).hexdigest()%0Aprint(insecure_value)',
