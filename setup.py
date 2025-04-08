@@ -391,6 +391,7 @@ for route, url in {
 
     #ML DEFENSE
     '/glaze':'https://glaze.cs.uchicago.edu/downloads.html',
+    '/nightshade':'https://nightshade.cs.uchicago.edu/',
 
     #Utils
     '/frantzme_frac':'https://franceme.github.io/frac.html',
