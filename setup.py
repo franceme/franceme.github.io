@@ -402,6 +402,7 @@ for route, url in {
     '/chief':'https://gchq.github.io/CyberChef/',
     '/txt':'https://www.onlinetexteditor.com/',
     '/smartware':'https://github.com/Malware-Research/Resources',
+    '/trains':'https://www.plantuml.com/plantuml/svg/XP5HJ_8m58Rl-HMzNhBsuyCBvGg86ZGumCqB9CJKzNHiTctJSnRXtziPX7ZbLVFcpViyJSu4IGPgQwjQwGS9ctN8o35f5TF13PA4tGVNifMHjTKr6DMtsIOM2TjkzqGUnqB4BNBfFQ-SuvKHhqrxsAzVGlxHplNYFzoml5Yks70uodQxmPcQRNhQXVq7zQ3TUhw-WhkHEnufgwxFrFn4lMnjuweQKmkV3GI48tSUh98akGnbR7ZfMj5d14AHFHRFqon_ACRZzmvJKrl0rEdKDYa5QR4c0GTlN00sczwof-ag2d_vIcS9B77Rd0RVWlW22WLQTeQ4harCKV26vHvKrwVYN_m-zqgpvU87F06hJXVv0W00',
     '/timezones':'https://www.timeanddate.com/worldclock/converter.html',
     '/telatex':'https://www.latex-tables.com/#',
     '/xelatex':'https://www.latex-tables.com/#',
