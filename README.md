@@ -53,4 +53,4 @@ There are a few cavietes that need to be handled:
 </html>
 ```
 
-2. The website is completely static, no dynamic handling or webpage redirecting.
+2. The website is compiled, no dynamic handling or webpage redirecting.
